@@ -63,7 +63,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/ibrahim/MobiArm/src/main_nodes/launch"
     "/home/ibrahim/MobiArm/src/main_nodes/urdf"
     "/home/ibrahim/MobiArm/src/main_nodes/rviz"
-    "/home/ibrahim/MobiArm/src/main_nodes/config"
     )
 endif()
 

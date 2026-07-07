@@ -4,9 +4,7 @@
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/arm.urdf.xacro
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/base.urdf.xacro
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/robot.urdf.xacro
-/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/control.gazebo.xacro
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/model.rviz
-/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/config/ros2_controllers.yaml
 /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/package_run_dependencies/main_nodes
 /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/parent_prefix_path/main_nodes
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.sh

@@ -4,7 +4,6 @@
 
 <xacro:include filename="$(find main_nodes)/urdf/base.urdf.xacro" />
 <xacro:include filename="$(find main_nodes)/urdf/arm.urdf.xacro" />
-<xacro:include filename="$(find main_nodes)/urdf/control.gazebo.xacro" />
 
 <joint name="connector_joint" type="fixed">
     <parent link="robot_base"/>
