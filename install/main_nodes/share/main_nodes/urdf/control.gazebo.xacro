@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Position-controlled arm joint for gazebo_ros2_control. Holding each
+       joint at its commanded position is what stops the arm collapsing under
+       gravity on spawn. -->
+  <xacro:macro name="pos_joint" params="name">
+    <joint name="${name}">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- ros2_control hardware. Only the arm + gripper joints are listed here;
+       the four wheels stay under the diff_drive plugin in base.urdf.xacro. -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <xacro:pos_joint name="j1_waist"/>
+    <xacro:pos_joint name="j2_shoulder"/>
+    <xacro:pos_joint name="j3_elbow"/>
+    <xacro:pos_joint name="j4_wrist"/>
+    <xacro:pos_joint name="j5_wrist"/>
+    <xacro:pos_joint name="j6_wrist"/>
+    <xacro:pos_joint name="gripperfinger_left_joint"/>
+    <xacro:pos_joint name="gripperfinger_right_joint"/>
+  </ros2_control>
+
+  <!-- The controller_manager runs inside Gazebo via this plugin. -->
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>$(find main_nodes)/config/ros2_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>

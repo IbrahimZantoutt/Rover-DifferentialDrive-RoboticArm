@@ -1,0 +1,10 @@
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/uninstall.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/main_nodes_uninstall.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/RunNode.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/test.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/edit_cache.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/rebuild_cache.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/list_install_components.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/install.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/install/local.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/install/strip.dir

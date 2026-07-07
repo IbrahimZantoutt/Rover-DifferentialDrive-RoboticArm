@@ -1,0 +1,26 @@
+[100%] Built target RunNode
+-- Install configuration: ""
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/RunNode
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/display.launch.py
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/arm.urdf.xacro
+-- Installing: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/base.urdf.xacro
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/robot.urdf.xacro
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/model.rviz
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/package_run_dependencies/main_nodes
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/parent_prefix_path/main_nodes
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/path.sh
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/path.dsv
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.bash
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.sh
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.zsh
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.dsv
+-- Installing: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.dsv
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/packages/main_nodes
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/cmake/main_nodesConfig.cmake
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/cmake/main_nodesConfig-version.cmake
+-- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.xml
