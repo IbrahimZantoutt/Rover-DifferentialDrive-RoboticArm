@@ -9,6 +9,8 @@ moveit_simple_controller_manager:
 
   arm_controller:
     type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
     joints:
       - j1_waist
       - j2_shoulder
@@ -18,6 +20,8 @@ moveit_simple_controller_manager:
       - j6_wrist
   gripper_controller:
     type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
     joints:
       - gripperfinger_left_joint
       - gripperfinger_right_joint

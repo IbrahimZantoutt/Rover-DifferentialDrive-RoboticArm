@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mobiarm">
     <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <!-- Set to true when launching in Gazebo (see gazebo.launch.py). Leave false for the RViz demo. -->
+    <xacro:arg name="use_gazebo" default="false" />
 
     <!-- Import mobiarm urdf file -->
     <xacro:include filename="$(find main_nodes)/urdf/robot.urdf.xacro" />
@@ -9,6 +11,20 @@
     <xacro:include filename="mobiarm.ros2_control.xacro" />
 
 
-    <xacro:mobiarm_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+    <xacro:mobiarm_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" use_gazebo="$(arg use_gazebo)"/>
+
+    <!-- Gazebo-only: load the ros2_control plugin so the controller_manager runs
+         inside Gazebo for the arm + gripper joints.
+         NOTE: unlike BinPicking (a fixed-base arm), we deliberately do NOT anchor
+         robot_base to a `world` link. This is a mobile base: it must stay free to
+         drive via its diff-drive plugin and it rests on its wheels on the ground.
+         Pinning it to `world` would freeze the base and fight the diff-drive. -->
+    <xacro:if value="$(arg use_gazebo)">
+        <gazebo>
+            <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+                <parameters>$(find moveit_config)/config/ros2_controllers.yaml</parameters>
+            </plugin>
+        </gazebo>
+    </xacro:if>
 
 </robot>
