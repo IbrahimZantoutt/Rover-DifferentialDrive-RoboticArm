@@ -9,18 +9,24 @@
                 <box size="0.75 0.45 0.13" />
             </geometry>
         </visual>
+        <!-- Collision must match the body so the robot rests on its WHEELS, not
+             on an oversized box. The old 0.28x0.28x0.35 box reached down to
+             z=-0.115 (below the wheels at -0.08), lifting the wheels off the
+             ground -> no traction -> robot couldn't drive. -->
         <collision>
             <origin xyz="0 0 0.06" rpy="0 0 0"/>
              <geometry>
-                <box size="0.28 0.28 0.35" />
+                <box size="0.75 0.45 0.13" />
             </geometry>
         </collision>
+        <!-- Inertia recomputed for a 13 kg, 0.75x0.45x0.13 box (I = m(a^2+b^2)/12);
+             COM lowered to z=0.04 (near the wheel axles) to resist tipping. -->
         <inertial>
-            <origin xyz="0 0 0.175" rpy="0 0 0"/>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
             <mass value="13.0"/>
-            <inertia ixx="0.0502" ixy="0" ixz="0"
-                     iyy="0.0502" iyz="0"
-                     izz="0.0392"/>
+            <inertia ixx="0.2377" ixy="0" ixz="0"
+                     iyy="0.6277" iyz="0"
+                     izz="0.8288"/>
         </inertial>
     </link>
 
@@ -38,9 +44,9 @@
         </collision>
         <inertial>
             <mass value="0.3"/>
-            <inertia ixx="0.000211" ixy="0" ixz="0"
-                     iyy="0.000211" iyz="0"
-                     izz="0.00036"/>
+            <inertia ixx="0.0005425" ixy="0" ixz="0"
+                     iyy="0.0005425" iyz="0"
+                     izz="0.00096"/>
         </inertial>
     </link>
 
@@ -64,9 +70,9 @@
         </collision>
         <inertial>
             <mass value="0.3"/>
-            <inertia ixx="0.000211" ixy="0" ixz="0"
-                     iyy="0.000211" iyz="0"
-                     izz="0.00036"/>
+            <inertia ixx="0.0005425" ixy="0" ixz="0"
+                     iyy="0.0005425" iyz="0"
+                     izz="0.00096"/>
         </inertial>
     </link>
 
@@ -94,9 +100,9 @@
         </collision>
         <inertial>
             <mass value="0.3"/>
-            <inertia ixx="0.000211" ixy="0" ixz="0"
-                     iyy="0.000211" iyz="0"
-                     izz="0.00036"/>
+            <inertia ixx="0.0005425" ixy="0" ixz="0"
+                     iyy="0.0005425" iyz="0"
+                     izz="0.00096"/>
         </inertial>
     </link>
 
@@ -120,9 +126,9 @@
         </collision>
         <inertial>
             <mass value="0.3"/>
-            <inertia ixx="0.000211" ixy="0" ixz="0"
-                     iyy="0.000211" iyz="0"
-                     izz="0.00036"/>
+            <inertia ixx="0.0005425" ixy="0" ixz="0"
+                     iyy="0.0005425" iyz="0"
+                     izz="0.00096"/>
         </inertial>
     </link>
 
@@ -156,10 +162,10 @@
             <left_joint>left_wheel2_joint</left_joint>
             <right_joint>right_wheel2_joint</right_joint>
 
-            <wheel_separation>0.308</wheel_separation>
-            <wheel_separation>0.308</wheel_separation>
-            <wheel_diameter>0.098</wheel_diameter>
-            <wheel_diameter>0.098</wheel_diameter>
+            <wheel_separation>0.46</wheel_separation>
+            <wheel_separation>0.46</wheel_separation>
+            <wheel_diameter>0.16</wheel_diameter>
+            <wheel_diameter>0.16</wheel_diameter>
 
             <max_wheel_torque>20.0</max_wheel_torque>
             <max_wheel_acceleration>1.0</max_wheel_acceleration>
