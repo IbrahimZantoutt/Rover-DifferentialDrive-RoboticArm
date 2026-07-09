@@ -1,0 +1,1 @@
+/home/ibrahim/MobiArm/src/moveit_config/launch/nav2_slam.launch.py

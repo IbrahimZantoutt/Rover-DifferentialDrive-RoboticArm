@@ -38,7 +38,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(DIRECTORY launch urdf rviz worlds
+install(DIRECTORY launch urdf rviz worlds config
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()

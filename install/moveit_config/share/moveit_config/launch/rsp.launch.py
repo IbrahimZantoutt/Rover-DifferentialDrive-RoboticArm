@@ -1,7 +1,1 @@
-from moveit_configs_utils import MoveItConfigsBuilder
-from moveit_configs_utils.launches import generate_rsp_launch
-
-
-def generate_launch_description():
-    moveit_config = MoveItConfigsBuilder("mobiarm", package_name="moveit_config").to_moveit_configs()
-    return generate_rsp_launch(moveit_config)
+/home/ibrahim/MobiArm/src/moveit_config/launch/rsp.launch.py

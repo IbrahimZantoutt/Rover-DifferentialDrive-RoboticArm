@@ -11,7 +11,6 @@
 		"commands" : 
 		[
 			"add_executable",
-			"install",
 			"add_compile_options",
 			"target_include_directories"
 		],
@@ -33,17 +32,11 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 26,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
 				"line" : 5,
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 0,
 				"line" : 17,
 				"parent" : 0
@@ -56,22 +49,22 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"fragment" : "-Wpedantic"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "/home/ibrahim/MobiArm/src/main_nodes/include"
 				}
 			],
@@ -83,20 +76,6 @@
 		}
 	],
 	"id" : "RunNode::@6890427a1f51a3e7e1df",
-	"install" : 
-	{
-		"destinations" : 
-		[
-			{
-				"backtrace" : 2,
-				"path" : "lib/main_nodes"
-			}
-		],
-		"prefix" : 
-		{
-			"path" : "/home/ibrahim/MobiArm/install/main_nodes"
-		}
-	},
 	"link" : 
 	{
 		"commandFragments" : 
