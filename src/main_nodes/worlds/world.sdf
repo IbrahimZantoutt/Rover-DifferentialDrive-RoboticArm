@@ -122,5 +122,35 @@
       </link>
     </model>
 
+    <!-- ================= Enclosing walls =================
+         An 8 x 8 m room centered on the origin so SLAM has structure to map and
+         Nav2 has boundaries. Walls are 0.5 m tall (well above the lidar scan
+         plane at z=0.145) and 0.1 m thick; the four segments are 8.2 m long so
+         the corners overlap and close. The robot spawns at the origin with ~4 m
+         of clearance in every direction. -->
+    <model name="walls">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <!-- north (+y) and south (-y): run along x -->
+        <collision name="north_col"><pose>0  4 0.25 0 0 0</pose><geometry><box><size>8.2 0.1 0.5</size></box></geometry></collision>
+        <visual    name="north_vis"><pose>0  4 0.25 0 0 0</pose><geometry><box><size>8.2 0.1 0.5</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+
+        <collision name="south_col"><pose>0 -4 0.25 0 0 0</pose><geometry><box><size>8.2 0.1 0.5</size></box></geometry></collision>
+        <visual    name="south_vis"><pose>0 -4 0.25 0 0 0</pose><geometry><box><size>8.2 0.1 0.5</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+
+        <!-- east (+x) and west (-x): run along y -->
+        <collision name="east_col"><pose> 4 0 0.25 0 0 0</pose><geometry><box><size>0.1 8.2 0.5</size></box></geometry></collision>
+        <visual    name="east_vis"><pose> 4 0 0.25 0 0 0</pose><geometry><box><size>0.1 8.2 0.5</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+
+        <collision name="west_col"><pose>-4 0 0.25 0 0 0</pose><geometry><box><size>0.1 8.2 0.5</size></box></geometry></collision>
+        <visual    name="west_vis"><pose>-4 0 0.25 0 0 0</pose><geometry><box><size>0.1 8.2 0.5</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+
   </world>
 </sdf>

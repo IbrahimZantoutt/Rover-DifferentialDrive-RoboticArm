@@ -9,12 +9,12 @@
     <link name="lidar_link">
         <visual>
             <geometry>
-                <cylinder radius="0.15" length="0.08"/>
+                <cylinder radius="0.15" length="0.05"/>
             </geometry>
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.15" length="0.08"/>
+                <cylinder radius="0.15" length="0.05"/>
             </geometry>
         </collision>
         <inertial>
@@ -28,19 +28,23 @@
     <joint name="lidar_joint" type="fixed">
         <parent link="robot_base"/>
         <child link="lidar_link"/>
-        <origin xyz="0 0 0.125" rpy="0 0 0"/>
+        <origin xyz="0 0 0.15" rpy="0 0 0"/>
     </joint>
 
 
     <joint name="connector_joint" type="fixed">
         <parent link="lidar_link"/>
         <child link="arm_base_link"/>
-        <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        <origin xyz="0 0 0.025" rpy="0 0 0"/>
     </joint>
 
     <gazebo reference="lidar_link">
         <sensor type="ray" name="lidar">
-            <pose>0 0 0 0 0 0</pose>
+            <!-- Raise the scan plane 2 cm above lidar_link's origin so it sits in
+                 the 4 cm gap between the base top (z=0.125) and the arm base bottom
+                 (z=0.165). At z=0 the plane grazed the base top and the lidar saw
+                 its own chassis as a ring of phantom obstacles. -->
+            <pose>0 0 0.02 0 0 0</pose>
             <always_on>true</always_on>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
