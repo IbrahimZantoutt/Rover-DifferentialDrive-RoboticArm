@@ -1,0 +1,38 @@
+[0.039s] Invoking command in '/home/ibrahim/MobiArm/build/main_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
+[0.387s] [ 50%] Built target RunNode
+[0.543s] [ 75%] [32mBuilding CXX object CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o[0m
+[14.167s] [100%] [32m[1mLinking CXX executable TravelPose[0m
+[15.292s] [100%] Built target TravelPose
+[15.317s] Invoked command in '/home/ibrahim/MobiArm/build/main_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
+[15.341s] Invoking command in '/home/ibrahim/MobiArm/build/main_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/main_nodes
+[15.355s] -- Install configuration: ""
+[15.358s] -- Installing: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/TravelPose
+[15.360s] -- Set runtime path of "/home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/TravelPose" to ""
+[15.361s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/RunNode
+[15.361s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch
+[15.362s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/display.launch.py
+[15.362s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/gazebo.launch.py
+[15.362s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf
+[15.362s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/arm.urdf.xacro
+[15.362s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/base.urdf.xacro
+[15.362s] -- Installing: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/robot.urdf.xacro
+[15.363s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz
+[15.363s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/model.rviz
+[15.363s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/worlds
+[15.364s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/worlds/world.sdf
+[15.364s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/package_run_dependencies/main_nodes
+[15.364s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/parent_prefix_path/main_nodes
+[15.364s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.sh
+[15.365s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.dsv
+[15.365s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/path.sh
+[15.365s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/path.dsv
+[15.365s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.bash
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.sh
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.zsh
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.dsv
+[15.366s] -- Installing: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.dsv
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/packages/main_nodes
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/cmake/main_nodesConfig.cmake
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/cmake/main_nodesConfig-version.cmake
+[15.366s] -- Up-to-date: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.xml
+[15.370s] Invoked command in '/home/ibrahim/MobiArm/build/main_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/main_nodes
