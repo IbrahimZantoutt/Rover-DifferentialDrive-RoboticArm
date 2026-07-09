@@ -10,12 +10,18 @@ find_package(ament_cmake REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(moveit_ros_planning_interface REQUIRED)
 
 add_executable(RunNode src/RunNode.cpp)
 target_include_directories(RunNode PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
 target_compile_features(RunNode PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+
+add_executable(TravelPose src/TravelPose.cpp)
+ament_target_dependencies(TravelPose rclcpp moveit_ros_planning_interface)
+install(TARGETS TravelPose DESTINATION lib/${PROJECT_NAME})
 
 install(TARGETS RunNode
   DESTINATION lib/${PROJECT_NAME})
