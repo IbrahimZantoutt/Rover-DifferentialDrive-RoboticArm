@@ -41,4 +41,8 @@ endif()
 install(DIRECTORY launch urdf rviz worlds config
   DESTINATION share/${PROJECT_NAME})
 
+# Python self-filter node (removes lidar returns that hit the robot's own body)
+install(PROGRAMS scripts/scan_self_filter.py
+  DESTINATION lib/${PROJECT_NAME})
+
 ament_package()

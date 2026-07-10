@@ -65,7 +65,10 @@
             </ray>
             <plugin name="lidar_plugin" filename="libgazebo_ros_ray_sensor.so">
             <ros>
-                <remapping>~/out:=scan</remapping>
+                <!-- Raw scan (includes self-hits on the camera stand). The
+                     scan_self_filter node cleans it and republishes on /scan,
+                     which SLAM/Nav2 consume. -->
+                <remapping>~/out:=scan_raw</remapping>
             </ros>
             <output_type>sensor_msgs/LaserScan</output_type>
             <frame_name>lidar_link</frame_name>
@@ -80,6 +83,10 @@
                 <box size="0.05 0.1 0.05"/>
             </geometry>
         </visual>
+        <!-- Collision kept on purpose (honest sim): the real lidar WILL hit this
+             hardware, so instead of deleting collision we remove the self-hits
+             downstream with the scan_self_filter node (see nav2_slam.launch.py),
+             exactly how you'd handle it on a physical robot. -->
         <collision>
             <geometry><box size="0.05 0.05 0.05" /></geometry>
         </collision>
@@ -105,6 +112,8 @@
                 <cylinder radius="0.025" length="0.1"/>
             </geometry>
         </visual>
+        <!-- Collision kept (see camera_link): the stand crosses the scan plane;
+             its self-hits are removed downstream by scan_self_filter. -->
         <collision>
             <geometry><cylinder radius="0.025" length="0.1"/></geometry>
         </collision>

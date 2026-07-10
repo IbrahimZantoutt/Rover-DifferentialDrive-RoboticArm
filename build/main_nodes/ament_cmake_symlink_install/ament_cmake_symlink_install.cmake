@@ -324,6 +324,9 @@ include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targ
 # install(DIRECTORY "launch" "urdf" "rviz" "worlds" "config" "DESTINATION" "share/main_nodes")
 ament_cmake_symlink_install_directory("/home/ibrahim/MobiArm/src/main_nodes" DIRECTORY "launch" "urdf" "rviz" "worlds" "config" "DESTINATION" "share/main_nodes")
 
+# install(PROGRAMS "scripts/scan_self_filter.py" "DESTINATION" "lib/main_nodes")
+ament_cmake_symlink_install_programs("/home/ibrahim/MobiArm/src/main_nodes" PROGRAMS "scripts/scan_self_filter.py" "DESTINATION" "lib/main_nodes")
+
 # install(FILES "/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/main_nodes" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/ibrahim/MobiArm/src/main_nodes" FILES "/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/main_nodes" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

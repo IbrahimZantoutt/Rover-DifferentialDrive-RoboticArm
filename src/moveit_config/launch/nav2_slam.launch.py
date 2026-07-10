@@ -39,6 +39,18 @@ def generate_launch_description():
         )
     )
 
+    # --- Self-filter: strip lidar returns that hit the robot's own camera stand -
+    # The raw Gazebo scan is on /scan_raw; this republishes a cleaned /scan (the
+    # topic SLAM/Nav2 consume). Same idea as laser_filters' box filter, but as an
+    # in-repo node so there's no extra apt dependency. Ports directly to hardware.
+    scan_filter = Node(
+        package="main_nodes",
+        executable="scan_self_filter.py",
+        name="scan_self_filter",
+        output="screen",
+        parameters=[use_sim_time],
+    )
+
     # --- SLAM: slam_toolbox online async (publishes /map + map->odom) -----------
     slam = Node(
         package="slam_toolbox",
@@ -80,4 +92,6 @@ def generate_launch_description():
     # and lidar (/scan) before SLAM/Nav2 come up, so their TF/scan lookups succeed.
     slam_and_nav2 = TimerAction(period=8.0, actions=[slam, nav2, nav2_rviz])
 
-    return LaunchDescription([gazebo_sim, slam_and_nav2])
+    # The filter can start immediately -- it just waits for /scan_raw and must be
+    # up before SLAM/Nav2 subscribe to /scan.
+    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2])
