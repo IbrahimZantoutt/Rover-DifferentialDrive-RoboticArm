@@ -122,6 +122,42 @@
       </link>
     </model>
 
+    <!-- ================= Green cube on a stool =================
+         A 5 cm green cube raised on a short pedestal ("stool") at (-2.5, -1.2),
+         ~2.7 m from the robot and clear of the table. The stool lifts the cube so
+         its centre sits on the lidar scan plane (~z=0.25 m); a 5 cm cube on the
+         floor would be far below the beam and invisible. The stool top (z=0.225)
+         stays just under the scan plane, so it's mainly the cube that shows up in
+         the scan / costmaps. Static so it stays put as a stable landmark.
+         NOTE: at ~2.7 m a 5 cm cube only subtends ~1 deg, so expect just 1-2 beams
+         on it — a faint blip. Enlarge the cube or move it closer for a stronger hit. -->
+    <model name="green_cube_ground">
+      <static>true</static>
+      <pose>-2.5 -1.2 0 0 0 0</pose>
+      <link name="link">
+        <!-- stool / pedestal: cylinder from the floor up to z=0.225 -->
+        <collision name="stool_col">
+          <pose>0 0 0.1125 0 0 0</pose>
+          <geometry><cylinder><radius>0.08</radius><length>0.225</length></cylinder></geometry>
+        </collision>
+        <visual name="stool_vis">
+          <pose>0 0 0.1125 0 0 0</pose>
+          <geometry><cylinder><radius>0.08</radius><length>0.225</length></cylinder></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material>
+        </visual>
+        <!-- 5 cm green cube on top, centred on the scan plane (z=0.25) -->
+        <collision name="cube_col">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><box><size>0.05 0.05 0.05</size></box></geometry>
+        </collision>
+        <visual name="cube_vis">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><box><size>0.05 0.05 0.05</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material>
+        </visual>
+      </link>
+    </model>
+
     <!-- ================= Enclosing walls =================
          An 8 x 8 m room centered on the origin so SLAM has structure to map and
          Nav2 has boundaries. Walls are 0.5 m tall (well above the lidar scan
