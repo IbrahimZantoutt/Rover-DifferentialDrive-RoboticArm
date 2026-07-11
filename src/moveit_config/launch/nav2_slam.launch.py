@@ -24,8 +24,10 @@ def generate_launch_description():
 
     slam_params = os.path.join(main_nodes_share, "config", "slam_toolbox.yaml")
     nav2_params = os.path.join(main_nodes_share, "config", "nav2_params.yaml")
+    # Project copy of nav2_default_view.rviz with an extra (disabled-by-default)
+    # LaserScan display on /scan_objects -- tick "Scan Objects" in RViz to show it.
     nav2_rviz_config = os.path.join(
-        nav2_bringup_share, "rviz", "nav2_default_view.rviz"
+        main_nodes_share, "rviz", "nav2_view.rviz"
     )
 
     use_sim_time = {"use_sim_time": True}
@@ -47,6 +49,14 @@ def generate_launch_description():
         package="main_nodes",
         executable="scan_self_filter.py",
         name="scan_self_filter",
+        output="screen",
+        parameters=[use_sim_time],
+    )
+
+    scan_objects = Node(
+        package="main_nodes",
+        executable="scan_objects_filter.py",
+        name="scan_objects_filter",
         output="screen",
         parameters=[use_sim_time],
     )
@@ -94,4 +104,4 @@ def generate_launch_description():
 
     # The filter can start immediately -- it just waits for /scan_raw and must be
     # up before SLAM/Nav2 subscribe to /scan.
-    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2])
+    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2, scan_objects])

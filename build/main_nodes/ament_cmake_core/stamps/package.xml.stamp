@@ -15,9 +15,10 @@
   <exec_depend>xacro</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>teleop_twist_keyboard</exec_depend>
-  <!-- scan_self_filter.py (removes lidar self-hits on the camera stand) -->
+  <!-- scan_self_filter.py / scan_objects_filter.py (lidar filter nodes) -->
   <exec_depend>rclpy</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

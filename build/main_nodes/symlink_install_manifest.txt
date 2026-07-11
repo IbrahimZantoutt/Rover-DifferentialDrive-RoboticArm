@@ -6,10 +6,12 @@
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/base.urdf.xacro
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/robot.urdf.xacro
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/model.rviz
+/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/nav2_view.rviz
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/worlds/world.sdf
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/config/nav2_params.yaml
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/config/slam_toolbox.yaml
 /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/scan_self_filter.py
+/home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/scan_objects_filter.py
 /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/package_run_dependencies/main_nodes
 /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/parent_prefix_path/main_nodes
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.sh
