@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-33d58d8c323258da83f6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "main_nodes",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RunNode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RunNode-601b49494214f0d72c89.json",
+					"name" : "RunNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TravelPose::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TravelPose-f53ff88bfa4e2afd60ed.json",
+					"name" : "TravelPose",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "detectionNode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-detectionNode-1ca524f7f5cdec0a2cb6.json",
+					"name" : "detectionNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_nodes_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_nodes_uninstall-3c3b9dc715c9186c336c.json",
+					"name" : "main_nodes_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f336f26742f903e3d2a8.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ibrahim/MobiArm/build/main_nodes",
+		"source" : "/home/ibrahim/MobiArm/src/main_nodes"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

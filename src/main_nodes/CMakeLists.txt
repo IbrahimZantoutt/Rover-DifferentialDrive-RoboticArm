@@ -12,6 +12,14 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
+# detectionNode deps (Nav2 action client + TF)
+find_package(rclcpp_action REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav2_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 add_executable(RunNode src/RunNode.cpp)
 target_include_directories(RunNode PUBLIC
@@ -22,6 +30,12 @@ target_compile_features(RunNode PUBLIC c_std_99 cxx_std_17)  # Require C99 and C
 add_executable(TravelPose src/TravelPose.cpp)
 ament_target_dependencies(TravelPose rclcpp moveit_ros_planning_interface)
 install(TARGETS TravelPose DESTINATION lib/${PROJECT_NAME})
+
+add_executable(detectionNode src/detectionNode.cpp)
+ament_target_dependencies(detectionNode
+  rclcpp rclcpp_action sensor_msgs geometry_msgs nav2_msgs
+  tf2 tf2_ros tf2_geometry_msgs)
+install(TARGETS detectionNode DESTINATION lib/${PROJECT_NAME})
 
 install(TARGETS RunNode
   DESTINATION lib/${PROJECT_NAME})

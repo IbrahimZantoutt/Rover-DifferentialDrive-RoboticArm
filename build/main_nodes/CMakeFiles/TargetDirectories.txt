@@ -2,6 +2,7 @@
 /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/main_nodes_uninstall.dir
 /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/RunNode.dir
 /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/TravelPose.dir
+/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/detectionNode.dir
 /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/test.dir
 /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/edit_cache.dir
 /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles/rebuild_cache.dir

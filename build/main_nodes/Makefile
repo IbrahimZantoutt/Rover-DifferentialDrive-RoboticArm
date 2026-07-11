@@ -223,6 +223,19 @@ TravelPose/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TravelPose.dir/build.make CMakeFiles/TravelPose.dir/build
 .PHONY : TravelPose/fast
 
+#=============================================================================
+# Target rules for targets named detectionNode
+
+# Build rule for target.
+detectionNode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 detectionNode
+.PHONY : detectionNode
+
+# fast build rule for target.
+detectionNode/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/build
+.PHONY : detectionNode/fast
+
 src/RunNode.o: src/RunNode.cpp.o
 .PHONY : src/RunNode.o
 
@@ -271,6 +284,30 @@ src/TravelPose.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TravelPose.dir/build.make CMakeFiles/TravelPose.dir/src/TravelPose.cpp.s
 .PHONY : src/TravelPose.cpp.s
 
+src/detectionNode.o: src/detectionNode.cpp.o
+.PHONY : src/detectionNode.o
+
+# target to build an object file
+src/detectionNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o
+.PHONY : src/detectionNode.cpp.o
+
+src/detectionNode.i: src/detectionNode.cpp.i
+.PHONY : src/detectionNode.i
+
+# target to preprocess a source file
+src/detectionNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/src/detectionNode.cpp.i
+.PHONY : src/detectionNode.cpp.i
+
+src/detectionNode.s: src/detectionNode.cpp.s
+.PHONY : src/detectionNode.s
+
+# target to generate assembly for a file
+src/detectionNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/src/detectionNode.cpp.s
+.PHONY : src/detectionNode.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,12 +325,16 @@ help:
 	@echo "... uninstall"
 	@echo "... RunNode"
 	@echo "... TravelPose"
+	@echo "... detectionNode"
 	@echo "... src/RunNode.o"
 	@echo "... src/RunNode.i"
 	@echo "... src/RunNode.s"
 	@echo "... src/TravelPose.o"
 	@echo "... src/TravelPose.i"
 	@echo "... src/TravelPose.s"
+	@echo "... src/detectionNode.o"
+	@echo "... src/detectionNode.i"
+	@echo "... src/detectionNode.s"
 .PHONY : help
 
 

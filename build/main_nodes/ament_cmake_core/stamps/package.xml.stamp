@@ -17,8 +17,15 @@
   <exec_depend>teleop_twist_keyboard</exec_depend>
   <!-- scan_self_filter.py / scan_objects_filter.py (lidar filter nodes) -->
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>
-  <exec_depend>tf2_ros</exec_depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_ros</depend>
+  <!-- detectionNode.cpp (Nav2 action client + TF) -->
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

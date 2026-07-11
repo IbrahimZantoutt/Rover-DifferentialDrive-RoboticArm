@@ -1,4 +1,5 @@
 /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/TravelPose
+/home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/detectionNode
 /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/RunNode
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/display.launch.py
 /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/gazebo.launch.py

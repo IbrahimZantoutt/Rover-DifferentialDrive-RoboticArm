@@ -318,8 +318,11 @@ message(STATUS "Execute custom install script")
 # install("TARGETS" "TravelPose" "DESTINATION" "lib/main_nodes")
 include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "RunNode" "DESTINATION" "lib/main_nodes")
+# install("TARGETS" "detectionNode" "DESTINATION" "lib/main_nodes")
 include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "RunNode" "DESTINATION" "lib/main_nodes")
+include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "urdf" "rviz" "worlds" "config" "DESTINATION" "share/main_nodes")
 ament_cmake_symlink_install_directory("/home/ibrahim/MobiArm/src/main_nodes" DIRECTORY "launch" "urdf" "rviz" "worlds" "config" "DESTINATION" "share/main_nodes")

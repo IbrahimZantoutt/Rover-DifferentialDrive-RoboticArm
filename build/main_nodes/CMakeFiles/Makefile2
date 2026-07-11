@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/ibrahim/MobiArm/build/main_nodes
 # The main recursive "all" target.
 all: CMakeFiles/RunNode.dir/all
 all: CMakeFiles/TravelPose.dir/all
+all: CMakeFiles/detectionNode.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/main_nodes_uninstall.dir/clean
 clean: CMakeFiles/RunNode.dir/clean
 clean: CMakeFiles/TravelPose.dir/clean
+clean: CMakeFiles/detectionNode.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -181,6 +183,32 @@ TravelPose: CMakeFiles/TravelPose.dir/rule
 CMakeFiles/TravelPose.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TravelPose.dir/build.make CMakeFiles/TravelPose.dir/clean
 .PHONY : CMakeFiles/TravelPose.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/detectionNode.dir
+
+# All Build rule for target.
+CMakeFiles/detectionNode.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/MobiArm/build/main_nodes/CMakeFiles --progress-num=5,6 "Built target detectionNode"
+.PHONY : CMakeFiles/detectionNode.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/detectionNode.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/detectionNode.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/MobiArm/build/main_nodes/CMakeFiles 0
+.PHONY : CMakeFiles/detectionNode.dir/rule
+
+# Convenience name for target.
+detectionNode: CMakeFiles/detectionNode.dir/rule
+.PHONY : detectionNode
+
+# clean rule for target.
+CMakeFiles/detectionNode.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/clean
+.PHONY : CMakeFiles/detectionNode.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
