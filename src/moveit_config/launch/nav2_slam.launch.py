@@ -24,6 +24,7 @@ def generate_launch_description():
 
     slam_params = os.path.join(main_nodes_share, "config", "slam_toolbox.yaml")
     nav2_params = os.path.join(main_nodes_share, "config", "nav2_params.yaml")
+    ekf_params = os.path.join(main_nodes_share, "config", "ekf.yaml")
     # Project copy of nav2_default_view.rviz with an extra (disabled-by-default)
     # LaserScan display on /scan_objects -- tick "Scan Objects" in RViz to show it.
     nav2_rviz_config = os.path.join(
@@ -98,10 +99,16 @@ def generate_launch_description():
         parameters=[use_sim_time],
     )
 
+
+    ekf_node = Node(package="robot_localization", executable="ekf_node", name="ekf_filter_node",
+     parameters=[ekf_params, {"use_sim_time": True}])
+
+
+
     # Let Gazebo spawn the robot and start /clock + the diff_drive (odom->robot_base)
     # and lidar (/scan) before SLAM/Nav2 come up, so their TF/scan lookups succeed.
     slam_and_nav2 = TimerAction(period=8.0, actions=[slam, nav2, nav2_rviz])
 
     # The filter can start immediately -- it just waits for /scan_raw and must be
     # up before SLAM/Nav2 subscribe to /scan.
-    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2, scan_objects])
+    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2, scan_objects, ekf_node])
