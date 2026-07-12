@@ -39,7 +39,7 @@ class DetectionNode : public rclcpp::Node
 public:
   DetectionNode() : Node("detection_node")
   {
-    standoff_ = this->declare_parameter("standoff", 1.0);              // base->object [m]
+    standoff_ = this->declare_parameter("standoff", 1.3);              // base->object [m]
     target_frame_ = this->declare_parameter("target_frame", std::string("map"));
 
     tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
@@ -139,9 +139,10 @@ private:
         break;
       case rclcpp_action::ResultCode::ABORTED:
         RCLCPP_WARN(get_logger(),
-          "Nav2 aborted (goal may be inside the object's costmap inflation -- "
-          "try a larger 'standoff')");
-        navigating_ = false;
+          "Nav2 aborted. Staying COMMITTED to this one goal (one-shot): we do NOT "
+          "recompute a fresh goal from the robot's drifted position, which is what "
+          "made it approach from a random angle. Restart the node to try again.");
+        // navigating_ stays true -> no re-goal, no random re-approach
         break;
       case rclcpp_action::ResultCode::CANCELED:
         RCLCPP_WARN(get_logger(), "Nav2 canceled");

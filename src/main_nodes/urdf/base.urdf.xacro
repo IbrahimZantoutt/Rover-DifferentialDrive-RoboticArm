@@ -139,11 +139,18 @@
         <axis xyz="0 0 1"/>
     </joint>
 
-    <!-- wheel friction (helps the wheels grip the ground plane) -->
-    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>1.0</mu2></gazebo>
-    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>1.0</mu2></gazebo>
-    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>1.0</mu2></gazebo>
-    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>1.0</mu2></gazebo>
+    <!-- Skid-steer wheel friction. fdir1 = "1 0 0" pins friction axis 1 to the
+         wheel's ROLLING direction (base +x); each wheel link is only rotated about
+         x, so its local x = base x. Then:
+           mu1 (rolling)  = 1.0  -> forward traction, unchanged
+           mu2 (lateral)  = 0.0  -> wheels can scrub SIDEWAYS freely, so the base
+                                    can actually yaw. With mu2=1.0 the wheels were
+                                    laterally pinned and the robot could not turn
+                                    (measured ~11% of commanded rotation). -->
+    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.3</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.3</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.3</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.3</mu2><fdir1>1 0 0</fdir1></gazebo>
 
     <!-- Differential drive controller (publishes /odom + odom->robot_base TF,
          subscribes to /cmd_vel). Two wheel pairs driven together. -->
