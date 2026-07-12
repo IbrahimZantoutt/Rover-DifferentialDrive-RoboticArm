@@ -39,7 +39,7 @@ class DetectionNode : public rclcpp::Node
 public:
   DetectionNode() : Node("detection_node")
   {
-    standoff_ = this->declare_parameter("standoff", 0.6);              // base->object [m]
+    standoff_ = this->declare_parameter("standoff", 1.0);              // base->object [m]
     target_frame_ = this->declare_parameter("target_frame", std::string("map"));
 
     tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());

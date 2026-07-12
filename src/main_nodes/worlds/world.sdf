@@ -26,7 +26,7 @@
          tabletop (top surface at z=0.50) and four legs. -->
     <model name="table">
       <static>true</static>
-      <pose>1.0 0 0 0 0 0</pose>
+      <pose>2.5 0 0 0 0 0</pose>
       <link name="link">
 
         <!-- tabletop: 0.8 x 0.8 x 0.04, centred so its top face is at z=0.50 -->

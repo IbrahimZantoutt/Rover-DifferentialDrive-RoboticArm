@@ -52,8 +52,8 @@ class ScanObjectsFilter(Node):
         # as wall/outside. Walls are at +/-4 m, so 3.8 keeps the interior.
         self.room_half = self.declare_parameter('room_half', 3.8).value
         # Table box in the map frame (table centred at x=1, ~0.8 x 0.8, + margin).
-        self.table_min_x = self.declare_parameter('table_min_x', 0.55).value
-        self.table_max_x = self.declare_parameter('table_max_x', 1.45).value
+        self.table_min_x = self.declare_parameter('table_min_x', 2.05).value
+        self.table_max_x = self.declare_parameter('table_max_x', 2.95).value
         self.table_min_y = self.declare_parameter('table_min_y', -0.45).value
         self.table_max_y = self.declare_parameter('table_max_y', 0.45).value
 
