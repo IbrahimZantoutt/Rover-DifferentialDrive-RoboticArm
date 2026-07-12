@@ -183,10 +183,11 @@
             <robot_base_frame>robot_base</robot_base_frame>
 
             <publish_odom>true</publish_odom>
-            <!-- DIAGNOSTIC A/B: set back to true so the plugin publishes odom->robot_base
-                 itself (pure wheel odometry, pre-EKF behaviour). MUST disable the ekf_node
-                 in nav2_slam.launch.py at the same time, or two nodes publish the same TF
-                 and fight. Set back to false + re-enable EKF to restore the fused setup. -->
+            <!-- The diff-drive plugin publishes odom->robot_base directly from wheel
+                 odometry. An EKF/IMU fusion used to own this TF, but it introduced a
+                 yaw-dependent map/scan shift during turns (the scans swung in the odom
+                 frame as the robot rotated), so odom->base is sourced purely from the
+                 plugin. SLAM's map->odom absorbs the residual wheel-odometry drift. -->
             <publish_odom_tf>true</publish_odom_tf>
             <publish_wheel_tf>true</publish_wheel_tf>
         </plugin>
