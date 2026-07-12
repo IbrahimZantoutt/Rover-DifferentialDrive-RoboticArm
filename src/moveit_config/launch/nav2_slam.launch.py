@@ -111,4 +111,8 @@ def generate_launch_description():
 
     # The filter can start immediately -- it just waits for /scan_raw and must be
     # up before SLAM/Nav2 subscribe to /scan.
-    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2, scan_objects, ekf_node])
+    # DIAGNOSTIC A/B: ekf_node removed from the list so odom->robot_base comes ONLY
+    # from the diff_drive plugin (pure wheel odometry). Pair this with
+    # publish_odom_tf=true in base.urdf.xacro. Re-add `ekf_node` here and flip
+    # publish_odom_tf back to false to restore the fused EKF/IMU setup.
+    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2, scan_objects])

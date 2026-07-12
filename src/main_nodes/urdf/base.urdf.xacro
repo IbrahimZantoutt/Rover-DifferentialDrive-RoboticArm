@@ -183,7 +183,11 @@
             <robot_base_frame>robot_base</robot_base_frame>
 
             <publish_odom>true</publish_odom>
-            <publish_odom_tf>false</publish_odom_tf>
+            <!-- DIAGNOSTIC A/B: set back to true so the plugin publishes odom->robot_base
+                 itself (pure wheel odometry, pre-EKF behaviour). MUST disable the ekf_node
+                 in nav2_slam.launch.py at the same time, or two nodes publish the same TF
+                 and fight. Set back to false + re-enable EKF to restore the fused setup. -->
+            <publish_odom_tf>true</publish_odom_tf>
             <publish_wheel_tf>true</publish_wheel_tf>
         </plugin>
     </gazebo>
