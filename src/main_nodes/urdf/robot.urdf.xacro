@@ -166,9 +166,20 @@
     </gazebo>
 
 
-    <link name="imu_link"/>
-        <joint name="imu_joint" type="fixed">
-        <parent link="robot_base"/><child link="imu_link"/>
+    <!-- imu_link needs an <inertial> block: Gazebo Classic lumps a MASSLESS
+         fixed-joint child into its parent and drops the link, taking the
+         <gazebo reference="imu_link"> sensor with it -> /imu never publishes and
+         the EKF silently runs wheel-only (same yaw drift). A tiny mass keeps the
+         link (and its IMU sensor) alive, exactly like lidar_link/camera_link. -->
+    <link name="imu_link">
+        <inertial>
+            <mass value="0.01"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+        </inertial>
+    </link>
+    <joint name="imu_joint" type="fixed">
+        <parent link="robot_base"/>
+        <child link="imu_link"/>
         <origin xyz="0 0 0.05" rpy="0 0 0"/>
     </joint>
     <gazebo reference="imu_link">
