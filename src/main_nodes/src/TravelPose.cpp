@@ -13,43 +13,42 @@ int main(int argc,char **argv){
     executor.add_node(node);
     std::thread spin_thread([&executor]() { executor.spin(); });
 
-    MoveGroupInterface arm(node, "arm");
-    arm.setMaxVelocityScalingFactor(0.3);
-    arm.setMaxAccelerationScalingFactor(0.3);
-    arm.setPlanningTime(5.0);
+    node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+      std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+          RCLCPP_INFO(logger, "Travel pose service called");
+          response->success = true;
+          response->message = "Travel pose service called";
+          travel_process();
+          return true;
+      });
 
-    auto plan_and_execute = [&](const std::string & what) {
-      MoveGroupInterface::Plan plan;
-      bool ok = (arm.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS);
-      RCLCPP_INFO(logger, "Plan to [%s]: %s", what.c_str(), ok ? "SUCCESS" : "FAILED");
-      if (ok) {
-        arm.execute(plan);
-      }
-      return ok;
-    };
+    auto travel_process = [&](){
+      MoveGroupInterface arm(node, "arm");
+      arm.setMaxVelocityScalingFactor(0.3);
+      arm.setMaxAccelerationScalingFactor(0.3);
+      arm.setPlanningTime(5.0);
 
-    arm.setJointValueTarget(std::vector<double>{
-        -1.477,    // j1_waist
-        -1.0,   // j2_shoulder  (fold down)
-        2.0,    // j3_elbow
-        -1.477,    // j4_wrist
-        0.0,    // j5_wrist
-        0.0     // j6_wrist
-    });
-    plan_and_execute("travel");
+      auto plan_and_execute = [&](const std::string & what) {
+        MoveGroupInterface::Plan plan;
+        bool ok = (arm.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS);
+        RCLCPP_INFO(logger, "Plan to [%s]: %s", what.c_str(), ok ? "SUCCESS" : "FAILED");
+        if (ok) {
+          arm.execute(plan);
+        }
+        return ok;
+      };
 
-    // geometry_msgs::msg::Pose travel_pose;
-    // travel_pose.position.x = 0.295;
-    // travel_pose.position.y = 0.017;
-    // travel_pose.position.z = 0.017;
-    // tf2::Quaternion q;
-    // q.setRPY(0.000, 1.348, 0.086);
-    // travel_pose.orientation = tf2::toMsg(q);
-    // arm.setPoseTarget(travel_pose);
-    // plan_and_execute("travel pose");
+      arm.setJointValueTarget(std::vector<double>{
+          -1.477,    // j1_waist
+          -1.0,   // j2_shoulder  (fold down)
+          2.0,    // j3_elbow
+          -1.477,    // j4_wrist
+          0.0,    // j5_wrist
+          0.0     // j6_wrist
+      });
+      plan_and_execute("travel");
+    }
 
     rclcpp::shutdown(); spin_thread.join();
-
-
     return 0;
 }

@@ -29,6 +29,14 @@ int main(int argc, char **argv)
 
     int action_count_ = 0;
 
+    node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+        RCLCPP_INFO(logger, "pick service called");
+        response->success = true;
+        response->message = "pick pose service called";
+        run();
+        return true;
+    });
+
     auto search = [&](geometry_msgs::msg::Point & out) -> bool {
         if (!client->wait_for_service(5s)) {
             RCLCPP_ERROR(logger, "get_targets service not available (is VisionNode running?)");
@@ -162,11 +170,13 @@ int main(int argc, char **argv)
         }
     };
 
-    geometry_msgs::msg::Point target;
-    while (rclcpp::ok() && search(target)) {
-        pick(target.x, target.y, target.z);      // pick must take the point (see below)
-        std::this_thread::sleep_for(2s);
-        place();
+    auto run = [&](){
+        geometry_msgs::msg::Point target;
+        while (rclcpp::ok() && search(target)) {
+            pick(target.x, target.y, target.z);      // pick must take the point (see below)
+            std::this_thread::sleep_for(2s);
+            (void)place;
+        }
     }
 
     rclcpp::shutdown();

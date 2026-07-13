@@ -17,6 +17,7 @@ find_package(rclcpp_action REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav2_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
@@ -41,8 +42,8 @@ install(TARGETS TravelPose DESTINATION lib/${PROJECT_NAME})
 
 add_executable(detectionNode src/detectionNode.cpp)
 ament_target_dependencies(detectionNode
-  rclcpp rclcpp_action sensor_msgs geometry_msgs nav2_msgs
-  tf2 tf2_ros tf2_geometry_msgs)
+  rclcpp rclcpp_action sensor_msgs geometry_msgs nav2_msgs std_msgs
+  tf2 tf2_ros tf2_geometry_msgs bin_interfaces)
 install(TARGETS detectionNode DESTINATION lib/${PROJECT_NAME})
 
 add_executable(VisionNode src/VisionNode.cpp)

@@ -30,6 +30,8 @@
 #include "tf2_ros/buffer.h"
 #include "tf2_ros/transform_listener.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include "std_msgs/msg/bool.hpp"
+#include "bin_interfaces/srv/start_search.hpp"
 
 using NavigateToPose = nav2_msgs::action::NavigateToPose;
 using GoalHandle = rclcpp_action::ClientGoalHandle<NavigateToPose>;
@@ -51,6 +53,21 @@ public:
       "scan_objects", 10,
       std::bind(&DetectionNode::onScan, this, std::placeholders::_1));
 
+    lever_ = this->create_service<bin_interfaces::srv::StartSearch>(
+      "start_search",
+      [this](const std::shared_ptr<bin_interfaces::srv::StartSearch::Request> req,
+             std::shared_ptr<bin_interfaces::srv::StartSearch::Response> res) {
+              if(req->start == true){
+                active_ = true;
+                navigating_ = false;  // clear the previous one-shot latch so we can re-search
+                RCLCPP_INFO(get_logger(), "detection_node: search activated");
+                res->success = true;
+              }
+      });
+
+    reached_pub_ = this->create_publisher<std_msgs::msg::Bool>(
+      "/object_reached", rclcpp::QoS(1).transient_local());
+
     RCLCPP_INFO(get_logger(),
       "detection_node up: watching /scan_objects, standoff %.2f m, frame '%s'",
       standoff_, target_frame_.c_str());
@@ -59,6 +76,7 @@ public:
 private:
   void onScan(const sensor_msgs::msg::LaserScan::SharedPtr msg)
   {
+    if (!active_) return;
     if (navigating_) return;  // one goal at a time
 
     // 1) closest detection = smallest finite range
@@ -132,37 +150,60 @@ private:
   void onResult(const GoalHandle::WrappedResult & result)
   {
     switch (result.code) {
-      case rclcpp_action::ResultCode::SUCCEEDED:
+      case rclcpp_action::ResultCode::SUCCEEDED: {
         RCLCPP_INFO(get_logger(), "reached the object -- camera is facing it");
         // stays latched (navigating_ = true) so it doesn't immediately re-drive;
-        // relaunch or add a reset if you want it to pick the next object.
+        // the orchestrator re-arms via start_search (which clears the latch).
+        active_ = false;  // one-shot: stop until re-armed
+        publishReached(true);
         break;
-      case rclcpp_action::ResultCode::ABORTED:
+      }
+      case rclcpp_action::ResultCode::ABORTED: {
         RCLCPP_WARN(get_logger(),
           "Nav2 aborted. Staying COMMITTED to this one goal (one-shot): we do NOT "
           "recompute a fresh goal from the robot's drifted position, which is what "
           "made it approach from a random angle. Restart the node to try again.");
         // navigating_ stays true -> no re-goal, no random re-approach
+        active_ = false;  // one-shot: stop until re-armed
+        publishReached(false);
         break;
-      case rclcpp_action::ResultCode::CANCELED:
+      }
+      case rclcpp_action::ResultCode::CANCELED: {
         RCLCPP_WARN(get_logger(), "Nav2 canceled");
         navigating_ = false;
+        active_ = false;  // one-shot: stop until re-armed
+        publishReached(false);
         break;
-      default:
+      }
+      default: {
         RCLCPP_WARN(get_logger(), "Nav2 returned an unknown result");
         navigating_ = false;
+        active_ = false;  // one-shot: stop until re-armed
+        publishReached(false);
         break;
+      }
     }
+  }
+
+  void publishReached(bool ok)
+  {
+    std_msgs::msg::Bool m;
+    m.data = ok;
+    reached_pub_->publish(m);
   }
 
   double standoff_;
   std::string target_frame_;
   bool navigating_ = false;
+  bool active_ = false; 
 
   rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;
   rclcpp_action::Client<NavigateToPose>::SharedPtr nav_client_;
   std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
   std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+
+  rclcpp::Service<bin_interfaces::srv::StartSearch>::SharedPtr lever_;
+  rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr reached_pub_;
 };
 
 int main(int argc, char ** argv)
