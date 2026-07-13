@@ -45,7 +45,7 @@ public:
     dropoff_y_    = this->declare_parameter("dropoff_y", 0.0);
     dropoff_yaw_  = this->declare_parameter("dropoff_yaw", 0.0);
     target_frame_ = this->declare_parameter("target_frame", std::string("map"));
-    found_timeout_   = std::chrono::seconds(this->declare_parameter("found_timeout_s", 10));
+    found_timeout_   = std::chrono::seconds(this->declare_parameter("found_timeout_s", 30));
     reached_timeout_ = std::chrono::seconds(this->declare_parameter("reached_timeout_s", 180));
     action_timeout_ = std::chrono::seconds(this->declare_parameter("action_timeout_s", 60));
     nav_timeout_    = std::chrono::seconds(this->declare_parameter("nav_timeout_s", 120));

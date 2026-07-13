@@ -915,6 +915,9 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__builder.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__type_support.hpp
  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/start_search.hpp
  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__struct.hpp
  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__builder.hpp

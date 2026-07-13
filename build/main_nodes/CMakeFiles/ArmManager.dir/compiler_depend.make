@@ -758,6 +758,11 @@ CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o: /home/ibrahim/MobiArm/src/main_n
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__type_support.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
@@ -774,7 +779,6 @@ CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o: /home/ibrahim/MobiArm/src/main_n
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/navigate_to_pose.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__struct.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/srv/cancel_goal.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__builder.hpp \
@@ -787,7 +791,6 @@ CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o: /home/ibrahim/MobiArm/src/main_n
   /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__type_support.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__builder.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__traits.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__type_support.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/start_search.hpp \
@@ -828,17 +831,11 @@ CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o: /home/ibrahim/MobiArm/src/main_n
 
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__type_support.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp:
-
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__builder.hpp:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__type_support.hpp:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp:
-
-/opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__struct.hpp:
 
 /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__type_support.hpp:
 
@@ -871,6 +868,16 @@ CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o: /home/ibrahim/MobiArm/src/main_n
 /opt/ros/humble/include/tf2/tf2/LinearMath/Vector3.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:
+
+/opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__struct.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__type_support.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__builder.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -907,6 +914,8 @@ CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o: /home/ibrahim/MobiArm/src/main_n
 /usr/include/linux/limits.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
