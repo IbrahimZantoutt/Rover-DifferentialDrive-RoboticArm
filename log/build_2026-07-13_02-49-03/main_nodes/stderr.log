@@ -1,0 +1,11 @@
+/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp: In lambda function:
+/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp:23:37: error: ‘const SharedPtr’ {aka ‘const class std::shared_ptr<sensor_msgs::msg::CameraInfo_<std::allocator<void> > >’} has no member named ‘fromCameraInfo’
+   23 |                 camera_model_ = msg.fromCameraInfo(msg);
+      |                                     ^~~~~~~~~~~~~~
+/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp: In constructor ‘VisionNode::VisionNode()’:
+/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp:27:13: error: ‘camera_sub_’ was not declared in this scope
+   27 |             camera_sub_ = this->create_subscription<sensor_msgs::msg::Image>("/camera/image_raw", 10 ,std::bind(&VisionNode::image_callback, this, std::placeholders::_1));
+      |             ^~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/VisionNode.dir/build.make:76: CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/VisionNode.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

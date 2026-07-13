@@ -1,0 +1,280 @@
+[0.027s] Invoking command in '/home/ibrahim/MobiArm/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake /home/ibrahim/MobiArm/src/IFRA_LinkAttacher/linkattacher_msgs -DCMAKE_INSTALL_PREFIX=/home/ibrahim/MobiArm/install/linkattacher_msgs
+[0.382s] -- The C compiler identification is GNU 11.4.0
+[1.107s] -- The CXX compiler identification is GNU 11.4.0
+[1.549s] -- Detecting C compiler ABI info
+[1.765s] -- Detecting C compiler ABI info - done
+[1.772s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.772s] -- Detecting C compile features
+[1.772s] -- Detecting C compile features - done
+[1.776s] -- Detecting CXX compiler ABI info
+[1.989s] -- Detecting CXX compiler ABI info - done
+[1.995s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.996s] -- Detecting CXX compile features
+[1.996s] -- Detecting CXX compile features - done
+[2.006s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.201s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.370s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.486s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.494s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.509s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.761s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.051s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.291s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.581s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.763s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[3.767s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[4.276s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[4.276s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.276s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[4.276s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[4.297s] -- Found PythonExtra: .so  
+[4.454s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.458s] -- Added test 'lint_cmake' to check CMake code style
+[4.461s] -- Added test 'xmllint' to check XML markup files
+[4.475s] -- Configuring done
+[4.568s] -- Generating done
+[4.588s] -- Build files have been written to: /home/ibrahim/MobiArm/build/linkattacher_msgs
+[4.602s] Invoked command in '/home/ibrahim/MobiArm/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake /home/ibrahim/MobiArm/src/IFRA_LinkAttacher/linkattacher_msgs -DCMAKE_INSTALL_PREFIX=/home/ibrahim/MobiArm/install/linkattacher_msgs
+[4.603s] Invoking command in '/home/ibrahim/MobiArm/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/linkattacher_msgs -- -j16 -l16
+[4.676s] [  2%] Generating C code for ROS interfaces
+[4.689s] [  5%] Generating Rust code for ROS interfaces
+[4.690s] [  7%] Generating C++ code for ROS interfaces
+[4.705s] [  7%] Built target ament_cmake_python_copy_linkattacher_msgs
+[5.025s] running egg_info
+[5.026s] creating linkattacher_msgs.egg-info
+[5.026s] writing linkattacher_msgs.egg-info/PKG-INFO
+[5.027s] writing dependency_links to linkattacher_msgs.egg-info/dependency_links.txt
+[5.027s] writing top-level names to linkattacher_msgs.egg-info/top_level.txt
+[5.027s] writing manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'
+[5.029s] reading manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'
+[5.030s] writing manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'
+[5.068s] [  7%] Built target ament_cmake_python_build_linkattacher_msgs_egg
+[5.098s] [  7%] Built target linkattacher_msgs__rs
+[5.186s] [  7%] Built target linkattacher_msgs__cpp
+[5.193s] [ 10%] Building C object CMakeFiles/linkattacher_msgs__rosidl_generator_c.dir/rosidl_generator_c/linkattacher_msgs/srv/detail/attach_link__functions.c.o
+[5.194s] [ 12%] Building C object CMakeFiles/linkattacher_msgs__rosidl_generator_c.dir/rosidl_generator_c/linkattacher_msgs/srv/detail/detach_link__functions.c.o
+[5.202s] [ 15%] Generating C++ type support for eProsima Fast-RTPS
+[5.202s] [ 17%] Generating C++ type support dispatch for ROS interfaces
+[5.204s] [ 20%] Generating C++ introspection for ROS interfaces
+[5.288s] [ 22%] Linking C shared library liblinkattacher_msgs__rosidl_generator_c.so
+[5.437s] [ 22%] Built target linkattacher_msgs__rosidl_generator_c
+[5.452s] [ 25%] Generating C type support dispatch for ROS interfaces
+[5.453s] [ 27%] Generating C type support for eProsima Fast-RTPS
+[5.454s] [ 30%] Generating C introspection for ROS interfaces
+[5.584s] [ 32%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/linkattacher_msgs/srv/attach_link__type_support.cpp.o
+[5.585s] [ 35%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/linkattacher_msgs/srv/detach_link__type_support.cpp.o
+[5.600s] [ 37%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/linkattacher_msgs/srv/detail/detach_link__type_support.cpp.o
+[5.601s] [ 40%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/linkattacher_msgs/srv/detail/attach_link__type_support.cpp.o
+[5.616s] [ 45%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/linkattacher_msgs/srv/detail/dds_fastrtps/detach_link__type_support.cpp.o
+[5.616s] [ 45%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/linkattacher_msgs/srv/detail/dds_fastrtps/attach_link__type_support.cpp.o
+[5.870s] [ 47%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/linkattacher_msgs/srv/attach_link__type_support.cpp.o
+[5.872s] [ 50%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/linkattacher_msgs/srv/detach_link__type_support.cpp.o
+[5.903s] [ 55%] Building C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/linkattacher_msgs/srv/detail/attach_link__type_support.c.o
+[5.904s] [ 55%] Building C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/linkattacher_msgs/srv/detail/detach_link__type_support.c.o
+[5.934s] [ 57%] Linking CXX shared library liblinkattacher_msgs__rosidl_typesupport_c.so
+[5.943s] [ 60%] Linking CXX shared library liblinkattacher_msgs__rosidl_typesupport_cpp.so
+[5.952s] [ 62%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/linkattacher_msgs/srv/detail/attach_link__type_support_c.cpp.o
+[5.952s] [ 65%] Building CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/linkattacher_msgs/srv/detail/detach_link__type_support_c.cpp.o
+[5.960s] [ 67%] Linking C shared library liblinkattacher_msgs__rosidl_typesupport_introspection_c.so
+[6.078s] [ 67%] Built target linkattacher_msgs__rosidl_typesupport_c
+[6.078s] [ 67%] Built target linkattacher_msgs__rosidl_typesupport_cpp
+[6.090s] [ 70%] Linking CXX shared library liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so
+[6.102s] [ 70%] Built target linkattacher_msgs__rosidl_typesupport_introspection_c
+[6.132s] [ 72%] Linking CXX shared library liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so
+[6.294s] [ 72%] Built target linkattacher_msgs__rosidl_typesupport_introspection_cpp
+[6.336s] [ 72%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_cpp
+[6.354s] [ 75%] Linking CXX shared library liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so
+[6.557s] [ 75%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_c
+[6.589s] [ 75%] Built target linkattacher_msgs
+[6.617s] [ 77%] Generating Python code for ROS interfaces
+[7.219s] [ 77%] Built target linkattacher_msgs__py
+[7.249s] [ 82%] Building C object CMakeFiles/linkattacher_msgs__rosidl_generator_py.dir/rosidl_generator_py/linkattacher_msgs/srv/_attach_link_s.c.o
+[7.249s] [ 82%] Building C object CMakeFiles/linkattacher_msgs__rosidl_generator_py.dir/rosidl_generator_py/linkattacher_msgs/srv/_detach_link_s.c.o
+[7.385s] [ 85%] Linking C shared library rosidl_generator_py/linkattacher_msgs/liblinkattacher_msgs__rosidl_generator_py.so
+[7.530s] [ 85%] Built target linkattacher_msgs__rosidl_generator_py
+[7.559s] [ 87%] Building C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_c.c.o
+[7.559s] [ 90%] Building C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[7.560s] [ 92%] Building C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[7.668s] [ 95%] Linking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.676s] [ 97%] Linking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.677s] [100%] Linking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.785s] [100%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_c__pyext
+[7.785s] [100%] Built target linkattacher_msgs__rosidl_typesupport_c__pyext
+[7.785s] [100%] Built target linkattacher_msgs__rosidl_typesupport_introspection_c__pyext
+[7.803s] Invoked command in '/home/ibrahim/MobiArm/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/linkattacher_msgs -- -j16 -l16
+[7.805s] Invoking command in '/home/ibrahim/MobiArm/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/linkattacher_msgs
+[7.817s] -- Install configuration: ""
+[7.817s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv
+[7.820s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.srv
+[7.820s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.srv
+[7.822s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/ament_index/resource_index/rosidl_interfaces/linkattacher_msgs
+[7.823s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[7.824s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[7.825s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[7.825s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__struct.h
+[7.825s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.h
+[7.826s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.h
+[7.826s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__functions.h
+[7.826s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__struct.h
+[7.827s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__functions.h
+[7.827s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__functions.c
+[7.827s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__functions.c
+[7.828s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detach_link.h
+[7.828s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/attach_link.h
+[7.828s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[7.829s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_generator_c__visibility_control.h
+[7.829s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/library_path.sh
+[7.829s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/library_path.dsv
+[7.830s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_c.so
+[7.831s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_c.so" to ""
+[7.831s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[7.832s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[7.832s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[7.832s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_fastrtps_c.h
+[7.832s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_fastrtps_c.h
+[7.832s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[7.833s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.833s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so
+[7.833s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[7.834s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[7.834s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[7.834s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[7.834s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_introspection_c.h
+[7.834s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.c
+[7.835s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.c
+[7.835s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_introspection_c.h
+[7.835s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[7.835s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.835s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_c.so
+[7.835s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_c.so" to ""
+[7.835s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_c.so
+[7.836s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_c.so" to ""
+[7.836s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[7.836s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[7.836s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[7.836s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.hpp
+[7.836s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__traits.hpp
+[7.837s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__struct.hpp
+[7.837s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__traits.hpp
+[7.838s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.hpp
+[7.838s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__struct.hpp
+[7.838s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__builder.hpp
+[7.839s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__builder.hpp
+[7.839s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/attach_link.hpp
+[7.840s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detach_link.hpp
+[7.840s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[7.840s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[7.840s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[7.840s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[7.840s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[7.841s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/dds_fastrtps
+[7.841s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_fastrtps_cpp.hpp
+[7.841s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_fastrtps_cpp.hpp
+[7.841s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[7.841s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.841s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so
+[7.842s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.843s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[7.843s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[7.843s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[7.843s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_introspection_cpp.hpp
+[7.843s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.cpp
+[7.843s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.cpp
+[7.844s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_introspection_cpp.hpp
+[7.844s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so
+[7.844s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[7.844s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_cpp.so
+[7.845s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_cpp.so" to ""
+[7.845s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/pythonpath.sh
+[7.846s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/pythonpath.dsv
+[7.846s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info
+[7.848s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[7.848s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[7.849s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[7.849s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[7.849s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs
+[7.850s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.850s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.851s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_c.c
+[7.851s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv
+[7.852s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link.py
+[7.852s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link_s.c
+[7.853s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link.py
+[7.854s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/__init__.py
+[7.854s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link_s.c
+[7.854s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.855s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[7.856s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.856s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/__init__.py
+[7.856s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/liblinkattacher_msgs__rosidl_generator_py.so
+[7.894s] Listing '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs'...
+[7.894s] Compiling '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/__init__.py'...
+[7.894s] Listing '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv'...
+[7.894s] Compiling '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/__init__.py'...
+[7.894s] Compiling '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link.py'...
+[7.895s] Compiling '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link.py'...
+[7.901s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.901s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.902s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.902s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.903s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.904s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.904s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_py.so
+[7.904s] -- Set runtime path of "/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_py.so" to ""
+[7.906s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/ament_index/resource_index/rust_packages/linkattacher_msgs
+[7.906s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust
+[7.906s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/src
+[7.908s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/lib.rs
+[7.908s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv
+[7.909s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv/rmw.rs
+[7.909s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv.rs
+[7.909s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/build.rs
+[7.910s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/rust/Cargo.toml
+[7.910s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.idl
+[7.911s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.idl
+[7.911s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.srv
+[7.912s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink_Request.msg
+[7.912s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink_Response.msg
+[7.912s] -- Up-to-date: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.srv
+[7.912s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink_Request.msg
+[7.913s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink_Response.msg
+[7.914s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/ament_index/resource_index/package_run_dependencies/linkattacher_msgs
+[7.915s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/ament_index/resource_index/parent_prefix_path/linkattacher_msgs
+[7.915s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/ament_prefix_path.sh
+[7.915s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/ament_prefix_path.dsv
+[7.916s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/path.sh
+[7.916s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/environment/path.dsv
+[7.916s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.bash
+[7.917s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.sh
+[7.918s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.zsh
+[7.919s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.dsv
+[7.919s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.dsv
+[7.920s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/ament_index/resource_index/packages/linkattacher_msgs
+[7.921s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cExport.cmake
+[7.921s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cExport-noconfig.cmake
+[7.922s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[7.923s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.923s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cExport.cmake
+[7.923s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.924s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cExport.cmake
+[7.924s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[7.924s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cppExport.cmake
+[7.925s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.925s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.925s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[7.926s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.926s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cppExport.cmake
+[7.926s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[7.927s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_pyExport.cmake
+[7.927s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_pyExport-noconfig.cmake
+[7.927s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake-extras.cmake
+[7.928s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.928s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[7.929s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[7.929s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.929s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.930s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.930s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgsConfig.cmake
+[7.930s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgsConfig-version.cmake
+[7.931s] -- Installing: /home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.xml
+[7.934s] Invoked command in '/home/ibrahim/MobiArm/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/linkattacher_msgs

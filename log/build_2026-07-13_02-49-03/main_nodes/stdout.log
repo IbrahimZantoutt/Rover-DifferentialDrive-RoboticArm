@@ -1,0 +1,5 @@
+Consolidate compiler generated dependencies of target VisionNode
+[ 25%] Built target RunNode
+[ 75%] Built target detectionNode
+[ 75%] Built target TravelPose
+[ 87%] Building CXX object CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o

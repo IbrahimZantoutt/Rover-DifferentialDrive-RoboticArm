@@ -34,6 +34,11 @@
       </ode>
     </physics>
 
+    <!-- LinkAttacher: serves /ATTACHLINK and /DETACHLINK so ArmPickup can rigidly
+         weld the gripper to a cube on grasp and release it on place (simulated
+         grasp, no real friction closure). Provided by the ros2_linkattacher pkg. -->
+    <plugin name="gazebo_link_attacher" filename="libgazebo_link_attacher.so"/>
+
 
     <!-- ================= Simple table =================
          Static model at x=1.0 (1 m in front of the robot). One link with a

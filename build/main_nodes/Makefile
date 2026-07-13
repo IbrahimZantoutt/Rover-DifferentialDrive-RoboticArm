@@ -236,6 +236,56 @@ detectionNode/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detectionNode.dir/build.make CMakeFiles/detectionNode.dir/build
 .PHONY : detectionNode/fast
 
+#=============================================================================
+# Target rules for targets named VisionNode
+
+# Build rule for target.
+VisionNode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 VisionNode
+.PHONY : VisionNode
+
+# fast build rule for target.
+VisionNode/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionNode.dir/build.make CMakeFiles/VisionNode.dir/build
+.PHONY : VisionNode/fast
+
+#=============================================================================
+# Target rules for targets named ArmPickup
+
+# Build rule for target.
+ArmPickup: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ArmPickup
+.PHONY : ArmPickup
+
+# fast build rule for target.
+ArmPickup/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPickup.dir/build.make CMakeFiles/ArmPickup.dir/build
+.PHONY : ArmPickup/fast
+
+src/ArmPickup.o: src/ArmPickup.cpp.o
+.PHONY : src/ArmPickup.o
+
+# target to build an object file
+src/ArmPickup.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPickup.dir/build.make CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o
+.PHONY : src/ArmPickup.cpp.o
+
+src/ArmPickup.i: src/ArmPickup.cpp.i
+.PHONY : src/ArmPickup.i
+
+# target to preprocess a source file
+src/ArmPickup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPickup.dir/build.make CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.i
+.PHONY : src/ArmPickup.cpp.i
+
+src/ArmPickup.s: src/ArmPickup.cpp.s
+.PHONY : src/ArmPickup.s
+
+# target to generate assembly for a file
+src/ArmPickup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPickup.dir/build.make CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.s
+.PHONY : src/ArmPickup.cpp.s
+
 src/RunNode.o: src/RunNode.cpp.o
 .PHONY : src/RunNode.o
 
@@ -284,6 +334,30 @@ src/TravelPose.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TravelPose.dir/build.make CMakeFiles/TravelPose.dir/src/TravelPose.cpp.s
 .PHONY : src/TravelPose.cpp.s
 
+src/VisionNode.o: src/VisionNode.cpp.o
+.PHONY : src/VisionNode.o
+
+# target to build an object file
+src/VisionNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionNode.dir/build.make CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o
+.PHONY : src/VisionNode.cpp.o
+
+src/VisionNode.i: src/VisionNode.cpp.i
+.PHONY : src/VisionNode.i
+
+# target to preprocess a source file
+src/VisionNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionNode.dir/build.make CMakeFiles/VisionNode.dir/src/VisionNode.cpp.i
+.PHONY : src/VisionNode.cpp.i
+
+src/VisionNode.s: src/VisionNode.cpp.s
+.PHONY : src/VisionNode.s
+
+# target to generate assembly for a file
+src/VisionNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionNode.dir/build.make CMakeFiles/VisionNode.dir/src/VisionNode.cpp.s
+.PHONY : src/VisionNode.cpp.s
+
 src/detectionNode.o: src/detectionNode.cpp.o
 .PHONY : src/detectionNode.o
 
@@ -323,15 +397,23 @@ help:
 	@echo "... test"
 	@echo "... main_nodes_uninstall"
 	@echo "... uninstall"
+	@echo "... ArmPickup"
 	@echo "... RunNode"
 	@echo "... TravelPose"
+	@echo "... VisionNode"
 	@echo "... detectionNode"
+	@echo "... src/ArmPickup.o"
+	@echo "... src/ArmPickup.i"
+	@echo "... src/ArmPickup.s"
 	@echo "... src/RunNode.o"
 	@echo "... src/RunNode.i"
 	@echo "... src/RunNode.s"
 	@echo "... src/TravelPose.o"
 	@echo "... src/TravelPose.i"
 	@echo "... src/TravelPose.s"
+	@echo "... src/VisionNode.o"
+	@echo "... src/VisionNode.i"
+	@echo "... src/VisionNode.s"
 	@echo "... src/detectionNode.o"
 	@echo "... src/detectionNode.i"
 	@echo "... src/detectionNode.s"

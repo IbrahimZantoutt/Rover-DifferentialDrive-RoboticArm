@@ -1,0 +1,59 @@
+[0.097s] Invoking command in '/home/ibrahim/MobiArm/build/main_nodes': AMENT_PREFIX_PATH=/home/ibrahim/MobiArm/install/bin_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/bin_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ibrahim/MobiArm/install/bin_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
+[0.127s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.239s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.245s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.382s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.384s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.389s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.396s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.406s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.428s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.430s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.443s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.481s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[0.492s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[0.606s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.427s] -- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.432s] -- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.446s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[2.783s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[2.802s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[4.059s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[4.077s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[4.100s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[4.120s] -- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)
+[4.146s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[4.154s] -- Found image_geometry: 3.2.1 (/opt/ros/humble/share/image_geometry/cmake)
+[4.155s] -- Found bin_interfaces: 0.0.0 (/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/cmake)
+[4.172s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.237s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.237s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/MobiArm/src/main_nodes/include>
+[4.237s] -- Configured cppcheck exclude dirs and/or files: 
+[4.238s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.239s] -- Added test 'lint_cmake' to check CMake code style
+[4.239s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.241s] -- Added test 'uncrustify' to check C / C++ code style
+[4.241s] -- Configured uncrustify additional arguments: 
+[4.241s] -- Added test 'xmllint' to check XML markup files
+[4.243s] -- Configuring done
+[4.316s] -- Generating done
+[4.330s] -- Build files have been written to: /home/ibrahim/MobiArm/build/main_nodes
+[4.367s] [35m[1mConsolidate compiler generated dependencies of target RunNode[0m
+[4.369s] [35m[1mConsolidate compiler generated dependencies of target detectionNode[0m
+[4.369s] [35m[1mConsolidate compiler generated dependencies of target TravelPose[0m
+[4.381s] [ 12%] [32mBuilding CXX object CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o[0m
+[4.384s] [ 37%] Built target RunNode
+[4.397s] [ 62%] Built target detectionNode
+[4.405s] [ 87%] Built target TravelPose
+[8.062s] [01m[K/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp:[m[K In lambda function:
+[8.062s] [01m[K/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp:23:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sensor_msgs::msg::CameraInfo_<std::allocator<void> > >[m[K’} has no member named ‘[01m[KfromCameraInfo[m[K’
+[8.063s]    23 |                 camera_model_ = msg.[01;31m[KfromCameraInfo[m[K(msg);
+[8.063s]       |                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[8.103s] [01m[K/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp:[m[K In constructor ‘[01m[KVisionNode::VisionNode()[m[K’:
+[8.104s] [01m[K/home/ibrahim/MobiArm/src/main_nodes/src/VisionNode.cpp:27:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_sub_[m[K’ was not declared in this scope
+[8.104s]    27 |             [01;31m[Kcamera_sub_[m[K = this->create_subscription<sensor_msgs::msg::Image>("/camera/image_raw", 10 ,std::bind(&VisionNode::image_callback, this, std::placeholders::_1));
+[8.104s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[12.436s] gmake[2]: *** [CMakeFiles/VisionNode.dir/build.make:76: CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o] Error 1
+[12.436s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/VisionNode.dir/all] Error 2
+[12.436s] gmake: *** [Makefile:146: all] Error 2
+[12.439s] Invoked command in '/home/ibrahim/MobiArm/build/main_nodes' returned '2': AMENT_PREFIX_PATH=/home/ibrahim/MobiArm/install/bin_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/bin_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ibrahim/MobiArm/install/bin_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
