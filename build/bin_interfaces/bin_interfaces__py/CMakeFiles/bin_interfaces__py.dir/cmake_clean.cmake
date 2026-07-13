@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/bin_interfaces/srv/__init__.py"
   "../rosidl_generator_py/bin_interfaces/srv/_get_targets.py"
   "../rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c"
+  "../rosidl_generator_py/bin_interfaces/srv/_start_search.py"
+  "../rosidl_generator_py/bin_interfaces/srv/_start_search_s.c"
   "CMakeFiles/bin_interfaces__py"
 )
 

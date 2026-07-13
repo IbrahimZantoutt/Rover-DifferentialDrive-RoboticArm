@@ -85,7 +85,9 @@ rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosidl
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosidl_generator_rs/resource/templates/srv_idiomatic.rs.em
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: rosidl_adapter/bin_interfaces/srv/GetTargets.idl
+rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: rosidl_adapter/bin_interfaces/srv/StartSearch.idl
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: rosidl_adapter/bin_interfaces/srv/GetTargets.idl
+rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: rosidl_adapter/bin_interfaces/srv/StartSearch.idl
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_rs/bin_interfaces/rust/src/lib.rs: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

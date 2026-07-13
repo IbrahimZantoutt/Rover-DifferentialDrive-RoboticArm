@@ -78,6 +78,7 @@ rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targe
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: rosidl_adapter/bin_interfaces/srv/GetTargets.idl
+rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: rosidl_adapter/bin_interfaces/srv/StartSearch.idl
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -146,6 +147,12 @@ rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targe
 rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/get_targets__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/get_targets__rosidl_typesupport_fastrtps_cpp.hpp
 
+rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp
+
+rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/start_search__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/start_search__rosidl_typesupport_fastrtps_cpp.hpp
+
 CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.o: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/flags.make
 CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp
 CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.o: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/compiler_depend.ts
@@ -160,14 +167,30 @@ CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp -o CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.s
 
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/flags.make
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o -MF CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o.d -o CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o -c /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp
+
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp > CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.i
+
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp -o CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.s
+
 # Object files for target bin_interfaces__rosidl_typesupport_fastrtps_cpp
 bin_interfaces__rosidl_typesupport_fastrtps_cpp_OBJECTS = \
-"CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.o"
+"CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.o" \
+"CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o"
 
 # External object files for target bin_interfaces__rosidl_typesupport_fastrtps_cpp
 bin_interfaces__rosidl_typesupport_fastrtps_cpp_EXTERNAL_OBJECTS =
 
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp.o
+libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp.o
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -178,7 +201,7 @@ libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/librm
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/librcutils.so
 libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libbin_interfaces__rosidl_typesupport_fastrtps_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -190,7 +213,9 @@ CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean:
 .PHONY : CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/clean
 
 CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/get_targets__type_support.cpp
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/dds_fastrtps/start_search__type_support.cpp
 CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/get_targets__rosidl_typesupport_fastrtps_cpp.hpp
+CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/bin_interfaces/srv/detail/start_search__rosidl_typesupport_fastrtps_cpp.hpp
 	cd /home/ibrahim/MobiArm/build/bin_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/MobiArm/src/bin_interfaces /home/ibrahim/MobiArm/src/bin_interfaces /home/ibrahim/MobiArm/build/bin_interfaces /home/ibrahim/MobiArm/build/bin_interfaces /home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bin_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend
 

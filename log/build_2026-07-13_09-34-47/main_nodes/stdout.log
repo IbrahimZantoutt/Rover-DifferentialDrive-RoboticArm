@@ -1,0 +1,9 @@
+Consolidate compiler generated dependencies of target VisionNode
+Consolidate compiler generated dependencies of target detectionNode
+[ 20%] Built target RunNode
+Consolidate compiler generated dependencies of target TravelPose
+Consolidate compiler generated dependencies of target ArmPickup
+[ 60%] Built target VisionNode
+[ 60%] Built target detectionNode
+[ 70%] Building CXX object CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o
+[ 80%] Building CXX object CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o

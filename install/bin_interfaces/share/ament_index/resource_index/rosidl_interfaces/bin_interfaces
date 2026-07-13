@@ -2,3 +2,7 @@ srv/GetTargets.idl
 srv/GetTargets.srv
 srv/GetTargets_Request.msg
 srv/GetTargets_Response.msg
+srv/StartSearch.idl
+srv/StartSearch.srv
+srv/StartSearch_Request.msg
+srv/StartSearch_Response.msg

@@ -1,0 +1,382 @@
+[0.000000] (-) TimerEvent: {}
+[0.000349] (-) JobUnselected: {'identifier': 'bin_interfaces'}
+[0.000386] (-) JobUnselected: {'identifier': 'linkattacher_msgs'}
+[0.000402] (-) JobUnselected: {'identifier': 'moveit_config'}
+[0.000572] (-) JobUnselected: {'identifier': 'ros2_linkattacher'}
+[0.000730] (main_nodes) JobQueued: {'identifier': 'main_nodes', 'dependencies': OrderedDict([('bin_interfaces', '/home/ibrahim/MobiArm/install/bin_interfaces'), ('linkattacher_msgs', '/home/ibrahim/MobiArm/install/linkattacher_msgs')])}
+[0.000836] (main_nodes) JobStarted: {'identifier': 'main_nodes'}
+[0.099497] (-) TimerEvent: {}
+[0.160113] (main_nodes) JobProgress: {'identifier': 'main_nodes', 'progress': 'cmake'}
+[0.161315] (main_nodes) JobProgress: {'identifier': 'main_nodes', 'progress': 'build'}
+[0.161989] (main_nodes) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ibrahim/MobiArm/build/main_nodes', '--', '-j16', '-l16'], 'cwd': '/home/ibrahim/MobiArm/build/main_nodes', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('AI_AGENT', 'claude-code_2-1-207_agent'), ('USER', 'ibrahim'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/out/nls.messages.json","locale":"en","availableLanguages":{}}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/zanto/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.3.207'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ibrahim'), ('OLDPWD', '/home/ibrahim/MobiArm'), ('VSCODE_RECONNECTION_GRACE_TIME', '10800000'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-4cf3d1d6-368d-4e99-a9c2-8a4fb43072e3.sock'), ('ROS_PYTHON_VERSION', '3'), ('CLAUDE_CODE_CHILD_SESSION', '1'), ('COPILOT_OTEL_FILE_EXPORTER_PATH', '/dev/null'), ('MAKEFLAGS', '-k'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', ''), ('COLCON_PREFIX_PATH', '/home/ibrahim/MobiArm/install:/home/ibrahim/MoveItArm/install:/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/411_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('MCP_CONNECTION_NONBLOCKING', 'true'), ('PATH', '/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('CLAUDE_EFFORT', 'xhigh'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('MXC_BIN_DIR', '/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/node_modules/@microsoft/mxc-sdk/bin'), ('ELECTRON_RUN_AS_NODE', '1'), ('CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING', 'true'), ('CLAUDE_CODE_SESSION_ID', 'c7bf4787-1951-4957-9952-9128ce6f81ea'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/ibrahim/MobiArm/build/main_nodes'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/ibrahim/.vscode-server/extensions/anthropic.claude-code-2.1.207-linux-x64/resources/native-binary/claude'), ('PYTHONPATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/home/ibrahim/MobiArm/install/bin_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/MobiArm/install/bin_interface/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CLAUDE_CODE_ENABLE_TASKS', '0'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('COPILOT_CLI_ENABLED_FEATURE_FLAGS', 'SHELL_SPAWN_BACKEND'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.199682] (-) TimerEvent: {}
+[0.300051] (-) TimerEvent: {}
+[0.329218] (main_nodes) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400125] (-) TimerEvent: {}
+[0.441572] (main_nodes) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.451065] (main_nodes) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.500219] (-) TimerEvent: {}
+[0.579214] (main_nodes) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.580547] (main_nodes) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.584672] (main_nodes) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.591019] (main_nodes) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.598670] (main_nodes) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600268] (-) TimerEvent: {}
+[0.641717] (main_nodes) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.645583] (main_nodes) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.676903] (main_nodes) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.700433] (-) TimerEvent: {}
+[0.730817] (main_nodes) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)\n'}
+[0.746384] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread \n'}
+[0.800544] (-) TimerEvent: {}
+[0.900817] (-) TimerEvent: {}
+[0.914536] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[1.001000] (-) TimerEvent: {}
+[1.101297] (-) TimerEvent: {}
+[1.201617] (-) TimerEvent: {}
+[1.301929] (-) TimerEvent: {}
+[1.402181] (-) TimerEvent: {}
+[1.502480] (-) TimerEvent: {}
+[1.602912] (-) TimerEvent: {}
+[1.671558] (main_nodes) StdoutLine: {'line': b'-- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[1.682176] (main_nodes) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[1.702994] (-) TimerEvent: {}
+[1.708484] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[1.803173] (-) TimerEvent: {}
+[1.903416] (-) TimerEvent: {}
+[2.003651] (-) TimerEvent: {}
+[2.103888] (-) TimerEvent: {}
+[2.204146] (-) TimerEvent: {}
+[2.304372] (-) TimerEvent: {}
+[2.404546] (-) TimerEvent: {}
+[2.504773] (-) TimerEvent: {}
+[2.604978] (-) TimerEvent: {}
+[2.705164] (-) TimerEvent: {}
+[2.805381] (-) TimerEvent: {}
+[2.903594] (main_nodes) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[2.905431] (-) TimerEvent: {}
+[2.931973] (main_nodes) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[3.005629] (-) TimerEvent: {}
+[3.105891] (-) TimerEvent: {}
+[3.206125] (-) TimerEvent: {}
+[3.306329] (-) TimerEvent: {}
+[3.406536] (-) TimerEvent: {}
+[3.506753] (-) TimerEvent: {}
+[3.606962] (-) TimerEvent: {}
+[3.707229] (-) TimerEvent: {}
+[3.807531] (-) TimerEvent: {}
+[3.907742] (-) TimerEvent: {}
+[4.007944] (-) TimerEvent: {}
+[4.108180] (-) TimerEvent: {}
+[4.161643] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[4.187141] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options \n'}
+[4.208286] (-) TimerEvent: {}
+[4.214351] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread \n'}
+[4.245120] (main_nodes) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)\n'}
+[4.289360] (main_nodes) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[4.303663] (main_nodes) StdoutLine: {'line': b'-- Found image_geometry: 3.2.1 (/opt/ros/humble/share/image_geometry/cmake)\n'}
+[4.306206] (main_nodes) StdoutLine: {'line': b'-- Found bin_interfaces: 0.0.0 (/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/cmake)\n'}
+[4.308317] (-) TimerEvent: {}
+[4.315544] (main_nodes) StdoutLine: {'line': b'-- Found linkattacher_msgs: 0.0.0 (/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake)\n'}
+[4.338247] (main_nodes) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.402706] (main_nodes) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.403079] (main_nodes) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/MobiArm/src/main_nodes/include>\n'}
+[4.403145] (main_nodes) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.403422] (main_nodes) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[4.404008] (main_nodes) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.404356] (main_nodes) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[4.406163] (main_nodes) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.406282] (main_nodes) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.406562] (main_nodes) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.408360] (-) TimerEvent: {}
+[4.408529] (main_nodes) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.497006] (main_nodes) StdoutLine: {'line': b'-- Generating done\n'}
+[4.508500] (-) TimerEvent: {}
+[4.511794] (main_nodes) StdoutLine: {'line': b'-- Build files have been written to: /home/ibrahim/MobiArm/build/main_nodes\n'}
+[4.553137] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target RunNode\n'}
+[4.559670] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target VisionNode\n'}
+[4.559971] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target detectionNode\n'}
+[4.561792] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target ArmPickup\n'}
+[4.562191] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target TravelPose\n'}
+[4.567636] (main_nodes) StdoutLine: {'line': b'[ 20%] Built target RunNode\n'}
+[4.608607] (-) TimerEvent: {}
+[4.619730] (main_nodes) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o\n'}
+[4.619958] (main_nodes) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o\n'}
+[4.633502] (main_nodes) StdoutLine: {'line': b'[ 60%] Building CXX object CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o\n'}
+[4.633673] (main_nodes) StdoutLine: {'line': b'[ 60%] Building CXX object CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o\n'}
+[4.708737] (-) TimerEvent: {}
+[4.808995] (-) TimerEvent: {}
+[4.909249] (-) TimerEvent: {}
+[5.009468] (-) TimerEvent: {}
+[5.109683] (-) TimerEvent: {}
+[5.209980] (-) TimerEvent: {}
+[5.310236] (-) TimerEvent: {}
+[5.410457] (-) TimerEvent: {}
+[5.510729] (-) TimerEvent: {}
+[5.611026] (-) TimerEvent: {}
+[5.711278] (-) TimerEvent: {}
+[5.811509] (-) TimerEvent: {}
+[5.911735] (-) TimerEvent: {}
+[6.011962] (-) TimerEvent: {}
+[6.112180] (-) TimerEvent: {}
+[6.212425] (-) TimerEvent: {}
+[6.312670] (-) TimerEvent: {}
+[6.412937] (-) TimerEvent: {}
+[6.513159] (-) TimerEvent: {}
+[6.613421] (-) TimerEvent: {}
+[6.713704] (-) TimerEvent: {}
+[6.814019] (-) TimerEvent: {}
+[6.914275] (-) TimerEvent: {}
+[7.014541] (-) TimerEvent: {}
+[7.114773] (-) TimerEvent: {}
+[7.215047] (-) TimerEvent: {}
+[7.315329] (-) TimerEvent: {}
+[7.415615] (-) TimerEvent: {}
+[7.515870] (-) TimerEvent: {}
+[7.616139] (-) TimerEvent: {}
+[7.716386] (-) TimerEvent: {}
+[7.816628] (-) TimerEvent: {}
+[7.916876] (-) TimerEvent: {}
+[8.017080] (-) TimerEvent: {}
+[8.117271] (-) TimerEvent: {}
+[8.217574] (-) TimerEvent: {}
+[8.317875] (-) TimerEvent: {}
+[8.418144] (-) TimerEvent: {}
+[8.518424] (-) TimerEvent: {}
+[8.618724] (-) TimerEvent: {}
+[8.719017] (-) TimerEvent: {}
+[8.819325] (-) TimerEvent: {}
+[8.919658] (-) TimerEvent: {}
+[9.019945] (-) TimerEvent: {}
+[9.120233] (-) TimerEvent: {}
+[9.220450] (-) TimerEvent: {}
+[9.320722] (-) TimerEvent: {}
+[9.420954] (-) TimerEvent: {}
+[9.465046] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp: In function \xe2\x80\x98int main(int, char**)\xe2\x80\x99:\n'}
+[9.465346] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:26: error: \xe2\x80\x98std_srvs\xe2\x80\x99 was not declared in this scope\n'}
+[9.465814] (main_nodes) StderrLine: {'line': b'   16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,\n'}
+[9.465879] (main_nodes) StderrLine: {'line': b'      |                          ^~~~~~~~\n'}
+[9.465923] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:11: error: parse error in template argument list\n'}
+[9.465963] (main_nodes) StderrLine: {'line': b'   16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,\n'}
+[9.466010] (main_nodes) StderrLine: {'line': b'      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.466048] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp: In lambda function:\n'}
+[9.466085] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:19:19: error: base operand of \xe2\x80\x98->\xe2\x80\x99 is not a pointer\n'}
+[9.466123] (main_nodes) StderrLine: {'line': b'   19 |           response->success = true;\n'}
+[9.466160] (main_nodes) StderrLine: {'line': b'      |                   ^~\n'}
+[9.466196] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:20:19: error: base operand of \xe2\x80\x98->\xe2\x80\x99 is not a pointer\n'}
+[9.466232] (main_nodes) StderrLine: {'line': b'   20 |           response->message = "Travel pose service called";\n'}
+[9.466272] (main_nodes) StderrLine: {'line': b'      |                   ^~\n'}
+[9.475479] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:21:11: error: \xe2\x80\x98travel_process\xe2\x80\x99 was not declared in this scope\n'}
+[9.475897] (main_nodes) StderrLine: {'line': b'   21 |           travel_process();\n'}
+[9.475998] (main_nodes) StderrLine: {'line': b'      |           ^~~~~~~~~~~~~~\n'}
+[9.476056] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:124: warning: unused parameter \xe2\x80\x98request\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.476151] (main_nodes) StderrLine: {'line': b'   16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,\n'}
+[9.476208] (main_nodes) StderrLine: {'line': b'      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\n'}
+[9.476285] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp: In function \xe2\x80\x98int main(int, char**)\xe2\x80\x99:\n'}
+[9.476368] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:49: error: no matching function for call to \xe2\x80\x98rclcpp::Node::create_service<<expression error> >(const char [12], main(int, char**)::<lambda(int, int)>)\xe2\x80\x99\n'}
+[9.476410] (main_nodes) StderrLine: {'line': b'   16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,\n'}
+[9.476450] (main_nodes) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.476511] (main_nodes) StderrLine: {'line': b'   17 |       std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.476557] (main_nodes) StderrLine: {'line': b'      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.476599] (main_nodes) StderrLine: {'line': b'   18 |           RCLCPP_INFO(logger, "Travel pose service called");\n'}
+[9.476636] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.476671] (main_nodes) StderrLine: {'line': b'   19 |           response->success = true;\n'}
+[9.476711] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~~~~~~~~~              \n'}
+[9.476753] (main_nodes) StderrLine: {'line': b'   20 |           response->message = "Travel pose service called";\n'}
+[9.476794] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.476833] (main_nodes) StderrLine: {'line': b'   21 |           travel_process();\n'}
+[9.476870] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~                      \n'}
+[9.477205] (main_nodes) StderrLine: {'line': b'   22 |           return true;\n'}
+[9.477259] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~                           \n'}
+[9.477301] (main_nodes) StderrLine: {'line': b'   23 |       });\n'}
+[9.477332] (main_nodes) StderrLine: {'line': b'      |       ~~                                         \n'}
+[9.477360] (main_nodes) StderrLine: {'line': b'In file included from /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28,\n'}
+[9.477390] (main_nodes) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22,\n'}
+[9.477420] (main_nodes) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,\n'}
+[9.477450] (main_nodes) StderrLine: {'line': b'                 from /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:1:\n'}
+[9.477489] (main_nodes) StderrLine: {'line': b'/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note: candidate: \xe2\x80\x98template<class ServiceT, class CallbackT> typename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::create_service(const string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr)\xe2\x80\x99\n'}
+[9.477540] (main_nodes) StderrLine: {'line': b'  267 |   create_service(\n'}
+[9.477577] (main_nodes) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~\n'}
+[9.477609] (main_nodes) StderrLine: {'line': b'/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note:   template argument deduction/substitution failed:\n'}
+[9.477645] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:49: error: template argument 1 is invalid\n'}
+[9.477676] (main_nodes) StderrLine: {'line': b'   16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,\n'}
+[9.477710] (main_nodes) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.477738] (main_nodes) StderrLine: {'line': b'   17 |       std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.477764] (main_nodes) StderrLine: {'line': b'      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.477790] (main_nodes) StderrLine: {'line': b'   18 |           RCLCPP_INFO(logger, "Travel pose service called");\n'}
+[9.477815] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.477841] (main_nodes) StderrLine: {'line': b'   19 |           response->success = true;\n'}
+[9.477870] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~~~~~~~~~              \n'}
+[9.477895] (main_nodes) StderrLine: {'line': b'   20 |           response->message = "Travel pose service called";\n'}
+[9.477920] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.477945] (main_nodes) StderrLine: {'line': b'   21 |           travel_process();\n'}
+[9.477969] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~~~~~~                      \n'}
+[9.477998] (main_nodes) StderrLine: {'line': b'   22 |           return true;\n'}
+[9.478024] (main_nodes) StderrLine: {'line': b'      |           ~~~~~~~~~~~~                           \n'}
+[9.478053] (main_nodes) StderrLine: {'line': b'   23 |       });\n'}
+[9.478081] (main_nodes) StderrLine: {'line': b'      |       ~~                                         \n'}
+[9.478107] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:52:5: error: expected \xe2\x80\x98,\xe2\x80\x99 or \xe2\x80\x98;\xe2\x80\x99 before \xe2\x80\x98rclcpp\xe2\x80\x99\n'}
+[9.478134] (main_nodes) StderrLine: {'line': b'   52 |     rclcpp::shutdown(); spin_thread.join();\n'}
+[9.478161] (main_nodes) StderrLine: {'line': b'      |     ^~~~~~\n'}
+[9.521123] (-) TimerEvent: {}
+[9.556993] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In function \xe2\x80\x98int main(int, char**)\xe2\x80\x99:\n'}
+[9.557612] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:26: error: \xe2\x80\x98std_srvs\xe2\x80\x99 was not declared in this scope\n'}
+[9.557771] (main_nodes) StderrLine: {'line': b'   32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.557865] (main_nodes) StderrLine: {'line': b'      |                          ^~~~~~~~\n'}
+[9.557914] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:11: error: parse error in template argument list\n'}
+[9.557946] (main_nodes) StderrLine: {'line': b'   32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.557974] (main_nodes) StderrLine: {'line': b'      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.557999] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In lambda function:\n'}
+[9.558024] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:34:17: error: base operand of \xe2\x80\x98->\xe2\x80\x99 is not a pointer\n'}
+[9.558050] (main_nodes) StderrLine: {'line': b'   34 |         response->success = true;\n'}
+[9.558075] (main_nodes) StderrLine: {'line': b'      |                 ^~\n'}
+[9.558100] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:35:17: error: base operand of \xe2\x80\x98->\xe2\x80\x99 is not a pointer\n'}
+[9.558125] (main_nodes) StderrLine: {'line': b'   35 |         response->message = "pick pose service called";\n'}
+[9.558149] (main_nodes) StderrLine: {'line': b'      |                 ^~\n'}
+[9.563190] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:36:9: error: \xe2\x80\x98run\xe2\x80\x99 was not declared in this scope\n'}
+[9.563384] (main_nodes) StderrLine: {'line': b'   36 |         run();\n'}
+[9.563458] (main_nodes) StderrLine: {'line': b'      |         ^~~\n'}
+[9.563526] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:119: warning: unused parameter \xe2\x80\x98req\xe2\x80\x99 [-Wunused-parameter]\n'}
+[9.563574] (main_nodes) StderrLine: {'line': b'   32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.563673] (main_nodes) StderrLine: {'line': b'      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\n'}
+[9.563711] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In function \xe2\x80\x98int main(int, char**)\xe2\x80\x99:\n'}
+[9.563742] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:49: error: no matching function for call to \xe2\x80\x98rclcpp::Node::create_service<<expression error> >(const char [7], main(int, char**)::<lambda(int, int)>)\xe2\x80\x99\n'}
+[9.563772] (main_nodes) StderrLine: {'line': b'   32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.563799] (main_nodes) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.563825] (main_nodes) StderrLine: {'line': b'   33 |         RCLCPP_INFO(logger, "pick service called");\n'}
+[9.563850] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.563875] (main_nodes) StderrLine: {'line': b'   34 |         response->success = true;\n'}
+[9.563900] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~~                \n'}
+[9.563943] (main_nodes) StderrLine: {'line': b'   35 |         response->message = "pick pose service called";\n'}
+[9.563968] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.563992] (main_nodes) StderrLine: {'line': b'   36 |         run();\n'}
+[9.564020] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~                                   \n'}
+[9.564044] (main_nodes) StderrLine: {'line': b'   37 |         return true;\n'}
+[9.564067] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~                             \n'}
+[9.564094] (main_nodes) StderrLine: {'line': b'   38 |     });\n'}
+[9.564123] (main_nodes) StderrLine: {'line': b'      |     ~~                                           \n'}
+[9.564150] (main_nodes) StderrLine: {'line': b'In file included from /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28,\n'}
+[9.564176] (main_nodes) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22,\n'}
+[9.564201] (main_nodes) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,\n'}
+[9.564225] (main_nodes) StderrLine: {'line': b'                 from /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:1:\n'}
+[9.564249] (main_nodes) StderrLine: {'line': b'/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note: candidate: \xe2\x80\x98template<class ServiceT, class CallbackT> typename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::create_service(const string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr)\xe2\x80\x99\n'}
+[9.564278] (main_nodes) StderrLine: {'line': b'  267 |   create_service(\n'}
+[9.564307] (main_nodes) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~\n'}
+[9.564332] (main_nodes) StderrLine: {'line': b'/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note:   template argument deduction/substitution failed:\n'}
+[9.564356] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:49: error: template argument 1 is invalid\n'}
+[9.564381] (main_nodes) StderrLine: {'line': b'   32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){\n'}
+[9.564406] (main_nodes) StderrLine: {'line': b'      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.564431] (main_nodes) StderrLine: {'line': b'   33 |         RCLCPP_INFO(logger, "pick service called");\n'}
+[9.564455] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.564479] (main_nodes) StderrLine: {'line': b'   34 |         response->success = true;\n'}
+[9.564503] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~~                \n'}
+[9.564527] (main_nodes) StderrLine: {'line': b'   35 |         response->message = "pick pose service called";\n'}
+[9.564551] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[9.564575] (main_nodes) StderrLine: {'line': b'   36 |         run();\n'}
+[9.564600] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~                                   \n'}
+[9.564624] (main_nodes) StderrLine: {'line': b'   37 |         return true;\n'}
+[9.564649] (main_nodes) StderrLine: {'line': b'      |         ~~~~~~~~~~~~                             \n'}
+[9.564673] (main_nodes) StderrLine: {'line': b'   38 |     });\n'}
+[9.564697] (main_nodes) StderrLine: {'line': b'      |     ~~                                           \n'}
+[9.621270] (-) TimerEvent: {}
+[9.693629] (main_nodes) StderrLine: {'line': b'/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:182:5: error: expected \xe2\x80\x98,\xe2\x80\x99 or \xe2\x80\x98;\xe2\x80\x99 before \xe2\x80\x98rclcpp\xe2\x80\x99\n'}
+[9.693891] (main_nodes) StderrLine: {'line': b'  182 |     rclcpp::shutdown();\n'}
+[9.693980] (main_nodes) StderrLine: {'line': b'      |     ^~~~~~\n'}
+[9.721375] (-) TimerEvent: {}
+[9.821625] (-) TimerEvent: {}
+[9.921877] (-) TimerEvent: {}
+[10.022169] (-) TimerEvent: {}
+[10.122435] (-) TimerEvent: {}
+[10.222684] (-) TimerEvent: {}
+[10.322963] (-) TimerEvent: {}
+[10.423249] (-) TimerEvent: {}
+[10.523577] (-) TimerEvent: {}
+[10.623875] (-) TimerEvent: {}
+[10.724114] (-) TimerEvent: {}
+[10.824358] (-) TimerEvent: {}
+[10.924620] (-) TimerEvent: {}
+[11.024906] (-) TimerEvent: {}
+[11.125228] (-) TimerEvent: {}
+[11.225715] (-) TimerEvent: {}
+[11.325960] (-) TimerEvent: {}
+[11.426208] (-) TimerEvent: {}
+[11.526462] (-) TimerEvent: {}
+[11.626751] (-) TimerEvent: {}
+[11.727037] (-) TimerEvent: {}
+[11.827276] (-) TimerEvent: {}
+[11.927537] (-) TimerEvent: {}
+[12.027802] (-) TimerEvent: {}
+[12.090421] (main_nodes) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/TravelPose.dir/build.make:76: CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o] Error 1\n'}
+[12.090676] (main_nodes) StderrLine: {'line': b"gmake[2]: Target 'CMakeFiles/TravelPose.dir/build' not remade because of errors.\n"}
+[12.090948] (main_nodes) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/TravelPose.dir/all] Error 2\n'}
+[12.127936] (-) TimerEvent: {}
+[12.228181] (-) TimerEvent: {}
+[12.328370] (-) TimerEvent: {}
+[12.428590] (-) TimerEvent: {}
+[12.528855] (-) TimerEvent: {}
+[12.629145] (-) TimerEvent: {}
+[12.647099] (main_nodes) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ArmPickup.dir/build.make:76: CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o] Error 1\n'}
+[12.647314] (main_nodes) StderrLine: {'line': b"gmake[2]: Target 'CMakeFiles/ArmPickup.dir/build' not remade because of errors.\n"}
+[12.647639] (main_nodes) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/ArmPickup.dir/all] Error 2\n'}
+[12.729248] (-) TimerEvent: {}
+[12.829505] (-) TimerEvent: {}
+[12.929783] (-) TimerEvent: {}
+[13.030062] (-) TimerEvent: {}
+[13.130342] (-) TimerEvent: {}
+[13.230522] (-) TimerEvent: {}
+[13.330815] (-) TimerEvent: {}
+[13.431126] (-) TimerEvent: {}
+[13.531477] (-) TimerEvent: {}
+[13.631769] (-) TimerEvent: {}
+[13.732039] (-) TimerEvent: {}
+[13.832330] (-) TimerEvent: {}
+[13.932500] (-) TimerEvent: {}
+[13.969910] (main_nodes) StdoutLine: {'line': b'[ 70%] Linking CXX executable detectionNode\n'}
+[14.032566] (-) TimerEvent: {}
+[14.132798] (-) TimerEvent: {}
+[14.233064] (-) TimerEvent: {}
+[14.333256] (-) TimerEvent: {}
+[14.433514] (-) TimerEvent: {}
+[14.533756] (-) TimerEvent: {}
+[14.634011] (-) TimerEvent: {}
+[14.641688] (main_nodes) StdoutLine: {'line': b'[ 70%] Built target detectionNode\n'}
+[14.734155] (-) TimerEvent: {}
+[14.834427] (-) TimerEvent: {}
+[14.934696] (-) TimerEvent: {}
+[15.034982] (-) TimerEvent: {}
+[15.135228] (-) TimerEvent: {}
+[15.235467] (-) TimerEvent: {}
+[15.335727] (-) TimerEvent: {}
+[15.435982] (-) TimerEvent: {}
+[15.536167] (-) TimerEvent: {}
+[15.636392] (-) TimerEvent: {}
+[15.736662] (-) TimerEvent: {}
+[15.836929] (-) TimerEvent: {}
+[15.937190] (-) TimerEvent: {}
+[16.037515] (-) TimerEvent: {}
+[16.137783] (-) TimerEvent: {}
+[16.238026] (-) TimerEvent: {}
+[16.338322] (-) TimerEvent: {}
+[16.438552] (-) TimerEvent: {}
+[16.538843] (-) TimerEvent: {}
+[16.639770] (main_nodes) StdoutLine: {'line': b'[ 80%] Linking CXX executable VisionNode\n'}
+[16.640039] (-) TimerEvent: {}
+[16.740259] (-) TimerEvent: {}
+[16.840569] (-) TimerEvent: {}
+[16.940824] (-) TimerEvent: {}
+[17.041018] (-) TimerEvent: {}
+[17.141327] (-) TimerEvent: {}
+[17.241592] (-) TimerEvent: {}
+[17.341825] (-) TimerEvent: {}
+[17.442081] (-) TimerEvent: {}
+[17.542331] (-) TimerEvent: {}
+[17.642616] (-) TimerEvent: {}
+[17.742870] (-) TimerEvent: {}
+[17.843113] (-) TimerEvent: {}
+[17.916650] (main_nodes) StdoutLine: {'line': b'[ 80%] Built target VisionNode\n'}
+[17.917707] (main_nodes) StderrLine: {'line': b"gmake[1]: Target 'all' not remade because of errors.\n"}
+[17.918102] (main_nodes) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[17.918273] (main_nodes) StderrLine: {'line': b"gmake: Target 'default_target' not remade because of errors.\n"}
+[17.921262] (main_nodes) CommandEnded: {'returncode': 2}
+[17.931092] (main_nodes) JobEnded: {'identifier': 'main_nodes', 'rc': 2}
+[17.941763] (-) EventReactorShutdown: {}

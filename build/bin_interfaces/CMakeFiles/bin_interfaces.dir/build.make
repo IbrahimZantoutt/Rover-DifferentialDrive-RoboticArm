@@ -69,6 +69,9 @@ include CMakeFiles/bin_interfaces.dir/progress.make
 CMakeFiles/bin_interfaces: /home/ibrahim/MobiArm/src/bin_interfaces/srv/GetTargets.srv
 CMakeFiles/bin_interfaces: rosidl_cmake/srv/GetTargets_Request.msg
 CMakeFiles/bin_interfaces: rosidl_cmake/srv/GetTargets_Response.msg
+CMakeFiles/bin_interfaces: /home/ibrahim/MobiArm/src/bin_interfaces/srv/StartSearch.srv
+CMakeFiles/bin_interfaces: rosidl_cmake/srv/StartSearch_Request.msg
+CMakeFiles/bin_interfaces: rosidl_cmake/srv/StartSearch_Response.msg
 CMakeFiles/bin_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/bin_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/bin_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

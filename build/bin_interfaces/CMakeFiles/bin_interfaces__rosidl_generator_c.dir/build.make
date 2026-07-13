@@ -83,6 +83,7 @@ rosidl_generator_c/bin_interfaces/srv/get_targets.h: /opt/ros/humble/share/rosid
 rosidl_generator_c/bin_interfaces/srv/get_targets.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/bin_interfaces/srv/get_targets.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/bin_interfaces/srv/get_targets.h: rosidl_adapter/bin_interfaces/srv/GetTargets.idl
+rosidl_generator_c/bin_interfaces/srv/get_targets.h: rosidl_adapter/bin_interfaces/srv/StartSearch.idl
 rosidl_generator_c/bin_interfaces/srv/get_targets.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_c/bin_interfaces/srv/get_targets.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_c/bin_interfaces/srv/get_targets.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -157,8 +158,23 @@ rosidl_generator_c/bin_interfaces/srv/detail/get_targets__struct.h: rosidl_gener
 rosidl_generator_c/bin_interfaces/srv/detail/get_targets__type_support.h: rosidl_generator_c/bin_interfaces/srv/get_targets.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/detail/get_targets__type_support.h
 
+rosidl_generator_c/bin_interfaces/srv/start_search.h: rosidl_generator_c/bin_interfaces/srv/get_targets.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/start_search.h
+
+rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.h: rosidl_generator_c/bin_interfaces/srv/get_targets.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.h
+
+rosidl_generator_c/bin_interfaces/srv/detail/start_search__struct.h: rosidl_generator_c/bin_interfaces/srv/get_targets.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/detail/start_search__struct.h
+
+rosidl_generator_c/bin_interfaces/srv/detail/start_search__type_support.h: rosidl_generator_c/bin_interfaces/srv/get_targets.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/detail/start_search__type_support.h
+
 rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c: rosidl_generator_c/bin_interfaces/srv/get_targets.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c
+
+rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c: rosidl_generator_c/bin_interfaces/srv/get_targets.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c
 
 CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.o: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.o: rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c
@@ -174,14 +190,30 @@ CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfa
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c -o CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.s
 
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o: rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o -MF CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o.d -o CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o -c /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c
+
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c > CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.i
+
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c -o CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.s
+
 # Object files for target bin_interfaces__rosidl_generator_c
 bin_interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.o"
+"CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.o" \
+"CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o"
 
 # External object files for target bin_interfaces__rosidl_generator_c
 bin_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libbin_interfaces__rosidl_generator_c.so: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.c.o
+libbin_interfaces__rosidl_generator_c.so: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c.o
 libbin_interfaces__rosidl_generator_c.so: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/build.make
 libbin_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libbin_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
@@ -189,7 +221,7 @@ libbin_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfa
 libbin_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libbin_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libbin_interfaces__rosidl_generator_c.so: CMakeFiles/bin_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libbin_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libbin_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bin_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -204,7 +236,12 @@ CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin
 CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/get_targets__functions.h
 CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/get_targets__struct.h
 CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/get_targets__type_support.h
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.c
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/start_search__functions.h
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/start_search__struct.h
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/detail/start_search__type_support.h
 CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/get_targets.h
+CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bin_interfaces/srv/start_search.h
 	cd /home/ibrahim/MobiArm/build/bin_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/MobiArm/src/bin_interfaces /home/ibrahim/MobiArm/src/bin_interfaces /home/ibrahim/MobiArm/build/bin_interfaces /home/ibrahim/MobiArm/build/bin_interfaces /home/ibrahim/MobiArm/build/bin_interfaces/CMakeFiles/bin_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bin_interfaces__rosidl_generator_c.dir/depend
 

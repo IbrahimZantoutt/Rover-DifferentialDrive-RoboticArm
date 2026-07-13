@@ -4,7 +4,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/bin_interfaces/srv/detail/get_targets__struct.hpp"
   "rosidl_generator_cpp/bin_interfaces/srv/detail/get_targets__traits.hpp"
   "rosidl_generator_cpp/bin_interfaces/srv/detail/get_targets__type_support.hpp"
+  "rosidl_generator_cpp/bin_interfaces/srv/detail/start_search__builder.hpp"
+  "rosidl_generator_cpp/bin_interfaces/srv/detail/start_search__struct.hpp"
+  "rosidl_generator_cpp/bin_interfaces/srv/detail/start_search__traits.hpp"
+  "rosidl_generator_cpp/bin_interfaces/srv/detail/start_search__type_support.hpp"
   "rosidl_generator_cpp/bin_interfaces/srv/get_targets.hpp"
+  "rosidl_generator_cpp/bin_interfaces/srv/start_search.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

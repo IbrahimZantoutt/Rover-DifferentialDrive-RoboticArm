@@ -1,0 +1,193 @@
+[0.162s] Invoking command in '/home/ibrahim/MobiArm/build/main_nodes': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
+[0.329s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.441s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.450s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.578s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.580s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.584s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.590s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.598s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.641s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.645s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.676s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.730s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[0.746s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[0.914s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.671s] -- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.681s] -- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.708s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[2.903s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[2.931s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[4.161s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[4.186s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[4.214s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[4.244s] -- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)
+[4.289s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[4.303s] -- Found image_geometry: 3.2.1 (/opt/ros/humble/share/image_geometry/cmake)
+[4.305s] -- Found bin_interfaces: 0.0.0 (/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/cmake)
+[4.315s] -- Found linkattacher_msgs: 0.0.0 (/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake)
+[4.337s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.402s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.402s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/MobiArm/src/main_nodes/include>
+[4.402s] -- Configured cppcheck exclude dirs and/or files: 
+[4.403s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.403s] -- Added test 'lint_cmake' to check CMake code style
+[4.404s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.405s] -- Added test 'uncrustify' to check C / C++ code style
+[4.405s] -- Configured uncrustify additional arguments: 
+[4.406s] -- Added test 'xmllint' to check XML markup files
+[4.408s] -- Configuring done
+[4.496s] -- Generating done
+[4.511s] -- Build files have been written to: /home/ibrahim/MobiArm/build/main_nodes
+[4.552s] Consolidate compiler generated dependencies of target RunNode
+[4.559s] Consolidate compiler generated dependencies of target VisionNode
+[4.559s] Consolidate compiler generated dependencies of target detectionNode
+[4.561s] Consolidate compiler generated dependencies of target ArmPickup
+[4.561s] Consolidate compiler generated dependencies of target TravelPose
+[4.567s] [ 20%] Built target RunNode
+[4.619s] [ 40%] Building CXX object CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o
+[4.619s] [ 40%] Building CXX object CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o
+[4.633s] [ 60%] Building CXX object CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o
+[4.633s] [ 60%] Building CXX object CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o
+[9.464s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp: In function ‘int main(int, char**)’:
+[9.465s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:26: error: ‘std_srvs’ was not declared in this scope
+[9.465s]    16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+[9.465s]       |                          ^~~~~~~~
+[9.465s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:11: error: parse error in template argument list
+[9.465s]    16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+[9.465s]       |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.465s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp: In lambda function:
+[9.465s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:19:19: error: base operand of ‘->’ is not a pointer
+[9.465s]    19 |           response->success = true;
+[9.465s]       |                   ^~
+[9.465s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:20:19: error: base operand of ‘->’ is not a pointer
+[9.465s]    20 |           response->message = "Travel pose service called";
+[9.465s]       |                   ^~
+[9.475s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:21:11: error: ‘travel_process’ was not declared in this scope
+[9.475s]    21 |           travel_process();
+[9.475s]       |           ^~~~~~~~~~~~~~
+[9.475s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:124: warning: unused parameter ‘request’ [-Wunused-parameter]
+[9.475s]    16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+[9.475s]       |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+[9.475s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp: In function ‘int main(int, char**)’:
+[9.475s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:49: error: no matching function for call to ‘rclcpp::Node::create_service<<expression error> >(const char [12], main(int, char**)::<lambda(int, int)>)’
+[9.475s]    16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+[9.476s]       |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.476s]    17 |       std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.476s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.476s]    18 |           RCLCPP_INFO(logger, "Travel pose service called");
+[9.476s]       |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.476s]    19 |           response->success = true;
+[9.476s]       |           ~~~~~~~~~~~~~~~~~~~~~~~~~              
+[9.476s]    20 |           response->message = "Travel pose service called";
+[9.476s]       |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.476s]    21 |           travel_process();
+[9.476s]       |           ~~~~~~~~~~~~~~~~~                      
+[9.476s]    22 |           return true;
+[9.476s]       |           ~~~~~~~~~~~~                           
+[9.476s]    23 |       });
+[9.476s]       |       ~~                                         
+[9.476s] In file included from /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28,
+[9.476s]                  from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22,
+[9.476s]                  from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+[9.477s]                  from /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:1:
+[9.477s] /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note: candidate: ‘template<class ServiceT, class CallbackT> typename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::create_service(const string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr)’
+[9.477s]   267 |   create_service(
+[9.477s]       |   ^~~~~~~~~~~~~~
+[9.477s] /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note:   template argument deduction/substitution failed:
+[9.477s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:16:49: error: template argument 1 is invalid
+[9.477s]    16 |     node->create_service<std_srvs::srv::Trigger>("travel_pose", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+[9.477s]       |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.477s]    17 |       std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.477s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.477s]    18 |           RCLCPP_INFO(logger, "Travel pose service called");
+[9.477s]       |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.477s]    19 |           response->success = true;
+[9.477s]       |           ~~~~~~~~~~~~~~~~~~~~~~~~~              
+[9.477s]    20 |           response->message = "Travel pose service called";
+[9.477s]       |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.477s]    21 |           travel_process();
+[9.477s]       |           ~~~~~~~~~~~~~~~~~                      
+[9.477s]    22 |           return true;
+[9.477s]       |           ~~~~~~~~~~~~                           
+[9.477s]    23 |       });
+[9.477s]       |       ~~                                         
+[9.477s] /home/ibrahim/MobiArm/src/main_nodes/src/TravelPose.cpp:52:5: error: expected ‘,’ or ‘;’ before ‘rclcpp’
+[9.477s]    52 |     rclcpp::shutdown(); spin_thread.join();
+[9.477s]       |     ^~~~~~
+[9.557s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In function ‘int main(int, char**)’:
+[9.557s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:26: error: ‘std_srvs’ was not declared in this scope
+[9.557s]    32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.557s]       |                          ^~~~~~~~
+[9.557s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:11: error: parse error in template argument list
+[9.557s]    32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.557s]       |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.557s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In lambda function:
+[9.557s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:34:17: error: base operand of ‘->’ is not a pointer
+[9.557s]    34 |         response->success = true;
+[9.557s]       |                 ^~
+[9.557s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:35:17: error: base operand of ‘->’ is not a pointer
+[9.557s]    35 |         response->message = "pick pose service called";
+[9.557s]       |                 ^~
+[9.562s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:36:9: error: ‘run’ was not declared in this scope
+[9.562s]    36 |         run();
+[9.563s]       |         ^~~
+[9.563s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:119: warning: unused parameter ‘req’ [-Wunused-parameter]
+[9.563s]    32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.563s]       |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+[9.563s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In function ‘int main(int, char**)’:
+[9.563s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:49: error: no matching function for call to ‘rclcpp::Node::create_service<<expression error> >(const char [7], main(int, char**)::<lambda(int, int)>)’
+[9.563s]    32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.563s]       |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.563s]    33 |         RCLCPP_INFO(logger, "pick service called");
+[9.563s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.563s]    34 |         response->success = true;
+[9.563s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~                
+[9.563s]    35 |         response->message = "pick pose service called";
+[9.563s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.563s]    36 |         run();
+[9.563s]       |         ~~~~~~                                   
+[9.563s]    37 |         return true;
+[9.563s]       |         ~~~~~~~~~~~~                             
+[9.563s]    38 |     });
+[9.563s]       |     ~~                                           
+[9.563s] In file included from /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28,
+[9.563s]                  from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22,
+[9.563s]                  from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+[9.563s]                  from /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:1:
+[9.563s] /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note: candidate: ‘template<class ServiceT, class CallbackT> typename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::create_service(const string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr)’
+[9.563s]   267 |   create_service(
+[9.563s]       |   ^~~~~~~~~~~~~~
+[9.563s] /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:267:3: note:   template argument deduction/substitution failed:
+[9.563s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:32:49: error: template argument 1 is invalid
+[9.563s]    32 |     node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
+[9.563s]       |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.564s]    33 |         RCLCPP_INFO(logger, "pick service called");
+[9.564s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.564s]    34 |         response->success = true;
+[9.564s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~                
+[9.564s]    35 |         response->message = "pick pose service called";
+[9.564s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9.564s]    36 |         run();
+[9.564s]       |         ~~~~~~                                   
+[9.564s]    37 |         return true;
+[9.564s]       |         ~~~~~~~~~~~~                             
+[9.564s]    38 |     });
+[9.564s]       |     ~~                                           
+[9.693s] /home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:182:5: error: expected ‘,’ or ‘;’ before ‘rclcpp’
+[9.693s]   182 |     rclcpp::shutdown();
+[9.693s]       |     ^~~~~~
+[12.090s] gmake[2]: *** [CMakeFiles/TravelPose.dir/build.make:76: CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o] Error 1
+[12.090s] gmake[2]: Target 'CMakeFiles/TravelPose.dir/build' not remade because of errors.
+[12.090s] gmake[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/TravelPose.dir/all] Error 2
+[12.646s] gmake[2]: *** [CMakeFiles/ArmPickup.dir/build.make:76: CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o] Error 1
+[12.647s] gmake[2]: Target 'CMakeFiles/ArmPickup.dir/build' not remade because of errors.
+[12.647s] gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/ArmPickup.dir/all] Error 2
+[13.969s] [ 70%] Linking CXX executable detectionNode
+[14.641s] [ 70%] Built target detectionNode
+[16.639s] [ 80%] Linking CXX executable VisionNode
+[17.916s] [ 80%] Built target VisionNode
+[17.917s] gmake[1]: Target 'all' not remade because of errors.
+[17.917s] gmake: *** [Makefile:146: all] Error 2
+[17.917s] gmake: Target 'default_target' not remade because of errors.
+[17.921s] Invoked command in '/home/ibrahim/MobiArm/build/main_nodes' returned '2': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16

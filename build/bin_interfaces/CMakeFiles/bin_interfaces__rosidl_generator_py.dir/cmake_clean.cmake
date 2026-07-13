@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/bin_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c.o"
   "CMakeFiles/bin_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c.o.d"
+  "CMakeFiles/bin_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bin_interfaces/srv/_start_search_s.c.o"
+  "CMakeFiles/bin_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bin_interfaces/srv/_start_search_s.c.o.d"
   "rosidl_generator_py/bin_interfaces/libbin_interfaces__rosidl_generator_py.pdb"
   "rosidl_generator_py/bin_interfaces/libbin_interfaces__rosidl_generator_py.so"
 )

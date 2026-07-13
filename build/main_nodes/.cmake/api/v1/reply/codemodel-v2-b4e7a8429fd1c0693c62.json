@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-33d58d8c323258da83f6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "main_nodes",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ArmPickup::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArmPickup-24afd74245afd399ec8e.json",
+					"name" : "ArmPickup",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RunNode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RunNode-e617772c423050156f7e.json",
+					"name" : "RunNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TravelPose::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TravelPose-e406b62557875a1332b7.json",
+					"name" : "TravelPose",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VisionNode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VisionNode-70d6f3c7a97da38eceeb.json",
+					"name" : "VisionNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "detectionNode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-detectionNode-6b600559cf931f7e63d6.json",
+					"name" : "detectionNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_nodes_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_nodes_uninstall-3c3b9dc715c9186c336c.json",
+					"name" : "main_nodes_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f336f26742f903e3d2a8.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ibrahim/MobiArm/build/main_nodes",
+		"source" : "/home/ibrahim/MobiArm/src/main_nodes"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

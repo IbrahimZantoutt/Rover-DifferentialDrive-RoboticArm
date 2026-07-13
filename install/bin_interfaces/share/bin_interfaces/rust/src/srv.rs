@@ -100,6 +100,98 @@ impl rosidl_runtime_rs::Message for GetTargets_Response {
 }
 
 
+// Corresponds to bin_interfaces__srv__StartSearch_Request
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[allow(non_camel_case_types)]
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct StartSearch_Request {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub start: bool,
+
+}
+
+
+
+impl Default for StartSearch_Request {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::srv::rmw::StartSearch_Request::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for StartSearch_Request {
+  type RmwMsg = super::srv::rmw::StartSearch_Request;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        start: msg.start,
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      start: msg.start,
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      start: msg.start,
+    }
+  }
+}
+
+
+// Corresponds to bin_interfaces__srv__StartSearch_Response
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[allow(non_camel_case_types)]
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct StartSearch_Response {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub success: bool,
+
+}
+
+
+
+impl Default for StartSearch_Response {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::srv::rmw::StartSearch_Response::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for StartSearch_Response {
+  type RmwMsg = super::srv::rmw::StartSearch_Response;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        success: msg.success,
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      success: msg.success,
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      success: msg.success,
+    }
+  }
+}
+
+
 
 
 
@@ -120,6 +212,28 @@ impl rosidl_runtime_rs::Service for GetTargets {
     fn get_type_support() -> *const std::ffi::c_void {
         // SAFETY: No preconditions for this function.
         unsafe { rosidl_typesupport_c__get_service_type_support_handle__bin_interfaces__srv__GetTargets() }
+    }
+}
+
+
+
+
+#[link(name = "bin_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_service_type_support_handle__bin_interfaces__srv__StartSearch() -> *const std::ffi::c_void;
+}
+
+// Corresponds to bin_interfaces__srv__StartSearch
+#[allow(missing_docs, non_camel_case_types)]
+pub struct StartSearch;
+
+impl rosidl_runtime_rs::Service for StartSearch {
+    type Request = StartSearch_Request;
+    type Response = StartSearch_Response;
+
+    fn get_type_support() -> *const std::ffi::c_void {
+        // SAFETY: No preconditions for this function.
+        unsafe { rosidl_typesupport_c__get_service_type_support_handle__bin_interfaces__srv__StartSearch() }
     }
 }
 

@@ -70,8 +70,10 @@ bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interf
 bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_c.c
 bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_get_targets.py
+bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_start_search.py
 bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/__init__.py
 bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c
+bin_interfaces__py/CMakeFiles/bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_start_search_s.c
 
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +89,7 @@ rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastr
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bin_interfaces/srv/GetTargets.idl
+rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bin_interfaces/srv/StartSearch.idl
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -161,11 +164,17 @@ rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_c.c: 
 rosidl_generator_py/bin_interfaces/srv/_get_targets.py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bin_interfaces/srv/_get_targets.py
 
+rosidl_generator_py/bin_interfaces/srv/_start_search.py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bin_interfaces/srv/_start_search.py
+
 rosidl_generator_py/bin_interfaces/srv/__init__.py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bin_interfaces/srv/__init__.py
 
 rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c
+
+rosidl_generator_py/bin_interfaces/srv/_start_search_s.c: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bin_interfaces/srv/_start_search_s.c
 
 bin_interfaces__py: bin_interfaces__py/CMakeFiles/bin_interfaces__py
 bin_interfaces__py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_c.c
@@ -174,6 +183,8 @@ bin_interfaces__py: rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosi
 bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/__init__.py
 bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_get_targets.py
 bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c
+bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_start_search.py
+bin_interfaces__py: rosidl_generator_py/bin_interfaces/srv/_start_search_s.c
 bin_interfaces__py: bin_interfaces__py/CMakeFiles/bin_interfaces__py.dir/build.make
 .PHONY : bin_interfaces__py
 

@@ -17,6 +17,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/srv/__init__.py" "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/srv/_get_targets.py" "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/srv/_get_targets_s.c" "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/srv/_start_search.py" "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/srv/_start_search_s.c" "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_py/bin_interfaces/_bin_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

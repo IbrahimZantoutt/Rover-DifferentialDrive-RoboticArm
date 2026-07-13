@@ -836,4 +836,16 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: \
  /usr/include/kdl/frames.hpp /usr/include/kdl/utilities/kdl-config.h \
  /usr/include/kdl/utilities/utility.h \
  /usr/include/kdl/utilities/kdl-config.h /usr/include/kdl/frames.inl \
- /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp
+ /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/start_search.hpp \
+ /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__struct.hpp \
+ /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__builder.hpp \
+ /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__traits.hpp \
+ /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__type_support.hpp \
+ /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp

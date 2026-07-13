@@ -3,10 +3,12 @@
   "output_dir": "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_generator_rs/bin_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource",
   "idl_tuples": [
-    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces:srv/GetTargets.idl"
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces:srv/GetTargets.idl",
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces:srv/StartSearch.idl"
   ],
   "ros_interface_files": [
-    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/GetTargets.idl"
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/GetTargets.idl",
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/StartSearch.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -86,7 +88,9 @@
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource/templates/srv_idiomatic.rs.em",
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../resource/templates/srv_rmw.rs.em",
     "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/GetTargets.idl",
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/StartSearch.idl",
     "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/GetTargets.idl",
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/StartSearch.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

@@ -907,8 +907,34 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: /home/ibrahim/MobiArm/src/
   /usr/include/kdl/utilities/utility.h \
   /usr/include/kdl/utilities/kdl-config.h \
   /usr/include/kdl/frames.inl \
-  /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp
+  /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/start_search.hpp \
+  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__struct.hpp \
+  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__builder.hpp \
+  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__traits.hpp \
+  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__type_support.hpp \
+  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
+
+/home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__builder.hpp:
+
+/home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/start_search.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp:
 
 /usr/include/kdl/frames.inl:
 
@@ -987,6 +1013,8 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: /home/ibrahim/MobiArm/src/
 /opt/ros/humble/include/tf2/tf2/convert.hpp:
 
 /opt/ros/humble/include/tf2/tf2/time.hpp:
+
+/home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp:
 
@@ -1202,6 +1230,8 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: /home/ibrahim/MobiArm/src/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
 
+/home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__type_support.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_client.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/executable_list.hpp:
@@ -1213,6 +1243,8 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: /home/ibrahim/MobiArm/src/
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface_traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__type_support.hpp:
 
@@ -1622,6 +1654,8 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: /home/ibrahim/MobiArm/src/
 
 /usr/include/c++/11/array:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp:
+
 /usr/include/c++/11/tr1/beta_function.tcc:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp:
@@ -1957,6 +1991,8 @@ CMakeFiles/detectionNode.dir/src/detectionNode.cpp.o: /home/ibrahim/MobiArm/src/
 /usr/include/c++/11/cmath:
 
 /usr/include/c++/11/pstl/pstl_config.h:
+
+/home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/start_search__traits.hpp:
 
 /usr/include/c++/11/cstdint:
 

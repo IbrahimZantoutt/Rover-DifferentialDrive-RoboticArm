@@ -6,10 +6,13 @@
 #include <linkattacher_msgs/srv/detach_link.hpp>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include <moveit_msgs/msg/collision_object.hpp>
+#include <std_srvs/srv/trigger.hpp>
 
 #include <bin_interfaces/srv/get_targets.hpp>
 
 #include <chrono>
+#include <map>
+#include <string>
 #include <thread>
 
 using namespace std::chrono_literals;
@@ -24,40 +27,17 @@ int main(int argc, char **argv)
     auto logger = node->get_logger();
 
     auto client = node->create_client<bin_interfaces::srv::GetTargets>("get_targets");
-
     auto request = std::make_shared<bin_interfaces::srv::GetTargets::Request>();
 
     int action_count_ = 0;
 
-    node->create_service<std_srvs::srv::Trigger>("pickup", [&](const std::shared_ptr<std_srvs::srv::Trigger::Request> req,  std::shared_ptr<std_srvs::srv::Trigger::Response> response){
-        RCLCPP_INFO(logger, "pick service called");
-        response->success = true;
-        response->message = "pick pose service called";
-        run();
-        return true;
-    });
+    // The pickup/place callbacks drive MoveGroup and block on service-client
+    // responses; run them in their own callback group under a MultiThreadedExecutor
+    // so those responses are serviced on other threads (no single-thread deadlock).
+    auto srv_group =
+        node->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
-    auto search = [&](geometry_msgs::msg::Point & out) -> bool {
-        if (!client->wait_for_service(5s)) {
-            RCLCPP_ERROR(logger, "get_targets service not available (is VisionNode running?)");
-            return false;
-        }
-        auto future = client->async_send_request(request);
-        if (future.wait_for(5s) != std::future_status::ready) {
-            RCLCPP_ERROR(logger, "get_targets call timed out");
-            return false;
-        }
-        auto response = future.get();
-        if (response->found) {
-            out = response->target.point;                 // <-- fill the output
-            RCLCPP_INFO(logger, "Target at: x=%f y=%f z=%f", out.x, out.y, out.z);
-            return true;
-        }
-        RCLCPP_WARN(logger, "No target found.");
-        return false;
-    };
-
-    rclcpp::executors::SingleThreadedExecutor executor;
+    rclcpp::executors::MultiThreadedExecutor executor;
     executor.add_node(node);
     std::thread spin_thread([&executor]() { executor.spin(); });
 
@@ -71,10 +51,30 @@ int main(int argc, char **argv)
     gripper.setMaxAccelerationScalingFactor(0.5);
     gripper.setPlanningTime(5.0);
 
-    auto plan_and_execute = [&] (const std::string &what){
+    auto search = [&](geometry_msgs::msg::Point & out) -> bool {
+        if (!client->wait_for_service(5s)) {
+            RCLCPP_ERROR(logger, "get_targets service not available (is VisionNode running?)");
+            return false;
+        }
+        auto future = client->async_send_request(request);
+        if (future.wait_for(5s) != std::future_status::ready) {
+            RCLCPP_ERROR(logger, "get_targets call timed out");
+            return false;
+        }
+        auto response = future.get();
+        if (response->found) {
+            out = response->target.point;
+            RCLCPP_INFO(logger, "Target at: x=%f y=%f z=%f", out.x, out.y, out.z);
+            return true;
+        }
+        RCLCPP_WARN(logger, "No target found.");
+        return false;
+    };
+
+    auto plan_and_execute = [&](const std::string &what) {
         MoveGroupInterface::Plan plan;
         bool ok = (arm.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS);
-        if(ok){
+        if (ok) {
             arm.execute(plan);
             RCLCPP_INFO(logger, "Executed plan for %s", what.c_str());
         }
@@ -129,9 +129,8 @@ int main(int argc, char **argv)
 
     auto setGripper = [&](double g1, double g2){
         gripper.setJointValueTarget({std::map<std::string, double>{{"gripperfinger_left_joint", g1}, {"gripperfinger_right_joint", g2}}});
-
         MoveGroupInterface::Plan plan;
-        if(gripper.plan(plan)==moveit::core::MoveItErrorCode::SUCCESS){
+        if (gripper.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS) {
             gripper.execute(plan);
         }
     };
@@ -151,35 +150,61 @@ int main(int argc, char **argv)
         return plan_and_execute("pose target");
     };
 
-    auto pick = [&](double x, double y, double z){
+    auto pick = [&](double x, double y, double z) -> bool {
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
-        if(goToPos(x, y, z+0.06, 3.1416, 0, 0)){
+        if (goToPos(x, y, z + 0.06, 3.1416, 0, 0)) {
             action_count_++;
+            // NOTE: attaches green_cube_<N> in call order, not the cube actually
+            // grasped -- needs a position->model-name lookup for arbitrary layouts.
             std::string current_cube = "green_cube_" + std::to_string(action_count_);
             attach("robot_arm", "wrist_yaw_link", current_cube, "link");
             setGripper(0.01, 0.01);
+            return true;
         }
+        return false;
     };
 
-    auto place = [&](){
+    auto place = [&]() -> bool {
         //goToPos(0.374, -0.215, 0.327,-0.898, -1.442, 2.633);
-        if(goToPos(0.313, -0.309, 0.379,3.141, 1.390, 3.142)){
+        if (goToPos(0.313, -0.309, 0.379, 3.141, 1.390, 3.142)) {
             std::string current_cube = "green_cube_" + std::to_string(action_count_);
             detach("robot_arm", "wrist_yaw_link", current_cube, "link");
             setGripper(0.0, 0.0);
+            return true;
         }
+        return false;
     };
 
-    auto run = [&](){
+    // Pick a single cube: pull the latest target from vision, then grasp it.
+    auto pick_one = [&]() -> bool {
         geometry_msgs::msg::Point target;
-        while (rclcpp::ok() && search(target)) {
-            pick(target.x, target.y, target.z);      // pick must take the point (see below)
-            std::this_thread::sleep_for(2s);
-            (void)place;
-        }
-    }
+        if (!search(target)) return false;
+        return pick(target.x, target.y, target.z);
+    };
 
+    auto pickup_srv = node->create_service<std_srvs::srv::Trigger>(
+        "pickup",
+        [&](const std::shared_ptr<std_srvs::srv::Trigger::Request>,
+            std::shared_ptr<std_srvs::srv::Trigger::Response> res){
+            RCLCPP_INFO(logger, "pickup service called");
+            const bool ok = pick_one();
+            res->success = ok;
+            res->message = ok ? "picked cube" : "no target / pick failed";
+        },
+        rmw_qos_profile_services_default, srv_group);
+
+    auto place_srv = node->create_service<std_srvs::srv::Trigger>(
+        "place",
+        [&](const std::shared_ptr<std_srvs::srv::Trigger::Request>,
+            std::shared_ptr<std_srvs::srv::Trigger::Response> res){
+            RCLCPP_INFO(logger, "place service called");
+            const bool ok = place();
+            res->success = ok;
+            res->message = ok ? "placed cube" : "place failed";
+        },
+        rmw_qos_profile_services_default, srv_group);
+
+    spin_thread.join();   // block until shutdown (Ctrl-C stops the executor)
     rclcpp::shutdown();
-    spin_thread.join();
     return 0;
 }

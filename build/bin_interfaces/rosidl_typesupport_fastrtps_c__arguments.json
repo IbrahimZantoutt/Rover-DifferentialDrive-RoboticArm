@@ -3,7 +3,8 @@
   "output_dir": "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_typesupport_fastrtps_c/bin_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource",
   "idl_tuples": [
-    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces:srv/GetTargets.idl"
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces:srv/GetTargets.idl",
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces:srv/StartSearch.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -79,6 +80,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
     "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/GetTargets.idl",
+    "/home/ibrahim/MobiArm/build/bin_interfaces/rosidl_adapter/bin_interfaces/srv/StartSearch.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",
