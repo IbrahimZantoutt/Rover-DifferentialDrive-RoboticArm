@@ -1,0 +1,12 @@
+[01m[K/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:[m[K In lambda function:
+[01m[K/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:34:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach[m[K’ was not declared in this scope; did you mean ‘[01m[Katanh[m[K’?
+   34 |     auto lockBase   = [&](){ return [01;31m[Kattach[m[K("mobiarm", "robot_base", "ground_plane", "link"); };
+      |                                     [01;31m[K^~~~~~[m[K
+      |                                     [32m[Katanh[m[K
+[01m[K/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:[m[K In lambda function:
+[01m[K/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:35:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach[m[K’ was not declared in this scope
+   35 |     auto unlockBase = [&](){ return [01;31m[Kdetach[m[K("mobiarm", "robot_base", "ground_plane", "link"); };
+      |                                     [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/ArmPickup.dir/build.make:76: CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/ArmPickup.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

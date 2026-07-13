@@ -147,10 +147,10 @@
                                     can actually yaw. With mu2=1.0 the wheels were
                                     laterally pinned and the robot could not turn
                                     (measured ~11% of commanded rotation). -->
-    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.8</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.8</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.8</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.8</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
 
     <!-- Differential drive controller (publishes /odom + odom->robot_base TF,
          subscribes to /cmd_vel). Two wheel pairs driven together. -->

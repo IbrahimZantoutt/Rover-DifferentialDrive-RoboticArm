@@ -127,6 +127,10 @@ int main(int argc, char **argv)
         return res->success;
     };
 
+    auto lockBase   = [&](){ return attach("mobiarm", "robot_base", "ground_plane", "link"); };
+    auto unlockBase = [&](){ return detach("mobiarm", "robot_base", "ground_plane", "link"); };
+
+
     auto setGripper = [&](double g1, double g2){
         gripper.setJointValueTarget({std::map<std::string, double>{{"gripperfinger_left_joint", g1}, {"gripperfinger_right_joint", g2}}});
         MoveGroupInterface::Plan plan;
@@ -152,15 +156,18 @@ int main(int argc, char **argv)
 
     auto pick = [&](double x, double y, double z) -> bool {
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
-        if (goToPos(x, y, z + 0.4, 3.1416, 0, 0)) {
+        lockBase();
+        if (goToPos(x, y, z + 0.25, 3.1416, 0, 0)) {
             action_count_++;
             // NOTE: attaches green_cube_<N> in call order, not the cube actually
             // grasped -- needs a position->model-name lookup for arbitrary layouts.
             std::string current_cube = "green_cube_" + std::to_string(action_count_);
             attach("robot_arm", "wrist_yaw_link", current_cube, "link");
             setGripper(0.01, 0.01);
+            unlockBase();
             return true;
         }
+        unlockBase();
         return false;
     };
 
