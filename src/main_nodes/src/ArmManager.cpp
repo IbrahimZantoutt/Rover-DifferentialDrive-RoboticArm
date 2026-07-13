@@ -18,6 +18,7 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "std_srvs/srv/trigger.hpp"
 #include "std_msgs/msg/bool.hpp"
+#include "std_msgs/msg/empty.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "bin_interfaces/srv/start_search.hpp"
@@ -44,7 +45,8 @@ public:
     dropoff_y_    = this->declare_parameter("dropoff_y", 0.0);
     dropoff_yaw_  = this->declare_parameter("dropoff_yaw", 0.0);
     target_frame_ = this->declare_parameter("target_frame", std::string("map"));
-    search_timeout_ = std::chrono::seconds(this->declare_parameter("search_timeout_s", 20));
+    found_timeout_   = std::chrono::seconds(this->declare_parameter("found_timeout_s", 10));
+    reached_timeout_ = std::chrono::seconds(this->declare_parameter("reached_timeout_s", 180));
     action_timeout_ = std::chrono::seconds(this->declare_parameter("action_timeout_s", 60));
     nav_timeout_    = std::chrono::seconds(this->declare_parameter("nav_timeout_s", 120));
     max_failures_   = this->declare_parameter("max_failures", 3);
@@ -55,10 +57,13 @@ public:
     place_client_  = this->create_client<Trigger>("place");
     nav_client_    = rclcpp_action::create_client<NavigateToPose>(this, "navigate_to_pose");
 
-    // Match detection_node's transient-local (latched) QoS on /object_reached.
+    // Match detection_node's transient-local (latched) QoS on both topics.
     reached_sub_ = this->create_subscription<std_msgs::msg::Bool>(
       "/object_reached", rclcpp::QoS(1).transient_local(),
       std::bind(&ArmManager::onReached, this, std::placeholders::_1));
+    found_sub_ = this->create_subscription<std_msgs::msg::Empty>(
+      "/object_found", rclcpp::QoS(1).transient_local(),
+      std::bind(&ArmManager::onFound, this, std::placeholders::_1));
 
     RCLCPP_INFO(get_logger(), "arm_manager up: dropoff (%.2f, %.2f) yaw %.2f in '%s'",
                 dropoff_x_, dropoff_y_, dropoff_yaw_, target_frame_.c_str());
@@ -68,7 +73,15 @@ public:
   void join()  { if (worker_.joinable()) worker_.join(); }
 
 private:
-  // ---- /object_reached: detection tells us the outcome of an approach ----------
+  // ---- detection's two signals: /object_found (started driving) then --------
+  // ---- /object_reached (drive finished, with success/failure) ----------------
+  void onFound(const std_msgs::msg::Empty::SharedPtr)
+  {
+    std::lock_guard<std::mutex> lk(m_);
+    found_got_ = true;
+    cv_.notify_all();
+  }
+
   void onReached(const std_msgs::msg::Bool::SharedPtr msg)
   {
     std::lock_guard<std::mutex> lk(m_);
@@ -77,13 +90,22 @@ private:
     cv_.notify_all();
   }
 
-  void armReached()
+  // Reset both signals before arming detection for a fresh search cycle.
+  void armSearch()
   {
     std::lock_guard<std::mutex> lk(m_);
+    found_got_   = false;
     reached_got_ = false;
   }
 
-  // nullopt = timed out (no cube reached in time), else true/false from detection.
+  // true = detection committed to a cube (driving); false = timed out => no cubes.
+  bool waitForFound(std::chrono::seconds timeout)
+  {
+    std::unique_lock<std::mutex> lk(m_);
+    return cv_.wait_for(lk, timeout, [this] { return found_got_; });
+  }
+
+  // nullopt = the drive never reported back in time, else true/false from Nav2.
   std::optional<bool> waitForReached(std::chrono::seconds timeout)
   {
     std::unique_lock<std::mutex> lk(m_);
@@ -178,18 +200,27 @@ private:
         break;
       }
 
-      // Search: arm detection, then wait for it to reach a cube.
-      armReached();
+      // Search: arm detection, then wait a SHORT time for it to commit to a cube.
+      // No commit => nothing left to find => the mission is complete.
+      armSearch();
       if (!callStartSearch()) {
         RCLCPP_ERROR(get_logger(), "start_search failed -- aborting mission");
         break;
       }
       RCLCPP_INFO(get_logger(), "searching for the next cube...");
 
-      auto reached = waitForReached(search_timeout_);
-      if (!reached.has_value()) {
+      if (!waitForFound(found_timeout_)) {
         RCLCPP_INFO(get_logger(), "no cube found within %llds -- mission complete",
-                    static_cast<long long>(search_timeout_.count()));
+                    static_cast<long long>(found_timeout_.count()));
+        break;
+      }
+
+      // A cube was found and detection is driving to it; wait (long) for arrival.
+      RCLCPP_INFO(get_logger(), "cube found -- driving to it");
+      auto reached = waitForReached(reached_timeout_);
+      if (!reached.has_value()) {
+        RCLCPP_ERROR(get_logger(), "no arrival within %llds -- aborting mission",
+                    static_cast<long long>(reached_timeout_.count()));
         break;
       }
       if (!reached.value()) {
@@ -231,7 +262,8 @@ private:
   // params
   double dropoff_x_, dropoff_y_, dropoff_yaw_;
   std::string target_frame_;
-  std::chrono::seconds search_timeout_{20}, action_timeout_{60}, nav_timeout_{120};
+  std::chrono::seconds found_timeout_{10}, reached_timeout_{180},
+                       action_timeout_{60}, nav_timeout_{120};
   int max_failures_{3};
 
   // clients / subscription
@@ -239,10 +271,12 @@ private:
   rclcpp::Client<StartSearch>::SharedPtr search_client_;
   rclcpp_action::Client<NavigateToPose>::SharedPtr nav_client_;
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr reached_sub_;
+  rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr found_sub_;
 
-  // /object_reached synchronization
+  // detection-signal synchronization (/object_found + /object_reached)
   std::mutex m_;
   std::condition_variable cv_;
+  bool found_got_   = false;
   bool reached_got_ = false;
   bool reached_ok_  = false;
 

@@ -31,6 +31,7 @@
 #include "tf2_ros/transform_listener.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include "std_msgs/msg/bool.hpp"
+#include "std_msgs/msg/empty.hpp"
 #include "bin_interfaces/srv/start_search.hpp"
 
 using NavigateToPose = nav2_msgs::action::NavigateToPose;
@@ -67,6 +68,11 @@ public:
 
     reached_pub_ = this->create_publisher<std_msgs::msg::Bool>(
       "/object_reached", rclcpp::QoS(1).transient_local());
+
+    // Pulsed the instant we commit a Nav2 goal, so the orchestrator can tell
+    // "driving to a cube" (found) apart from "no cubes left" (never fires).
+    found_pub_ = this->create_publisher<std_msgs::msg::Empty>(
+      "/object_found", rclcpp::QoS(1).transient_local());
 
     RCLCPP_INFO(get_logger(),
       "detection_node up: watching /scan_objects, standoff %.2f m, frame '%s'",
@@ -145,6 +151,7 @@ private:
       best_r, theta * 180.0 / M_PI,
       goal_map.pose.position.x, goal_map.pose.position.y, target_frame_.c_str());
     nav_client_->async_send_goal(goal, opts);
+    found_pub_->publish(std_msgs::msg::Empty());  // committed to a cube -> driving
   }
 
   void onResult(const GoalHandle::WrappedResult & result)
@@ -204,6 +211,7 @@ private:
 
   rclcpp::Service<bin_interfaces::srv::StartSearch>::SharedPtr lever_;
   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr reached_pub_;
+  rclcpp::Publisher<std_msgs::msg::Empty>::SharedPtr found_pub_;
 };
 
 int main(int argc, char ** argv)
