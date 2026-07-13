@@ -1363,8 +1363,22 @@ CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o: /home/ibrahim/MobiArm/src/main_n
   /opt/ros/humble/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__traits.hpp \
   /opt/ros/humble/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__type_support.hpp \
   /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /opt/ros/humble/include/moveit_move_group_interface_export.h
+  /opt/ros/humble/include/moveit_move_group_interface_export.h \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp \
+  /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp
 
+
+/opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp:
 
 /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -1553,6 +1567,8 @@ CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o: /home/ibrahim/MobiArm/src/main_n
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:
 
 /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/detail/grasp__struct.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp:
 
 /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/grasp.hpp:
 
@@ -3617,6 +3633,8 @@ CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o: /home/ibrahim/MobiArm/src/main_n
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface_traits.hpp:
 
 /usr/include/boost/mpl/int_fwd.hpp:
+
+/opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 

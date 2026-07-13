@@ -18,6 +18,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav2_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
@@ -37,7 +38,7 @@ target_include_directories(RunNode PUBLIC
 target_compile_features(RunNode PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
 add_executable(TravelPose src/TravelPose.cpp)
-ament_target_dependencies(TravelPose rclcpp moveit_ros_planning_interface)
+ament_target_dependencies(TravelPose rclcpp moveit_ros_planning_interface std_srvs)
 install(TARGETS TravelPose DESTINATION lib/${PROJECT_NAME})
 
 add_executable(detectionNode src/detectionNode.cpp)
@@ -68,8 +69,21 @@ ament_target_dependencies(ArmPickup
   tf2
   moveit_msgs
   linkattacher_msgs
+  std_srvs
   bin_interfaces)
 install(TARGETS ArmPickup DESTINATION lib/${PROJECT_NAME})
+
+add_executable(ArmManager src/ArmManager.cpp)
+ament_target_dependencies(ArmManager
+  rclcpp
+  rclcpp_action
+  std_srvs
+  std_msgs
+  geometry_msgs
+  nav2_msgs
+  tf2
+  bin_interfaces)
+install(TARGETS ArmManager DESTINATION lib/${PROJECT_NAME})
 
 install(TARGETS RunNode
   DESTINATION lib/${PROJECT_NAME})

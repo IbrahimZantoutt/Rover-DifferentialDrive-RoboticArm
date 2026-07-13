@@ -1454,6 +1454,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ament_cmake_symlink_install_targets_2_.cmake"
   "ament_cmake_symlink_install_targets_3_.cmake"
   "ament_cmake_symlink_install_targets_4_.cmake"
+  "ament_cmake_symlink_install_targets_5_.cmake"
   "ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/main_nodes"
   "ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/main_nodes"
   "ament_cmake_index/share/ament_index/resource_index/packages/main_nodes"
@@ -1469,4 +1470,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/detectionNode.dir/DependInfo.cmake"
   "CMakeFiles/VisionNode.dir/DependInfo.cmake"
   "CMakeFiles/ArmPickup.dir/DependInfo.cmake"
+  "CMakeFiles/ArmManager.dir/DependInfo.cmake"
   )

@@ -1,0 +1,234 @@
+[0.000000] (-) TimerEvent: {}
+[0.000160] (-) JobUnselected: {'identifier': 'bin_interfaces'}
+[0.000626] (-) JobUnselected: {'identifier': 'linkattacher_msgs'}
+[0.000702] (-) JobUnselected: {'identifier': 'moveit_config'}
+[0.000748] (-) JobUnselected: {'identifier': 'ros2_linkattacher'}
+[0.000849] (main_nodes) JobQueued: {'identifier': 'main_nodes', 'dependencies': OrderedDict([('bin_interfaces', '/home/ibrahim/MobiArm/install/bin_interfaces'), ('linkattacher_msgs', '/home/ibrahim/MobiArm/install/linkattacher_msgs')])}
+[0.000999] (main_nodes) JobStarted: {'identifier': 'main_nodes'}
+[0.099310] (-) TimerEvent: {}
+[0.150135] (main_nodes) JobProgress: {'identifier': 'main_nodes', 'progress': 'cmake'}
+[0.150752] (main_nodes) JobProgress: {'identifier': 'main_nodes', 'progress': 'build'}
+[0.151326] (main_nodes) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ibrahim/MobiArm/build/main_nodes', '--', '-j16', '-l16'], 'cwd': '/home/ibrahim/MobiArm/build/main_nodes', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('AI_AGENT', 'claude-code_2-1-207_agent'), ('USER', 'ibrahim'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/out/nls.messages.json","locale":"en","availableLanguages":{}}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/zanto/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.3.207'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ibrahim'), ('OLDPWD', '/home/ibrahim/MobiArm'), ('VSCODE_RECONNECTION_GRACE_TIME', '10800000'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-4cf3d1d6-368d-4e99-a9c2-8a4fb43072e3.sock'), ('ROS_PYTHON_VERSION', '3'), ('CLAUDE_CODE_CHILD_SESSION', '1'), ('COPILOT_OTEL_FILE_EXPORTER_PATH', '/dev/null'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', ''), ('COLCON_PREFIX_PATH', '/home/ibrahim/MobiArm/install:/home/ibrahim/MoveItArm/install:/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/411_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('MCP_CONNECTION_NONBLOCKING', 'true'), ('PATH', '/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('CLAUDE_EFFORT', 'xhigh'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('MXC_BIN_DIR', '/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/node_modules/@microsoft/mxc-sdk/bin'), ('ELECTRON_RUN_AS_NODE', '1'), ('CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING', 'true'), ('CLAUDE_CODE_SESSION_ID', 'c7bf4787-1951-4957-9952-9128ce6f81ea'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/ibrahim/MobiArm/build/main_nodes'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/ibrahim/.vscode-server/extensions/anthropic.claude-code-2.1.207-linux-x64/resources/native-binary/claude'), ('PYTHONPATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/home/ibrahim/MobiArm/install/bin_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/MobiArm/install/bin_interface/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CLAUDE_CODE_ENABLE_TASKS', '0'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('COPILOT_CLI_ENABLED_FEATURE_FLAGS', 'SHELL_SPAWN_BACKEND'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.189453] (main_nodes) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199402] (-) TimerEvent: {}
+[0.290081] (main_nodes) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.296063] (main_nodes) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.299524] (-) TimerEvent: {}
+[0.399756] (-) TimerEvent: {}
+[0.431697] (main_nodes) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.433180] (main_nodes) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.437806] (main_nodes) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.445686] (main_nodes) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.453943] (main_nodes) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.475684] (main_nodes) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.476905] (main_nodes) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.490108] (main_nodes) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.499877] (-) TimerEvent: {}
+[0.523204] (main_nodes) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)\n'}
+[0.531540] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread \n'}
+[0.600005] (-) TimerEvent: {}
+[0.637090] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[0.700094] (-) TimerEvent: {}
+[0.800337] (-) TimerEvent: {}
+[0.900573] (-) TimerEvent: {}
+[1.000865] (-) TimerEvent: {}
+[1.101158] (-) TimerEvent: {}
+[1.201452] (-) TimerEvent: {}
+[1.301758] (-) TimerEvent: {}
+[1.402206] (main_nodes) StdoutLine: {'line': b'-- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[1.402400] (-) TimerEvent: {}
+[1.408001] (main_nodes) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[1.422698] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[1.502532] (-) TimerEvent: {}
+[1.602789] (-) TimerEvent: {}
+[1.702989] (-) TimerEvent: {}
+[1.803252] (-) TimerEvent: {}
+[1.903529] (-) TimerEvent: {}
+[2.003748] (-) TimerEvent: {}
+[2.103979] (-) TimerEvent: {}
+[2.204207] (-) TimerEvent: {}
+[2.304445] (-) TimerEvent: {}
+[2.404675] (-) TimerEvent: {}
+[2.504947] (-) TimerEvent: {}
+[2.580105] (main_nodes) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[2.596077] (main_nodes) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.605031] (-) TimerEvent: {}
+[2.705250] (-) TimerEvent: {}
+[2.805469] (-) TimerEvent: {}
+[2.905682] (-) TimerEvent: {}
+[3.005862] (-) TimerEvent: {}
+[3.106118] (-) TimerEvent: {}
+[3.206374] (-) TimerEvent: {}
+[3.306691] (-) TimerEvent: {}
+[3.406973] (-) TimerEvent: {}
+[3.507134] (-) TimerEvent: {}
+[3.607353] (-) TimerEvent: {}
+[3.707538] (-) TimerEvent: {}
+[3.744011] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[3.764045] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options \n'}
+[3.786255] (main_nodes) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread \n'}
+[3.803649] (main_nodes) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.20 (/opt/ros/humble/share/nav2_msgs/cmake)\n'}
+[3.807657] (-) TimerEvent: {}
+[3.832636] (main_nodes) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[3.841858] (main_nodes) StdoutLine: {'line': b'-- Found image_geometry: 3.2.1 (/opt/ros/humble/share/image_geometry/cmake)\n'}
+[3.843196] (main_nodes) StdoutLine: {'line': b'-- Found bin_interfaces: 0.0.0 (/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/cmake)\n'}
+[3.851276] (main_nodes) StdoutLine: {'line': b'-- Found linkattacher_msgs: 0.0.0 (/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/cmake)\n'}
+[3.867886] (main_nodes) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.907762] (-) TimerEvent: {}
+[3.933215] (main_nodes) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.933674] (main_nodes) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/MobiArm/src/main_nodes/include>\n'}
+[3.933804] (main_nodes) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.934009] (main_nodes) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.934560] (main_nodes) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.934949] (main_nodes) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.936817] (main_nodes) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.936946] (main_nodes) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.937236] (main_nodes) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.938190] (main_nodes) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.995822] (main_nodes) StdoutLine: {'line': b'-- Generating done\n'}
+[4.007934] (-) TimerEvent: {}
+[4.012542] (main_nodes) StdoutLine: {'line': b'-- Build files have been written to: /home/ibrahim/MobiArm/build/main_nodes\n'}
+[4.054876] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target RunNode\n'}
+[4.063417] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target VisionNode\n'}
+[4.064426] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target detectionNode\n'}
+[4.065496] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target TravelPose\n'}
+[4.066476] (main_nodes) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target ArmPickup\n'}
+[4.069322] (main_nodes) StdoutLine: {'line': b'[ 20%] Built target RunNode\n'}
+[4.083580] (main_nodes) StdoutLine: {'line': b'[ 40%] Built target detectionNode\n'}
+[4.084337] (main_nodes) StdoutLine: {'line': b'[ 60%] Built target VisionNode\n'}
+[4.086365] (main_nodes) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o\n'}
+[4.086483] (main_nodes) StdoutLine: {'line': b'[ 80%] Building CXX object CMakeFiles/TravelPose.dir/src/TravelPose.cpp.o\n'}
+[4.108091] (-) TimerEvent: {}
+[4.208333] (-) TimerEvent: {}
+[4.308621] (-) TimerEvent: {}
+[4.408943] (-) TimerEvent: {}
+[4.509229] (-) TimerEvent: {}
+[4.609540] (-) TimerEvent: {}
+[4.709860] (-) TimerEvent: {}
+[4.810077] (-) TimerEvent: {}
+[4.910347] (-) TimerEvent: {}
+[5.010610] (-) TimerEvent: {}
+[5.110899] (-) TimerEvent: {}
+[5.211087] (-) TimerEvent: {}
+[5.311326] (-) TimerEvent: {}
+[5.411544] (-) TimerEvent: {}
+[5.511810] (-) TimerEvent: {}
+[5.612068] (-) TimerEvent: {}
+[5.712341] (-) TimerEvent: {}
+[5.812595] (-) TimerEvent: {}
+[5.912868] (-) TimerEvent: {}
+[6.013081] (-) TimerEvent: {}
+[6.113294] (-) TimerEvent: {}
+[6.213548] (-) TimerEvent: {}
+[6.313808] (-) TimerEvent: {}
+[6.414136] (-) TimerEvent: {}
+[6.514340] (-) TimerEvent: {}
+[6.614554] (-) TimerEvent: {}
+[6.714819] (-) TimerEvent: {}
+[6.815068] (-) TimerEvent: {}
+[6.915327] (-) TimerEvent: {}
+[7.015590] (-) TimerEvent: {}
+[7.115833] (-) TimerEvent: {}
+[7.216147] (-) TimerEvent: {}
+[7.316448] (-) TimerEvent: {}
+[7.416672] (-) TimerEvent: {}
+[7.516961] (-) TimerEvent: {}
+[7.617187] (-) TimerEvent: {}
+[7.717507] (-) TimerEvent: {}
+[7.817814] (-) TimerEvent: {}
+[7.918052] (-) TimerEvent: {}
+[8.018249] (-) TimerEvent: {}
+[8.118471] (-) TimerEvent: {}
+[8.218756] (-) TimerEvent: {}
+[8.319050] (-) TimerEvent: {}
+[8.419304] (-) TimerEvent: {}
+[8.519606] (-) TimerEvent: {}
+[8.619910] (-) TimerEvent: {}
+[8.720207] (-) TimerEvent: {}
+[8.820479] (-) TimerEvent: {}
+[8.920758] (-) TimerEvent: {}
+[9.020984] (-) TimerEvent: {}
+[9.121216] (-) TimerEvent: {}
+[9.221515] (-) TimerEvent: {}
+[9.321755] (-) TimerEvent: {}
+[9.422047] (-) TimerEvent: {}
+[9.522306] (-) TimerEvent: {}
+[9.622561] (-) TimerEvent: {}
+[9.722863] (-) TimerEvent: {}
+[9.823131] (-) TimerEvent: {}
+[9.923457] (-) TimerEvent: {}
+[10.023793] (-) TimerEvent: {}
+[10.124167] (-) TimerEvent: {}
+[10.224485] (-) TimerEvent: {}
+[10.324774] (-) TimerEvent: {}
+[10.425052] (-) TimerEvent: {}
+[10.525301] (-) TimerEvent: {}
+[10.625589] (-) TimerEvent: {}
+[10.725863] (-) TimerEvent: {}
+[10.826146] (-) TimerEvent: {}
+[10.926379] (-) TimerEvent: {}
+[11.026569] (-) TimerEvent: {}
+[11.126790] (-) TimerEvent: {}
+[11.227078] (-) TimerEvent: {}
+[11.249852] (main_nodes) StdoutLine: {'line': b'[ 90%] Linking CXX executable TravelPose\n'}
+[11.327243] (-) TimerEvent: {}
+[11.427482] (-) TimerEvent: {}
+[11.527716] (-) TimerEvent: {}
+[11.627963] (-) TimerEvent: {}
+[11.728201] (-) TimerEvent: {}
+[11.752266] (main_nodes) StdoutLine: {'line': b'[ 90%] Built target TravelPose\n'}
+[11.828328] (-) TimerEvent: {}
+[11.928500] (-) TimerEvent: {}
+[12.028821] (-) TimerEvent: {}
+[12.129075] (-) TimerEvent: {}
+[12.229534] (-) TimerEvent: {}
+[12.329794] (-) TimerEvent: {}
+[12.430041] (-) TimerEvent: {}
+[12.530268] (-) TimerEvent: {}
+[12.543659] (main_nodes) StdoutLine: {'line': b'[100%] Linking CXX executable ArmPickup\n'}
+[12.630394] (-) TimerEvent: {}
+[12.730763] (-) TimerEvent: {}
+[12.831026] (-) TimerEvent: {}
+[12.931296] (-) TimerEvent: {}
+[12.983543] (main_nodes) StdoutLine: {'line': b'[100%] Built target ArmPickup\n'}
+[12.997354] (main_nodes) CommandEnded: {'returncode': 0}
+[12.998643] (main_nodes) JobProgress: {'identifier': 'main_nodes', 'progress': 'install'}
+[13.007828] (main_nodes) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ibrahim/MobiArm/build/main_nodes'], 'cwd': '/home/ibrahim/MobiArm/build/main_nodes', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('AI_AGENT', 'claude-code_2-1-207_agent'), ('USER', 'ibrahim'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/out/nls.messages.json","locale":"en","availableLanguages":{}}'), ('GIT_EDITOR', 'true'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/zanto/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('CLAUDE_AGENT_SDK_VERSION', '0.3.207'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ibrahim'), ('OLDPWD', '/home/ibrahim/MobiArm'), ('VSCODE_RECONNECTION_GRACE_TIME', '10800000'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-4cf3d1d6-368d-4e99-a9c2-8a4fb43072e3.sock'), ('ROS_PYTHON_VERSION', '3'), ('CLAUDE_CODE_CHILD_SESSION', '1'), ('COPILOT_OTEL_FILE_EXPORTER_PATH', '/dev/null'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', ''), ('COLCON_PREFIX_PATH', '/home/ibrahim/MobiArm/install:/home/ibrahim/MoveItArm/install:/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/411_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('MCP_CONNECTION_NONBLOCKING', 'true'), ('PATH', '/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('CLAUDE_EFFORT', 'xhigh'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('MXC_BIN_DIR', '/home/ibrahim/.vscode-server/bin/fc3def6774c76082adf699d366f31a557ce5573f/node_modules/@microsoft/mxc-sdk/bin'), ('ELECTRON_RUN_AS_NODE', '1'), ('CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING', 'true'), ('CLAUDE_CODE_SESSION_ID', 'c7bf4787-1951-4957-9952-9128ce6f81ea'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('PWD', '/home/ibrahim/MobiArm/build/main_nodes'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/ibrahim/.vscode-server/extensions/anthropic.claude-code-2.1.207-linux-x64/resources/native-binary/claude'), ('PYTHONPATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/home/ibrahim/MobiArm/install/bin_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/MobiArm/install/bin_interface/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CLAUDE_CODE_ENABLE_TASKS', '0'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('COPILOT_CLI_ENABLED_FEATURE_FLAGS', 'SHELL_SPAWN_BACKEND'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[13.016121] (main_nodes) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.016625] (main_nodes) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[13.016916] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/TravelPose\n'}
+[13.017176] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/detectionNode\n'}
+[13.017349] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/VisionNode\n'}
+[13.017541] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/ArmPickup\n'}
+[13.017715] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/RunNode\n'}
+[13.017995] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/display.launch.py\n'}
+[13.018201] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/launch/gazebo.launch.py\n'}
+[13.018342] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/arm.urdf.xacro\n'}
+[13.018578] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/base.urdf.xacro\n'}
+[13.018676] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/urdf/robot.urdf.xacro\n'}
+[13.018928] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/model.rviz\n'}
+[13.019118] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/rviz/nav2_view.rviz\n'}
+[13.019386] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/worlds/world.sdf\n'}
+[13.019710] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/config/nav2_params.yaml\n'}
+[13.019750] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/config/slam_toolbox.yaml\n'}
+[13.019848] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/scan_self_filter.py\n'}
+[13.019971] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/lib/main_nodes/scan_objects_filter.py\n'}
+[13.020264] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/package_run_dependencies/main_nodes\n'}
+[13.020718] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/parent_prefix_path/main_nodes\n'}
+[13.021086] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.sh\n'}
+[13.021431] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/ament_prefix_path.dsv\n'}
+[13.021539] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/path.sh\n'}
+[13.021633] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/environment/path.dsv\n'}
+[13.021738] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.bash\n'}
+[13.021791] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.sh\n'}
+[13.021862] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.zsh\n'}
+[13.021894] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/local_setup.dsv\n'}
+[13.021922] (main_nodes) StdoutLine: {'line': b'-- Symlinking: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.dsv\n'}
+[13.031399] (-) TimerEvent: {}
+[13.033112] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/ament_index/resource_index/packages/main_nodes\n'}
+[13.033511] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/cmake/main_nodesConfig.cmake\n'}
+[13.033609] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/cmake/main_nodesConfig-version.cmake\n'}
+[13.033697] (main_nodes) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.xml\n'}
+[13.035640] (main_nodes) CommandEnded: {'returncode': 0}
+[13.052883] (main_nodes) JobEnded: {'identifier': 'main_nodes', 'rc': 0}
+[13.053708] (-) EventReactorShutdown: {}

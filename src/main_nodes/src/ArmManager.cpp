@@ -1,45 +1,265 @@
-#include "rclcpp/rclcpp.hpp"
+// ArmManager: the mission orchestrator. Owns the state machine and drives the
+// dumb worker nodes over their services/actions:
+//
+//   loop:
+//     travel_pose            (fold the arm before any base movement)
+//     start_search           (arm detection_node; it drives to the nearest cube)
+//     wait /object_reached   (true = arrived, false = nav failed, timeout = no cubes left)
+//     pickup                 (grasp the cube in front of the camera)
+//     travel_pose            (tuck the carried cube before driving)
+//     navigate_to_pose       (drive to the fixed dropoff in front of the table)
+//     place                  (set the cube down, release)
+//
+// A search that yields nothing (timeout) ends the mission. The whole sequence runs
+// on a worker thread with blocking calls; a MultiThreadedExecutor services the
+// service/action responses on other threads, so the blocking calls don't deadlock.
 
+#include "rclcpp/rclcpp.hpp"
+#include "rclcpp_action/rclcpp_action.hpp"
+#include "std_srvs/srv/trigger.hpp"
+#include "std_msgs/msg/bool.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "nav2_msgs/action/navigate_to_pose.hpp"
+#include "bin_interfaces/srv/start_search.hpp"
+#include "tf2/LinearMath/Quaternion.h"
+
+#include <chrono>
+#include <condition_variable>
+#include <mutex>
+#include <optional>
+#include <thread>
+
+using namespace std::chrono_literals;
+using Trigger = std_srvs::srv::Trigger;
+using StartSearch = bin_interfaces::srv::StartSearch;
+using NavigateToPose = nav2_msgs::action::NavigateToPose;
+using NavGoalHandle = rclcpp_action::ClientGoalHandle<NavigateToPose>;
 
 class ArmManager : public rclcpp::Node
 {
-    public:
-    ArmManager() : Node("arm_manager"){
+public:
+  ArmManager() : Node("arm_manager")
+  {
+    dropoff_x_    = this->declare_parameter("dropoff_x", 1.8);
+    dropoff_y_    = this->declare_parameter("dropoff_y", 0.0);
+    dropoff_yaw_  = this->declare_parameter("dropoff_yaw", 0.0);
+    target_frame_ = this->declare_parameter("target_frame", std::string("map"));
+    search_timeout_ = std::chrono::seconds(this->declare_parameter("search_timeout_s", 20));
+    action_timeout_ = std::chrono::seconds(this->declare_parameter("action_timeout_s", 60));
+    nav_timeout_    = std::chrono::seconds(this->declare_parameter("nav_timeout_s", 120));
+    max_failures_   = this->declare_parameter("max_failures", 3);
 
-        RCLCPP_INFO(this->get_logger(), "Arm Manager Node has been started.");
-        travel_pose_client_ = this->create_client<std_srvs::srv::Trigger>("travel_pose");
-        vision_node_client_ = this->create_client<bin_interfaces::srv::GetTargets>("get_targets");
-        arm_pick_client_ = this->create_client<std_srvs::srv::Trigger>("pickup");
-        start_search_client_ = this->create_client<bin_interfaces::srv::StartSearch>("start_search");
+    travel_client_ = this->create_client<Trigger>("travel_pose");
+    search_client_ = this->create_client<StartSearch>("start_search");
+    pickup_client_ = this->create_client<Trigger>("pickup");
+    place_client_  = this->create_client<Trigger>("place");
+    nav_client_    = rclcpp_action::create_client<NavigateToPose>(this, "navigate_to_pose");
 
+    // Match detection_node's transient-local (latched) QoS on /object_reached.
+    reached_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+      "/object_reached", rclcpp::QoS(1).transient_local(),
+      std::bind(&ArmManager::onReached, this, std::placeholders::_1));
+
+    RCLCPP_INFO(get_logger(), "arm_manager up: dropoff (%.2f, %.2f) yaw %.2f in '%s'",
+                dropoff_x_, dropoff_y_, dropoff_yaw_, target_frame_.c_str());
+  }
+
+  void start() { worker_ = std::thread(&ArmManager::runMission, this); }
+  void join()  { if (worker_.joinable()) worker_.join(); }
+
+private:
+  // ---- /object_reached: detection tells us the outcome of an approach ----------
+  void onReached(const std_msgs::msg::Bool::SharedPtr msg)
+  {
+    std::lock_guard<std::mutex> lk(m_);
+    reached_got_ = true;
+    reached_ok_  = msg->data;
+    cv_.notify_all();
+  }
+
+  void armReached()
+  {
+    std::lock_guard<std::mutex> lk(m_);
+    reached_got_ = false;
+  }
+
+  // nullopt = timed out (no cube reached in time), else true/false from detection.
+  std::optional<bool> waitForReached(std::chrono::seconds timeout)
+  {
+    std::unique_lock<std::mutex> lk(m_);
+    if (cv_.wait_for(lk, timeout, [this] { return reached_got_; }))
+      return reached_ok_;
+    return std::nullopt;
+  }
+
+  // ---- blocking service calls (run on the worker thread) -----------------------
+  bool callTrigger(const rclcpp::Client<Trigger>::SharedPtr & client, const char * name)
+  {
+    if (!client->wait_for_service(5s)) {
+      RCLCPP_ERROR(get_logger(), "%s service not available", name);
+      return false;
+    }
+    auto fut = client->async_send_request(std::make_shared<Trigger::Request>());
+    if (fut.wait_for(action_timeout_) != std::future_status::ready) {
+      RCLCPP_ERROR(get_logger(), "%s timed out", name);
+      return false;
+    }
+    auto res = fut.get();
+    RCLCPP_INFO(get_logger(), "%s -> %s (%s)",
+                name, res->success ? "OK" : "FAIL", res->message.c_str());
+    return res->success;
+  }
+
+  bool callStartSearch()
+  {
+    if (!search_client_->wait_for_service(5s)) {
+      RCLCPP_ERROR(get_logger(), "start_search service not available");
+      return false;
+    }
+    auto req = std::make_shared<StartSearch::Request>();
+    req->start = true;
+    auto fut = search_client_->async_send_request(req);
+    if (fut.wait_for(5s) != std::future_status::ready) {
+      RCLCPP_ERROR(get_logger(), "start_search timed out");
+      return false;
+    }
+    return fut.get()->success;
+  }
+
+  // ---- drive to the fixed dropoff pose via Nav2 --------------------------------
+  bool navToDropoff()
+  {
+    if (!nav_client_->wait_for_action_server(5s)) {
+      RCLCPP_ERROR(get_logger(), "navigate_to_pose action server not available");
+      return false;
     }
 
-    void startCycle(){
-        auto requestTravelPose = std::make_shared<std_srvs::srv::Trigger::Request>();
-        travel_pose_client_->send_async_request(requestTravelPose, [this](rclcpp::Client<AddTwoInts>::SharedFuture ftr){
-            RCLCPP_INFO(this->get_logger(), "travel pose done");
+    NavigateToPose::Goal goal;
+    goal.pose.header.frame_id = target_frame_;
+    goal.pose.header.stamp = now();
+    goal.pose.pose.position.x = dropoff_x_;
+    goal.pose.pose.position.y = dropoff_y_;
+    tf2::Quaternion q;
+    q.setRPY(0.0, 0.0, dropoff_yaw_);
+    goal.pose.pose.orientation.x = q.x();
+    goal.pose.pose.orientation.y = q.y();
+    goal.pose.pose.orientation.z = q.z();
+    goal.pose.pose.orientation.w = q.w();
 
-            auto requestStartSearch = std::make_shared<bin_interfaces::srv::StartSearch::Request>();
-            reqyestStartSearch->start = true;
-            start_search_client_->send_async_request(requestStartSearch, [this](rclcpp::Client<AddTwoInts>::SharedFuture ftr2){
-                RCLCPP_INFO(this->get_logger(), "searching");
-            });
-        });
+    auto gh_fut = nav_client_->async_send_goal(goal);
+    if (gh_fut.wait_for(10s) != std::future_status::ready) {
+      RCLCPP_ERROR(get_logger(), "dropoff goal send timed out");
+      return false;
+    }
+    NavGoalHandle::SharedPtr gh = gh_fut.get();
+    if (!gh) {
+      RCLCPP_ERROR(get_logger(), "dropoff goal rejected by Nav2");
+      return false;
     }
 
-    private:
-        rclcpp::Client<std_srvs::srv>::SharedPtr travel_pose_client_;
-        rclcpp::Client<bin_interfaces::srv::GetTargets>::SharedPtr vision_node_client_;
-        rclcpp::Client<std_srvs::srv>::SharedPtr travel_pose_client_;
-        rclcpp::Client<bin_interfaces::srv::StartSearch>::SharedPtr start_search_client_;
+    auto res_fut = nav_client_->async_get_result(gh);
+    if (res_fut.wait_for(nav_timeout_) != std::future_status::ready) {
+      RCLCPP_ERROR(get_logger(), "dropoff nav timed out");
+      return false;
+    }
+    return res_fut.get().code == rclcpp_action::ResultCode::SUCCEEDED;
+  }
 
+  // ---- the mission ------------------------------------------------------------
+  void runMission()
+  {
+    RCLCPP_INFO(get_logger(), "mission starting");
+    int failures = 0;
+
+    while (rclcpp::ok()) {
+      // Fold the arm before any base movement (also un-extends it after a place).
+      if (!callTrigger(travel_client_, "travel_pose")) {
+        RCLCPP_ERROR(get_logger(), "fold failed -- aborting mission");
+        break;
+      }
+
+      // Search: arm detection, then wait for it to reach a cube.
+      armReached();
+      if (!callStartSearch()) {
+        RCLCPP_ERROR(get_logger(), "start_search failed -- aborting mission");
+        break;
+      }
+      RCLCPP_INFO(get_logger(), "searching for the next cube...");
+
+      auto reached = waitForReached(search_timeout_);
+      if (!reached.has_value()) {
+        RCLCPP_INFO(get_logger(), "no cube found within %llds -- mission complete",
+                    static_cast<long long>(search_timeout_.count()));
+        break;
+      }
+      if (!reached.value()) {
+        if (++failures > max_failures_) {
+          RCLCPP_ERROR(get_logger(), "too many approach failures -- aborting mission");
+          break;
+        }
+        RCLCPP_WARN(get_logger(), "approach failed (%d/%d) -- retrying search",
+                    failures, max_failures_);
+        continue;
+      }
+      failures = 0;
+
+      // Pick the cube now in front of the camera.
+      if (!callTrigger(pickup_client_, "pickup")) {
+        RCLCPP_WARN(get_logger(), "pickup failed -- back to search");
+        continue;
+      }
+
+      // Tuck the carried cube, drive to the dropoff, set it down.
+      if (!callTrigger(travel_client_, "travel_pose")) {
+        RCLCPP_ERROR(get_logger(), "carry-fold failed -- aborting mission");
+        break;
+      }
+      if (!navToDropoff()) {
+        RCLCPP_ERROR(get_logger(), "dropoff nav failed (still holding cube) -- aborting mission");
+        break;
+      }
+      if (!callTrigger(place_client_, "place")) {
+        RCLCPP_WARN(get_logger(), "place failed");
+      }
+      // loop -> fold + search for the next cube
+    }
+
+    RCLCPP_INFO(get_logger(), "mission finished");
+    rclcpp::shutdown();
+  }
+
+  // params
+  double dropoff_x_, dropoff_y_, dropoff_yaw_;
+  std::string target_frame_;
+  std::chrono::seconds search_timeout_{20}, action_timeout_{60}, nav_timeout_{120};
+  int max_failures_{3};
+
+  // clients / subscription
+  rclcpp::Client<Trigger>::SharedPtr travel_client_, pickup_client_, place_client_;
+  rclcpp::Client<StartSearch>::SharedPtr search_client_;
+  rclcpp_action::Client<NavigateToPose>::SharedPtr nav_client_;
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr reached_sub_;
+
+  // /object_reached synchronization
+  std::mutex m_;
+  std::condition_variable cv_;
+  bool reached_got_ = false;
+  bool reached_ok_  = false;
+
+  std::thread worker_;
 };
 
 int main(int argc, char ** argv)
 {
-    rclcpp::init(argc, argv);
-    auto node = std::make_shared<ArmManager>();
-    rclcpp::spin(node);
-    rclcpp::shutdown();
-    return 0;
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<ArmManager>();
+
+  rclcpp::executors::MultiThreadedExecutor executor;
+  executor.add_node(node);
+  node->start();     // launch the mission worker thread
+  executor.spin();   // service responses handled here until the mission shuts down
+  node->join();
+
+  rclcpp::shutdown();
+  return 0;
 }

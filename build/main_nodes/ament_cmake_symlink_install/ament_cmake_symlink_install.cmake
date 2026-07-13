@@ -327,8 +327,11 @@ include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targ
 # install("TARGETS" "ArmPickup" "DESTINATION" "lib/main_nodes")
 include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "RunNode" "DESTINATION" "lib/main_nodes")
+# install("TARGETS" "ArmManager" "DESTINATION" "lib/main_nodes")
 include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "RunNode" "DESTINATION" "lib/main_nodes")
+include("/home/ibrahim/MobiArm/build/main_nodes/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "urdf" "rviz" "worlds" "config" "DESTINATION" "share/main_nodes")
 ament_cmake_symlink_install_directory("/home/ibrahim/MobiArm/src/main_nodes" DIRECTORY "launch" "urdf" "rviz" "worlds" "config" "DESTINATION" "share/main_nodes")

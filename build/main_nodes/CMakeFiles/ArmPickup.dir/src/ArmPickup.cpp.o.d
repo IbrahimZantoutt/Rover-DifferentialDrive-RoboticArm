@@ -1308,6 +1308,12 @@ CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o: \
  /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/planning_scene.hpp \
  /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__builder.hpp \
  /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__type_support.hpp \
+ /opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp \
+ /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
+ /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
+ /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp \
+ /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp \
+ /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/get_targets.hpp \
  /home/ibrahim/MobiArm/install/bin_interfaces/include/bin_interfaces/bin_interfaces/srv/detail/get_targets__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp \

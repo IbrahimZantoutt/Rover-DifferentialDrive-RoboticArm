@@ -262,6 +262,43 @@ ArmPickup/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPickup.dir/build.make CMakeFiles/ArmPickup.dir/build
 .PHONY : ArmPickup/fast
 
+#=============================================================================
+# Target rules for targets named ArmManager
+
+# Build rule for target.
+ArmManager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ArmManager
+.PHONY : ArmManager
+
+# fast build rule for target.
+ArmManager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmManager.dir/build.make CMakeFiles/ArmManager.dir/build
+.PHONY : ArmManager/fast
+
+src/ArmManager.o: src/ArmManager.cpp.o
+.PHONY : src/ArmManager.o
+
+# target to build an object file
+src/ArmManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmManager.dir/build.make CMakeFiles/ArmManager.dir/src/ArmManager.cpp.o
+.PHONY : src/ArmManager.cpp.o
+
+src/ArmManager.i: src/ArmManager.cpp.i
+.PHONY : src/ArmManager.i
+
+# target to preprocess a source file
+src/ArmManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmManager.dir/build.make CMakeFiles/ArmManager.dir/src/ArmManager.cpp.i
+.PHONY : src/ArmManager.cpp.i
+
+src/ArmManager.s: src/ArmManager.cpp.s
+.PHONY : src/ArmManager.s
+
+# target to generate assembly for a file
+src/ArmManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmManager.dir/build.make CMakeFiles/ArmManager.dir/src/ArmManager.cpp.s
+.PHONY : src/ArmManager.cpp.s
+
 src/ArmPickup.o: src/ArmPickup.cpp.o
 .PHONY : src/ArmPickup.o
 
@@ -397,11 +434,15 @@ help:
 	@echo "... test"
 	@echo "... main_nodes_uninstall"
 	@echo "... uninstall"
+	@echo "... ArmManager"
 	@echo "... ArmPickup"
 	@echo "... RunNode"
 	@echo "... TravelPose"
 	@echo "... VisionNode"
 	@echo "... detectionNode"
+	@echo "... src/ArmManager.o"
+	@echo "... src/ArmManager.i"
+	@echo "... src/ArmManager.s"
 	@echo "... src/ArmPickup.o"
 	@echo "... src/ArmPickup.i"
 	@echo "... src/ArmPickup.s"
