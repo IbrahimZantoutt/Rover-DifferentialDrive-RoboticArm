@@ -159,7 +159,7 @@ int main(int argc, char **argv)
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
         lockBase();
         // Top-down grasp: gripper points straight down (roll = pi) onto the block.
-        if (goToPos(x, y, z + 0.275, 3.1416, 0, 0)) {
+        if (goToPos(x, y, z + 0.295, 3.1416, 0, 0)) {
             action_count_++;
             // NOTE: attaches green_cube_<N> in call order, not the cube actually
             // grasped -- needs a position->model-name lookup for arbitrary layouts.
