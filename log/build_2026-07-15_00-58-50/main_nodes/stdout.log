@@ -1,0 +1,6 @@
+[ 16%] Built target RunNode
+[ 58%] Built target detectionNode
+[ 58%] Building CXX object CMakeFiles/VisionNode.dir/src/VisionNode.cpp.o
+[ 58%] Built target ArmManager
+[ 75%] Built target TravelPose
+[ 91%] Built target ArmPickup

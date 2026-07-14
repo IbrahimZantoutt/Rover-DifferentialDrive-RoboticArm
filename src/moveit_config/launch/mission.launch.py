@@ -47,9 +47,17 @@ def generate_launch_description():
     dropoff_y_arg = DeclareLaunchArgument("dropoff_y", default_value="0.0")
     dropoff_yaw_arg = DeclareLaunchArgument("dropoff_yaw", default_value="0.0")
 
+    # debug_mode:=true re-enables VisionNode's hsv/mask windows (and, in
+    # nav2_slam.launch.py, the RViz windows). Off by default: the extra GUI work
+    # starves the Nav2 control loop and the robot crawls.
+    debug_mode_arg = DeclareLaunchArgument("debug_mode", default_value="false")
+
     vision = Node(
         package="main_nodes", executable="VisionNode",
-        output="screen", parameters=[sim_time],
+        output="screen",
+        parameters=[sim_time, {
+            "debug_mode": ParameterValue(LaunchConfiguration("debug_mode"), value_type=bool),
+        }],
     )
 
     detection = Node(
@@ -83,6 +91,6 @@ def generate_launch_description():
     arm_manager_delayed = TimerAction(period=10.0, actions=[arm_manager])
 
     return LaunchDescription([
-        dropoff_x_arg, dropoff_y_arg, dropoff_yaw_arg,
+        dropoff_x_arg, dropoff_y_arg, dropoff_yaw_arg, debug_mode_arg,
         vision, detection, travel_pose, arm_pickup, arm_manager_delayed,
     ])

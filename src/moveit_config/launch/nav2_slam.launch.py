@@ -2,8 +2,10 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 
@@ -32,13 +34,19 @@ def generate_launch_description():
 
     use_sim_time = {"use_sim_time": True}
 
+    # Both RViz windows are OFF unless debug_mode:=true -- they are a large GUI/CPU
+    # draw that starves the Nav2 control loop (the robot ends up crawling).
+    debug_mode = LaunchConfiguration("debug_mode")
+    debug_mode_arg = DeclareLaunchArgument("debug_mode", default_value="false")
+
     # --- Full Gazebo sim (robot + world + arm controllers + MoveIt + RViz) ------
     # This is your existing launch; it spawns robot.urdf.xacro (base + lidar +
     # arm), so /scan, /odom and /cmd_vel are all available for Nav2/SLAM.
     gazebo_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(moveit_config_share, "launch", "gazebo.launch.py")
-        )
+        ),
+        launch_arguments={"debug_mode": debug_mode}.items(),
     )
 
     # --- Self-filter: strip lidar returns that hit the robot's own camera stand -
@@ -94,6 +102,7 @@ def generate_launch_description():
         executable="rviz2",
         name="nav2_rviz",
         output="screen",
+        condition=IfCondition(debug_mode),
         arguments=["-d", nav2_rviz_config],
         parameters=[use_sim_time],
     )
@@ -104,4 +113,6 @@ def generate_launch_description():
 
     # The filter can start immediately -- it just waits for /scan_raw and must be
     # up before SLAM/Nav2 subscribe to /scan.
-    return LaunchDescription([gazebo_sim, scan_filter, slam_and_nav2, scan_objects])
+    return LaunchDescription(
+        [debug_mode_arg, gazebo_sim, scan_filter, slam_and_nav2, scan_objects]
+    )
