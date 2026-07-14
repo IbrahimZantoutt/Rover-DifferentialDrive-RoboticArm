@@ -25,7 +25,8 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 ### The full mission — search, approach, pick, carry, place, repeat
 
 <!-- Drag-and-drop your horizontal full-process GIF into GitHub's editor here and replace the src below. -->
-<img width="90%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="PASTE_FULL_PROCESS_GIF_URL_HERE" />
+
+<img width="90%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/8c89f1fc-3266-469f-a5a3-b6f9d4576a41" />
 
 </div>
 
@@ -36,15 +37,14 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 ### The robot model (URDF)
 
 <!-- Drag-and-drop a screenshot of the full robot in RViz (RobotModel display) here. -->
-<img width="100%" alt="MobiArm URDF: 4-wheel differential base, 6-DOF arm, lidar and depth camera" src="PASTE_URDF_IMAGE_URL_HERE" />
+<img width="100%" alt="MobiArm URDF: 4-wheel differential base, 6-DOF arm, lidar and depth camera" src="https://github.com/user-attachments/assets/cf1dbb5f-381e-41ab-882d-ef488186bfaa" />
 
 </td>
 <td width="50%" align="center">
 
 ### Live SLAM map — bird's-eye view
-
 <!-- Drag-and-drop the RViz bird's-eye map GIF here. -->
-<img width="100%" alt="slam_toolbox building the map in RViz while the robot works" src="PASTE_RVIZ_MAP_GIF_URL_HERE" />
+<img width="100%" alt="slam_toolbox building the map in RViz while the robot works" src="https://github.com/user-attachments/assets/6f992512-db09-4305-9865-783b3122afcb" />
 
 </td>
 </tr>
