@@ -1,1 +1,0 @@
-/home/ibrahim/MobiArm/src/moveit_config/launch/travel_pose.launch.py

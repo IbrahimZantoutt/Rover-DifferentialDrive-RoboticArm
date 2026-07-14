@@ -1,6 +1,0 @@
-[ 16%] Built target RunNode
-[ 50%] Built target ArmManager
-[ 50%] Built target detectionNode
-[ 66%] Built target VisionNode
-[ 91%] [32mBuilding CXX object CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o[0m
-[ 91%] Built target TravelPose

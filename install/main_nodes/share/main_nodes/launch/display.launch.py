@@ -1,1 +1,0 @@
-/home/ibrahim/MobiArm/src/main_nodes/launch/display.launch.py

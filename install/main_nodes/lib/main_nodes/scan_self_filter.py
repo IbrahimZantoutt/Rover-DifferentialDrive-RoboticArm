@@ -1,1 +1,0 @@
-/home/ibrahim/MobiArm/src/main_nodes/scripts/scan_self_filter.py

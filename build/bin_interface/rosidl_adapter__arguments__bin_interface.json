@@ -1,6 +1,0 @@
-{
-  "package_name": "bin_interface",
-  "non_idl_tuples": [
-    "/home/ibrahim/MobiArm/src/bin_interface:srv/GetTargets.srv"
-  ]
-}

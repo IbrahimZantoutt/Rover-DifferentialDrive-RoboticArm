@@ -1,6 +1,0 @@
-setup.py
-bin_interface/__init__.py
-bin_interface.egg-info/PKG-INFO
-bin_interface.egg-info/SOURCES.txt
-bin_interface.egg-info/dependency_links.txt
-bin_interface.egg-info/top_level.txt

@@ -8,6 +8,9 @@
             <geometry>
                 <box size="0.85 0.55 0.13" />
             </geometry>
+            <material name="body_orange">
+                <color rgba="0.9 0.45 0.05 1.0"/>
+            </material>
         </visual>
         <!-- Collision matches the body so the robot rests on its wheels; an
              oversized box lifted the wheels off the ground (no traction). -->
@@ -32,6 +35,9 @@
             <geometry>
                 <cylinder radius="0.08" length="0.05"/>
             </geometry>
+            <material name="wheel_black">
+                <color rgba="0.12 0.12 0.12 1.0"/>
+            </material>
         </visual>
         <collision>
              <geometry>
@@ -58,6 +64,9 @@
             <geometry>
                 <cylinder radius="0.08" length="0.05"/>
             </geometry>
+            <material name="wheel_black">
+                <color rgba="0.12 0.12 0.12 1.0"/>
+            </material>
         </visual>
         <collision>
              <geometry>
@@ -85,6 +94,9 @@
             <geometry>
                 <cylinder radius="0.08" length="0.05"/>
             </geometry>
+            <material name="wheel_black">
+                <color rgba="0.12 0.12 0.12 1.0"/>
+            </material>
         </visual>
         <collision>
              <geometry>
@@ -111,6 +123,9 @@
             <geometry>
                 <cylinder radius="0.08" length="0.05"/>
             </geometry>
+            <material name="wheel_black">
+                <color rgba="0.12 0.12 0.12 1.0"/>
+            </material>
         </visual>
         <collision>
              <geometry>
@@ -135,10 +150,14 @@
     <!-- Skid-steer friction: fdir1 pins axis 1 to the rolling dir. mu1=1 (forward
          traction); mu2 low so wheels scrub sideways and the base can yaw (mu2=1
          pinned them laterally -> ~11% of commanded rotation). -->
-    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <!-- Gazebo ignores the URDF <material> above (that only colours RViz), so the
+         render colour has to be repeated here per link. -->
+    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1><material>Gazebo/Black</material></gazebo>
+    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1><material>Gazebo/Black</material></gazebo>
+    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1><material>Gazebo/Black</material></gazebo>
+    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1><material>Gazebo/Black</material></gazebo>
+
+    <gazebo reference="robot_base"><material>Gazebo/Orange</material></gazebo>
 
     <!-- Differential drive: publishes /odom + odom->robot_base TF, subscribes /cmd_vel. -->
     <gazebo>
