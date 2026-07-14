@@ -88,10 +88,12 @@ controller_server:
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
-      # 0.4 m / 0.5 rad: RPP glides in smoothly but parks a bit short (~0.3 m) and
-      # this room's SLAM localization is only ~0.1-0.3 m precise, so a tight 0.25
-      # left it hovering forever. This band lets it declare "arrived" and stop.
-      xy_goal_tolerance: 0.4
+      # Tightened so the base pushes in until the costmap inflation stops it
+      # (~0.55 m from the object) instead of parking ~0.4 m short -- otherwise the
+      # cube lands ~0.8 m out, past the arm's ~0.7 m reach, and the grasp plan
+      # fails ("Unable to sample valid states for goal tree"). detectionNode's
+      # arrival_tolerance accepts the near-goal ABORT this can trigger.
+      xy_goal_tolerance: 0.2
       yaw_goal_tolerance: 0.5
     FollowPath:
       # Regulated Pure Pursuit: follows the path by chasing a lookahead point with

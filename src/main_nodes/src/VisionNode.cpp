@@ -62,7 +62,6 @@ class VisionNode : public rclcpp::Node{
             cv::imshow("Camera Image", cv_image);
             cv::waitKey(1);
 
-            // Process the image and depth data here
             cv::Mat hsv, mask;
             cv::cvtColor(cv_image, hsv, cv::COLOR_BGR2HSV);
             cv::inRange(hsv, cv::Scalar(40, 100, 40), cv::Scalar(80, 255, 255), mask);

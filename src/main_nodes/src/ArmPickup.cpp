@@ -31,9 +31,7 @@ int main(int argc, char **argv)
 
     int action_count_ = 0;
 
-    // The pickup/place callbacks drive MoveGroup and block on service-client
-    // responses; run them in their own callback group under a MultiThreadedExecutor
-    // so those responses are serviced on other threads (no single-thread deadlock).
+    // Own callback group + MultiThreadedExecutor so pickup/place's blocking calls don't deadlock.
     auto srv_group =
         node->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
@@ -159,15 +157,11 @@ int main(int argc, char **argv)
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
         lockBase();
         // Top-down grasp: gripper points straight down (roll = pi) onto the block.
-        if (goToPos(x, y, z + 0.295, 3.1416, 0, 0)) {
+        if (goToPos(x, y, z + 0.296, 3.1416, 0, 0)) {
             action_count_++;
-            // NOTE: attaches green_cube_<N> in call order, not the cube actually
-            // grasped -- needs a position->model-name lookup for arbitrary layouts.
+            // NOTE: attaches green_cube_<N> in call order, not the cube actually grasped.
             std::string current_cube = "green_cube_" + std::to_string(action_count_);
-            // The LinkAttacher plugin allows only ONE active attachment at a time
-            // (single global IsAttached guard), so release the base->ground weld
-            // BEFORE welding the wrist to the cube -- otherwise the cube attach is
-            // rejected with "Both links have already been attached, aborting...".
+            // LinkAttacher allows only one active weld at a time, so drop the base->ground weld first.
             unlockBase();
             attach("mobiarm", "wrist_yaw_link", current_cube, "link");
             setGripper(0.005, 0.005);
@@ -189,7 +183,6 @@ int main(int argc, char **argv)
         return false;
     };
 
-    // Pick a single cube: pull the latest target from vision, then grasp it.
     auto pick_one = [&]() -> bool {
         geometry_msgs::msg::Point target;
         if (!search(target)) return false;

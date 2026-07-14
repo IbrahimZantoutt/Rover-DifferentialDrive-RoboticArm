@@ -62,7 +62,7 @@
     <group_state name="placepose2" group="arm">
         <joint name="j1_waist" value="1.447"/>
         <joint name="j2_shoulder" value="0.662"/>
-        <joint name="j3_elbow" value="0.7"/>
+        <joint name="j3_elbow" value="0.6"/>
         <joint name="j4_wrist" value="0.119"/>
         <joint name="j5_wrist" value="0.73"/>
         <joint name="j6_wrist" value="0"/>

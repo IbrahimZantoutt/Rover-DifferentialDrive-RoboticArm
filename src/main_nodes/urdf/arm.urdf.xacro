@@ -55,8 +55,6 @@
         <limit lower="-3.14159" upper="3.14159" effort="100.0" velocity="1.0"/>
     </joint>
 
-    <!-- J2 -->
-
     <link name="shoulder_link">
         <inertial>
             <origin xyz="0 0 0" rpy="1.5708 0 1.5708"/>
@@ -116,8 +114,6 @@
         <child link="shoulder_arm"/>
         <origin xyz="0.027 0 0.18" rpy="0 0 0"/>
     </joint>
-
-    <!-- J3 -->
 
     <link name="elbow_link">
         <inertial>
@@ -180,8 +176,6 @@
         <origin xyz="-0.04 0 0.18" rpy="0 0 0"/>
     </joint>
 
-    <!-- J4 -->
-
     <link name="wrist_link">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -211,8 +205,6 @@
         <axis xyz="0 0 1"/>
         <limit lower="-3.14159" upper="3.14159" effort="100.0" velocity="1.0"/>
     </joint>
-
-    <!-- J5 -->
 
     <link name="wrist_pitch_link">
         <inertial>
@@ -273,8 +265,6 @@
         <origin xyz="0.02 0 0.04" rpy="0 0 0"/>
     </joint>
 
-    <!-- J6 -->
-
      <link name="wrist_yaw_link">
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -304,8 +294,6 @@
         <limit lower="-1.54159" upper="1.54159" effort="100.0" velocity="1.0"/>
     </joint>
 
-
-    <!-- tool -->
 
     <link name="tool_link">
         <inertial>

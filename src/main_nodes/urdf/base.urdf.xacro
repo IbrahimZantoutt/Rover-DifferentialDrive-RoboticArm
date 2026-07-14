@@ -9,18 +9,15 @@
                 <box size="0.85 0.55 0.13" />
             </geometry>
         </visual>
-        <!-- Collision must match the body so the robot rests on its WHEELS, not
-             on an oversized box. The old 0.28x0.28x0.35 box reached down to
-             z=-0.115 (below the wheels at -0.08), lifting the wheels off the
-             ground -> no traction -> robot couldn't drive. -->
+        <!-- Collision matches the body so the robot rests on its wheels; an
+             oversized box lifted the wheels off the ground (no traction). -->
         <collision>
             <origin xyz="0 0 0.06" rpy="0 0 0"/>
              <geometry>
                 <box size="0.85 0.55 0.13" />
             </geometry>
         </collision>
-        <!-- Inertia recomputed for a 13 kg, 0.85x0.55x0.13 box (I = m(a^2+b^2)/12);
-             COM lowered to z=0.04 (near the wheel axles) to resist tipping. -->
+        <!-- Inertia for a 13 kg 0.85x0.55x0.13 box; COM lowered to z=0.04 to resist tipping. -->
         <inertial>
             <origin xyz="0 0 0.04" rpy="0 0 0"/>
             <mass value="13.0"/>
@@ -30,7 +27,6 @@
         </inertial>
     </link>
 
-    <!-- left wheels -->
     <link name="left_wheel1">
         <visual>
             <geometry>
@@ -82,9 +78,6 @@
         <origin xyz="0.3 0.27 0" rpy="-1.5707 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
-
-
-    <!-- right wheels -->
 
 
     <link name="right_wheel1">
@@ -139,21 +132,15 @@
         <axis xyz="0 0 1"/>
     </joint>
 
-    <!-- Skid-steer wheel friction. fdir1 = "1 0 0" pins friction axis 1 to the
-         wheel's ROLLING direction (base +x); each wheel link is only rotated about
-         x, so its local x = base x. Then:
-           mu1 (rolling)  = 1.0  -> forward traction, unchanged
-           mu2 (lateral)  = 0.0  -> wheels can scrub SIDEWAYS freely, so the base
-                                    can actually yaw. With mu2=1.0 the wheels were
-                                    laterally pinned and the robot could not turn
-                                    (measured ~11% of commanded rotation). -->
-    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.6</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.6</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.6</mu2><fdir1>1 0 0</fdir1></gazebo>
-    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.6</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <!-- Skid-steer friction: fdir1 pins axis 1 to the rolling dir. mu1=1 (forward
+         traction); mu2 low so wheels scrub sideways and the base can yaw (mu2=1
+         pinned them laterally -> ~11% of commanded rotation). -->
+    <gazebo reference="left_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="left_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="right_wheel1"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
+    <gazebo reference="right_wheel2"><mu1>1.0</mu1><mu2>0.7</mu2><fdir1>1 0 0</fdir1></gazebo>
 
-    <!-- Differential drive controller (publishes /odom + odom->robot_base TF,
-         subscribes to /cmd_vel). Two wheel pairs driven together. -->
+    <!-- Differential drive: publishes /odom + odom->robot_base TF, subscribes /cmd_vel. -->
     <gazebo>
         <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
             <ros>
@@ -183,11 +170,9 @@
             <robot_base_frame>robot_base</robot_base_frame>
 
             <publish_odom>true</publish_odom>
-            <!-- The diff-drive plugin publishes odom->robot_base directly from wheel
-                 odometry. An EKF/IMU fusion used to own this TF, but it introduced a
-                 yaw-dependent map/scan shift during turns (the scans swung in the odom
-                 frame as the robot rotated), so odom->base is sourced purely from the
-                 plugin. SLAM's map->odom absorbs the residual wheel-odometry drift. -->
+            <!-- odom->robot_base from wheel odometry only; an EKF/IMU fusion here
+                 caused a yaw-dependent scan shift during turns. SLAM's map->odom
+                 absorbs the drift. -->
             <publish_odom_tf>true</publish_odom_tf>
             <publish_wheel_tf>true</publish_wheel_tf>
         </plugin>

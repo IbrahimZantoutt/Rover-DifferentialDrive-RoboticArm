@@ -1,19 +1,9 @@
-// Detection node: watch /scan_objects (the "novel objects only" scan), pick the
-// closest detection, and send Nav2 to a pose that stops the robot in front of it
-// with the front-mounted camera pointing at it.
+// Detection node: watch /scan_objects, take the closest return as the nearest
+// object, and send Nav2 to a standoff pose in front of it (camera facing it).
+// Gated by the start_search service.
 //
-// Flow:
-//   1. /scan_objects -> closest finite return = nearest object (smallest range).
-//   2. Build a goal along the current bearing to it, at (range - standoff) from
-//      the robot, yaw = that bearing (so the robot's +x / camera faces the object).
-//   3. Transform the goal from the lidar frame into 'map' via TF.
-//   4. Send it to Nav2's navigate_to_pose action.
-//
-// standoff = distance from the ROBOT BASE (robot_base) to the object. Nav2 drives
-// the base, and the object is an obstacle in the nav costmap (0.55 m inflation),
-// with the footprint front at 0.45 m -- so a base-to-object distance much below
-// ~0.6 m gets rejected as in-collision. The camera is ~0.4 m forward on the base,
-// so standoff 0.6 leaves the camera ~0.2 m from the object.
+// standoff = base->object distance. Below ~0.6 m Nav2 rejects the goal as
+// in-collision (0.55 m costmap inflation); the camera is ~0.4 m forward.
 
 #include <chrono>
 #include <cmath>
@@ -44,10 +34,8 @@ public:
   {
     standoff_ = this->declare_parameter("standoff", 0.4);              // base->object [m]
     target_frame_ = this->declare_parameter("target_frame", std::string("map"));
-    // If Nav2 ABORTS the final approach (progress-checker trip near the goal, or
-    // the goal sitting inside the costmap inflation) but the base actually ended
-    // up within this distance of the goal, count it as "arrived" and let the
-    // pickup run instead of bouncing back to a fresh detection.
+    // If Nav2 ABORTS the approach but the base ended within this of the goal, count
+    // it as arrived (see onResult) instead of bouncing back to detection.
     arrival_tolerance_ = this->declare_parameter("arrival_tolerance", 0.6);       // [m]
     robot_base_frame_ = this->declare_parameter("robot_base_frame", std::string("robot_base"));
 
@@ -75,8 +63,8 @@ public:
     reached_pub_ = this->create_publisher<std_msgs::msg::Bool>(
       "/object_reached", rclcpp::QoS(1).transient_local());
 
-    // Pulsed the instant we commit a Nav2 goal, so the orchestrator can tell
-    // "driving to a cube" (found) apart from "no cubes left" (never fires).
+    // Pulsed when we commit a Nav2 goal, so the orchestrator can tell "driving"
+    // (found) from "no cubes left" (never fires).
     found_pub_ = this->create_publisher<std_msgs::msg::Empty>(
       "/object_found", rclcpp::QoS(1).transient_local());
 
@@ -167,19 +155,16 @@ private:
     switch (result.code) {
       case rclcpp_action::ResultCode::SUCCEEDED: {
         RCLCPP_INFO(get_logger(), "reached the object -- camera is facing it");
-        // stays latched (navigating_ = true) so it doesn't immediately re-drive;
-        // the orchestrator re-arms via start_search (which clears the latch).
+        // stays latched (navigating_ = true) so it doesn't re-drive; orchestrator
+        // re-arms via start_search.
         active_ = false;  // one-shot: stop until re-armed
         publishReached(true);
         break;
       }
       case rclcpp_action::ResultCode::ABORTED: {
-        // Nav2 frequently ABORTS the last stretch of the approach even though the
-        // base is basically at the cube: near the goal the robot moves too little
-        // to satisfy the progress checker (required_movement_radius 0.5 m / 10 s),
-        // or the goal sits inside the costmap inflation. If we actually ended up
-        // within arrival_tolerance of the goal, treat it as reached so the pickup
-        // runs -- instead of reporting failure and bouncing back to detection.
+        // Nav2 often ABORTS the last stretch even though the base is at the cube
+        // (progress-checker trip, or goal inside the costmap inflation). If we
+        // ended within arrival_tolerance, treat it as reached so the pickup runs.
         double dist = -1.0;
         const bool have_dist = distanceToGoal(dist);
         if (have_dist && dist <= arrival_tolerance_) {
@@ -191,10 +176,8 @@ private:
         } else {
           RCLCPP_WARN(get_logger(),
             "Nav2 aborted and base is %.2f m from goal (> %.2f) -- approach failed. "
-            "Staying COMMITTED to this one goal; we do NOT recompute from a drifted "
-            "pose (that caused random re-approaches).",
+            "Staying COMMITTED; we do NOT recompute from a drifted pose.",
             dist, arrival_tolerance_);
-          // navigating_ stays true -> no re-goal, no random re-approach
           active_ = false;  // one-shot: stop until re-armed
           publishReached(false);
         }
@@ -224,9 +207,8 @@ private:
     reached_pub_->publish(m);
   }
 
-  // Planar distance [m] from the robot base to the last committed goal, both in
-  // the map frame. Returns false (leaving dist_out untouched) if no goal has been
-  // committed yet or TF map<-robot_base is unavailable.
+  // Planar distance [m] from the robot base to the last committed goal (map frame).
+  // Returns false if no goal committed yet or TF map<-robot_base is unavailable.
   bool distanceToGoal(double & dist_out)
   {
     if (!have_goal_) return false;
