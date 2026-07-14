@@ -22,11 +22,12 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 
 <div align="center">
 
-### The full mission — search, approach, pick, carry, place, repeat
+### one part demo — search, approach, pick, carry, place
 
 <!-- Drag-and-drop your horizontal full-process GIF into GitHub's editor here and replace the src below. -->
 
-<img width="90%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/8c89f1fc-3266-469f-a5a3-b6f9d4576a41" />
+
+<img width="90%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/fa8d8a7e-42d4-4761-8c31-b46f6ad4e7dc" />
 
 </div>
 
@@ -49,6 +50,16 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+### The full mission — search, approach, pick, carry, place, repeat
+
+<!-- Drag-and-drop your horizontal full-process GIF into GitHub's editor here and replace the src below. -->
+
+<img width="50%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/8c89f1fc-3266-469f-a5a3-b6f9d4576a41" />
+
+</div>
 
 ---
 
