@@ -43,8 +43,8 @@ int main(int argc, char **argv)
 
     MoveGroupInterface arm(node, "arm");
     arm.setPlanningTime(5.0);
-    arm.setMaxVelocityScalingFactor(0.5);
-    arm.setMaxAccelerationScalingFactor(0.5);
+    arm.setMaxVelocityScalingFactor(1.0);     // full speed to the joint_limits.yaml ceiling
+    arm.setMaxAccelerationScalingFactor(1.0);
     arm.setGoalOrientationTolerance(0.3);   // radians, before setPoseTarget
 
     MoveGroupInterface gripper(node, "gripper");
@@ -158,7 +158,8 @@ int main(int argc, char **argv)
     auto pick = [&](double x, double y, double z) -> bool {
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
         lockBase();
-        if (goToPos(x, y, z + 0.26, 1.5, 0, 0)) {
+        // Top-down grasp: gripper points straight down (roll = pi) onto the block.
+        if (goToPos(x, y, z + 0.275, 3.1416, 0, 0)) {
             action_count_++;
             // NOTE: attaches green_cube_<N> in call order, not the cube actually
             // grasped -- needs a position->model-name lookup for arbitrary layouts.
@@ -169,7 +170,7 @@ int main(int argc, char **argv)
             // rejected with "Both links have already been attached, aborting...".
             unlockBase();
             attach("mobiarm", "wrist_yaw_link", current_cube, "link");
-            setGripper(0.01, 0.01);
+            setGripper(0.005, 0.005);
             return true;
         }
         unlockBase();

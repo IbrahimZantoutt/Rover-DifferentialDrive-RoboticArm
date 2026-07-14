@@ -1,0 +1,7 @@
+[ 16%] Built target RunNode
+[ 33%] Built target detectionNode
+[ 50%] Built target ArmManager
+Consolidate compiler generated dependencies of target ArmPickup
+[ 66%] Built target TravelPose
+[ 83%] Built target VisionNode
+[ 91%] Building CXX object CMakeFiles/ArmPickup.dir/src/ArmPickup.cpp.o
