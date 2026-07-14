@@ -45,6 +45,7 @@ int main(int argc, char **argv)
     arm.setPlanningTime(5.0);
     arm.setMaxVelocityScalingFactor(0.5);
     arm.setMaxAccelerationScalingFactor(0.5);
+    arm.setGoalOrientationTolerance(0.3);   // radians, before setPoseTarget
 
     MoveGroupInterface gripper(node, "gripper");
     gripper.setMaxVelocityScalingFactor(0.5);
@@ -162,9 +163,13 @@ int main(int argc, char **argv)
             // NOTE: attaches green_cube_<N> in call order, not the cube actually
             // grasped -- needs a position->model-name lookup for arbitrary layouts.
             std::string current_cube = "green_cube_" + std::to_string(action_count_);
-            attach("robot_arm", "wrist_yaw_link", current_cube, "link");
-            setGripper(0.01, 0.01);
+            // The LinkAttacher plugin allows only ONE active attachment at a time
+            // (single global IsAttached guard), so release the base->ground weld
+            // BEFORE welding the wrist to the cube -- otherwise the cube attach is
+            // rejected with "Both links have already been attached, aborting...".
             unlockBase();
+            attach("mobiarm", "wrist_yaw_link", current_cube, "link");
+            setGripper(0.01, 0.01);
             return true;
         }
         unlockBase();
@@ -173,9 +178,10 @@ int main(int argc, char **argv)
 
     auto place = [&]() -> bool {
         //goToPos(0.374, -0.215, 0.327,-0.898, -1.442, 2.633);
-        if (goToPos(0.313, -0.309, 0.379, 3.141, 1.390, 3.142)) {
+        arm.setNamedTarget("placepose2");
+        if (plan_and_execute("place pose target")) {
             std::string current_cube = "green_cube_" + std::to_string(action_count_);
-            detach("robot_arm", "wrist_yaw_link", current_cube, "link");
+            detach("mobiarm", "wrist_yaw_link", current_cube, "link");
             setGripper(0.0, 0.0);
             return true;
         }

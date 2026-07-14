@@ -51,6 +51,22 @@
         <joint name="j5_wrist" value="0.594"/>
         <joint name="j6_wrist" value="0"/>
     </group_state>
+    <group_state name="placepose" group="arm">
+        <joint name="j1_waist" value="-1.545"/>
+        <joint name="j2_shoulder" value="-0.288"/>
+        <joint name="j3_elbow" value="-1.104"/>
+        <joint name="j4_wrist" value="1.545"/>
+        <joint name="j5_wrist" value="0"/>
+        <joint name="j6_wrist" value="0"/>
+    </group_state>
+    <group_state name="placepose2" group="arm">
+        <joint name="j1_waist" value="1.347"/>
+        <joint name="j2_shoulder" value="0.662"/>
+        <joint name="j3_elbow" value="0.700"/>
+        <joint name="j4_wrist" value="0.119"/>
+        <joint name="j5_wrist" value="0.730"/>
+        <joint name="j6_wrist" value="0"/>
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="gripper_ee" parent_link="tool_link" group="gripper" parent_group="arm"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->

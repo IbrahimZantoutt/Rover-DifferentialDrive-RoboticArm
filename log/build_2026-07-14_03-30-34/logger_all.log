@@ -1,0 +1,442 @@
+[0.463s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.463s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ae3438556f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ae3438550f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ae3438550f0>>)
+[0.904s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.904s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.905s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.905s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.905s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.905s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.905s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ibrahim/MobiArm'
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extensions ['ignore', 'ignore_ament_install']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'ignore'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'ignore_ament_install'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extensions ['colcon_pkg']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'colcon_pkg'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extensions ['colcon_meta']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'colcon_meta'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extensions ['ros']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'ros'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extensions ['cmake', 'python']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'cmake'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'python'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extensions ['python_setup_py']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher) by extension 'python_setup_py'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extension 'ignore'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extension 'ignore_ament_install'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extensions ['colcon_pkg']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extension 'colcon_pkg'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extensions ['colcon_meta']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extension 'colcon_meta'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extensions ['ros']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/linkattacher_msgs) by extension 'ros'
+[0.936s] DEBUG:colcon.colcon_core.package_identification:Package 'src/IFRA_LinkAttacher/linkattacher_msgs' with type 'ros.ament_cmake' and name 'linkattacher_msgs'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extension 'ignore_ament_install'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extensions ['colcon_pkg']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extension 'colcon_pkg'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extensions ['colcon_meta']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extension 'colcon_meta'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extensions ['ros']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/IFRA_LinkAttacher/ros2_LinkAttacher) by extension 'ros'
+[0.938s] DEBUG:colcon.colcon_core.package_identification:Package 'src/IFRA_LinkAttacher/ros2_LinkAttacher' with type 'ros.ament_cmake' and name 'ros2_linkattacher'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extension 'ignore'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extension 'ignore_ament_install'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extensions ['colcon_pkg']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extension 'colcon_pkg'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extensions ['colcon_meta']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extension 'colcon_meta'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extensions ['ros']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/bin_interfaces) by extension 'ros'
+[0.940s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bin_interfaces' with type 'ros.ament_cmake' and name 'bin_interfaces'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extension 'ignore'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extension 'ignore_ament_install'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extensions ['colcon_pkg']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extension 'colcon_pkg'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extensions ['colcon_meta']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extension 'colcon_meta'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extensions ['ros']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/main_nodes) by extension 'ros'
+[0.944s] DEBUG:colcon.colcon_core.package_identification:Package 'src/main_nodes' with type 'ros.ament_cmake' and name 'main_nodes'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extension 'ignore'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extension 'ignore_ament_install'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extensions ['colcon_pkg']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extension 'colcon_pkg'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extensions ['colcon_meta']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extension 'colcon_meta'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extensions ['ros']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_config) by extension 'ros'
+[0.946s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_config' with type 'ros.ament_cmake' and name 'moveit_config'
+[0.946s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.946s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.946s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.946s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.946s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.993s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.993s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.005s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/ibrahim/MobiArm/install
+[1.006s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ibrahim/MoveItArm/install
+[1.007s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ibrahim/RobotArmExpanded/install
+[1.007s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ibrahim/RobotArm/install
+[1.007s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ibrahim/TF2Sample/install
+[1.008s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ibrahim/RobotNav/install
+[1.008s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ibrahim/RobotMonitor/install
+[1.009s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ibrahim/ros2_ws/install
+[1.011s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 449 installed packages in /opt/ros/humble
+[1.013s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'bin_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.106s] DEBUG:colcon.colcon_core.verb:Building package 'bin_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ibrahim/MobiArm/build/bin_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ibrahim/MobiArm/install/bin_interfaces', 'merge_install': False, 'path': '/home/ibrahim/MobiArm/src/bin_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'cmake_args' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'cmake_target' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'linkattacher_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.107s] DEBUG:colcon.colcon_core.verb:Building package 'linkattacher_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ibrahim/MobiArm/build/linkattacher_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ibrahim/MobiArm/install/linkattacher_msgs', 'merge_install': False, 'path': '/home/ibrahim/MobiArm/src/IFRA_LinkAttacher/linkattacher_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'cmake_args' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'cmake_target' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'cmake_clean_cache' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'cmake_clean_first' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'cmake_force_configure' from command line to 'False'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'ament_cmake_args' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'catkin_cmake_args' from command line to 'None'
+[1.107s] Level 5:colcon.colcon_core.verb:set package 'main_nodes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.108s] DEBUG:colcon.colcon_core.verb:Building package 'main_nodes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ibrahim/MobiArm/build/main_nodes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ibrahim/MobiArm/install/main_nodes', 'merge_install': False, 'path': '/home/ibrahim/MobiArm/src/main_nodes', 'symlink_install': False, 'test_result_base': None}
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'cmake_args' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'cmake_target' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'cmake_clean_cache' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'cmake_clean_first' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'cmake_force_configure' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'ament_cmake_args' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'catkin_cmake_args' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'ros2_linkattacher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.109s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_linkattacher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ibrahim/MobiArm/build/ros2_linkattacher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ibrahim/MobiArm/install/ros2_linkattacher', 'merge_install': False, 'path': '/home/ibrahim/MobiArm/src/IFRA_LinkAttacher/ros2_LinkAttacher', 'symlink_install': False, 'test_result_base': None}
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'cmake_args' from command line to 'None'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'cmake_target' from command line to 'None'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[1.109s] Level 5:colcon.colcon_core.verb:set package 'moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.109s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ibrahim/MobiArm/build/moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ibrahim/MobiArm/install/moveit_config', 'merge_install': False, 'path': '/home/ibrahim/MobiArm/src/moveit_config', 'symlink_install': False, 'test_result_base': None}
+[1.109s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.111s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.111s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ibrahim/MobiArm/src/IFRA_LinkAttacher/linkattacher_msgs' with build type 'ament_cmake'
+[1.111s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ibrahim/MobiArm/src/IFRA_LinkAttacher/linkattacher_msgs'
+[1.118s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.119s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.119s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.127s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ibrahim/MobiArm/src/bin_interfaces' with build type 'ament_cmake'
+[1.127s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ibrahim/MobiArm/src/bin_interfaces'
+[1.128s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.128s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/linkattacher_msgs -- -j16 -l16
+[1.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/bin_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/bin_interfaces -- -j16 -l16
+[1.717s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/linkattacher_msgs -- -j16 -l16
+[1.732s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/linkattacher_msgs
+[1.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/bin_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/MobiArm/build/bin_interfaces -- -j16 -l16
+[1.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/bin_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/bin_interfaces
+[1.832s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(linkattacher_msgs)
+[1.835s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/linkattacher_msgs
+[1.843s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs' for CMake module files
+[1.844s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs' for CMake config files
+[1.849s] Level 1:colcon.colcon_core.shell:create_environment_hook('linkattacher_msgs', 'cmake_prefix_path')
+[1.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/cmake_prefix_path.ps1'
+[1.850s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/cmake_prefix_path.dsv'
+[1.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/cmake_prefix_path.sh'
+[1.852s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib'
+[1.853s] Level 1:colcon.colcon_core.shell:create_environment_hook('linkattacher_msgs', 'ld_library_path_lib')
+[1.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/ld_library_path_lib.ps1'
+[1.854s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/ld_library_path_lib.dsv'
+[1.854s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/ld_library_path_lib.sh'
+[1.854s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/bin'
+[1.854s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/pkgconfig/linkattacher_msgs.pc'
+[1.855s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/python3.10/site-packages'
+[1.855s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/bin'
+[1.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.ps1'
+[1.857s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.dsv'
+[1.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.sh'
+[1.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.bash'
+[1.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.zsh'
+[1.861s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/linkattacher_msgs/share/colcon-core/packages/linkattacher_msgs)
+[1.861s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(linkattacher_msgs)
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs' for CMake module files
+[1.862s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs' for CMake config files
+[1.863s] Level 1:colcon.colcon_core.shell:create_environment_hook('linkattacher_msgs', 'cmake_prefix_path')
+[1.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/cmake_prefix_path.ps1'
+[1.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/cmake_prefix_path.dsv'
+[1.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/cmake_prefix_path.sh'
+[1.864s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib'
+[1.864s] Level 1:colcon.colcon_core.shell:create_environment_hook('linkattacher_msgs', 'ld_library_path_lib')
+[1.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/ld_library_path_lib.ps1'
+[1.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/ld_library_path_lib.dsv'
+[1.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/hook/ld_library_path_lib.sh'
+[1.865s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/bin'
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/pkgconfig/linkattacher_msgs.pc'
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/lib/python3.10/site-packages'
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/linkattacher_msgs/bin'
+[1.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.ps1'
+[1.867s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.dsv'
+[1.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.sh'
+[1.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.bash'
+[1.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/linkattacher_msgs/share/linkattacher_msgs/package.zsh'
+[1.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/linkattacher_msgs/share/colcon-core/packages/linkattacher_msgs)
+[1.869s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ibrahim/MobiArm/src/IFRA_LinkAttacher/ros2_LinkAttacher' with build type 'ament_cmake'
+[1.869s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ibrahim/MobiArm/src/IFRA_LinkAttacher/ros2_LinkAttacher'
+[1.869s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.870s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.877s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bin_interfaces)
+[1.878s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces' for CMake module files
+[1.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/bin_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/MobiArm/build/bin_interfaces
+[1.880s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces' for CMake config files
+[1.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('bin_interfaces', 'cmake_prefix_path')
+[1.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/cmake_prefix_path.ps1'
+[1.888s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/cmake_prefix_path.dsv'
+[1.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/cmake_prefix_path.sh'
+[1.889s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/lib'
+[1.889s] Level 1:colcon.colcon_core.shell:create_environment_hook('bin_interfaces', 'ld_library_path_lib')
+[1.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/ld_library_path_lib.ps1'
+[1.890s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/ld_library_path_lib.dsv'
+[1.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/ld_library_path_lib.sh'
+[1.891s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/bin'
+[1.891s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/lib/pkgconfig/bin_interfaces.pc'
+[1.891s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/lib/python3.10/site-packages'
+[1.892s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/bin'
+[1.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.ps1'
+[1.893s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.dsv'
+[1.893s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.sh'
+[1.894s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.bash'
+[1.894s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.zsh'
+[1.894s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/bin_interfaces/share/colcon-core/packages/bin_interfaces)
+[1.895s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bin_interfaces)
+[1.895s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces' for CMake module files
+[1.896s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces' for CMake config files
+[1.898s] Level 1:colcon.colcon_core.shell:create_environment_hook('bin_interfaces', 'cmake_prefix_path')
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/cmake_prefix_path.ps1'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/cmake_prefix_path.dsv'
+[1.899s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/cmake_prefix_path.sh'
+[1.899s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/lib'
+[1.900s] Level 1:colcon.colcon_core.shell:create_environment_hook('bin_interfaces', 'ld_library_path_lib')
+[1.900s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/ld_library_path_lib.ps1'
+[1.900s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/ld_library_path_lib.dsv'
+[1.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/hook/ld_library_path_lib.sh'
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/bin'
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/lib/pkgconfig/bin_interfaces.pc'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/lib/python3.10/site-packages'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/bin_interfaces/bin'
+[1.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.ps1'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.dsv'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.sh'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.bash'
+[1.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/bin_interfaces/share/bin_interfaces/package.zsh'
+[1.906s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/bin_interfaces/share/colcon-core/packages/bin_interfaces)
+[1.906s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ibrahim/MobiArm/src/main_nodes' with build type 'ament_cmake'
+[1.907s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ibrahim/MobiArm/src/main_nodes'
+[1.907s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.907s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.003s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/ros2_linkattacher': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/ros2_linkattacher -- -j16 -l16
+[2.165s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/main_nodes': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
+[2.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/ros2_linkattacher' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/ros2_linkattacher -- -j16 -l16
+[2.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/ros2_linkattacher': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/MobiArm/build/ros2_linkattacher
+[2.249s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_linkattacher)
+[2.249s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher' for CMake module files
+[2.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/ros2_linkattacher' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/MobiArm/build/ros2_linkattacher
+[2.251s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher' for CMake config files
+[2.252s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_linkattacher', 'cmake_prefix_path')
+[2.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/cmake_prefix_path.ps1'
+[2.253s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/cmake_prefix_path.dsv'
+[2.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/cmake_prefix_path.sh'
+[2.254s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/lib'
+[2.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_linkattacher', 'ld_library_path_lib')
+[2.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/ld_library_path_lib.ps1'
+[2.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/ld_library_path_lib.dsv'
+[2.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/ld_library_path_lib.sh'
+[2.256s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/bin'
+[2.256s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/lib/pkgconfig/ros2_linkattacher.pc'
+[2.256s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/lib/python3.10/site-packages'
+[2.257s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/bin'
+[2.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.ps1'
+[2.258s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.dsv'
+[2.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.sh'
+[2.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.bash'
+[2.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.zsh'
+[2.259s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/ros2_linkattacher/share/colcon-core/packages/ros2_linkattacher)
+[2.260s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_linkattacher)
+[2.260s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher' for CMake module files
+[2.261s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher' for CMake config files
+[2.261s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_linkattacher', 'cmake_prefix_path')
+[2.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/cmake_prefix_path.ps1'
+[2.262s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/cmake_prefix_path.dsv'
+[2.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/cmake_prefix_path.sh'
+[2.263s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/lib'
+[2.263s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_linkattacher', 'ld_library_path_lib')
+[2.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/ld_library_path_lib.ps1'
+[2.264s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/ld_library_path_lib.dsv'
+[2.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/hook/ld_library_path_lib.sh'
+[2.265s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/bin'
+[2.265s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/lib/pkgconfig/ros2_linkattacher.pc'
+[2.265s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/lib/python3.10/site-packages'
+[2.266s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/ros2_linkattacher/bin'
+[2.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.ps1'
+[2.267s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.dsv'
+[2.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.sh'
+[2.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.bash'
+[2.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/ros2_linkattacher/share/ros2_linkattacher/package.zsh'
+[2.269s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/ros2_linkattacher/share/colcon-core/packages/ros2_linkattacher)
+[15.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/main_nodes' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/main_nodes -- -j16 -l16
+[15.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/main_nodes': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/MobiArm/build/main_nodes
+[15.497s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(main_nodes)
+[15.497s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes' for CMake module files
+[15.498s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/main_nodes' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/MobiArm/build/main_nodes
+[15.498s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes' for CMake config files
+[15.500s] Level 1:colcon.colcon_core.shell:create_environment_hook('main_nodes', 'cmake_prefix_path')
+[15.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/hook/cmake_prefix_path.ps1'
+[15.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/hook/cmake_prefix_path.dsv'
+[15.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/hook/cmake_prefix_path.sh'
+[15.501s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/lib'
+[15.501s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/bin'
+[15.502s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/lib/pkgconfig/main_nodes.pc'
+[15.502s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/lib/python3.10/site-packages'
+[15.502s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/bin'
+[15.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.ps1'
+[15.503s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.dsv'
+[15.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.sh'
+[15.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.bash'
+[15.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.zsh'
+[15.505s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/main_nodes/share/colcon-core/packages/main_nodes)
+[15.506s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(main_nodes)
+[15.506s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes' for CMake module files
+[15.507s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes' for CMake config files
+[15.507s] Level 1:colcon.colcon_core.shell:create_environment_hook('main_nodes', 'cmake_prefix_path')
+[15.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/hook/cmake_prefix_path.ps1'
+[15.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/hook/cmake_prefix_path.dsv'
+[15.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/hook/cmake_prefix_path.sh'
+[15.510s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/lib'
+[15.510s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/bin'
+[15.510s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/lib/pkgconfig/main_nodes.pc'
+[15.511s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/lib/python3.10/site-packages'
+[15.511s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/main_nodes/bin'
+[15.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.ps1'
+[15.512s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.dsv'
+[15.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.sh'
+[15.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.bash'
+[15.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/main_nodes/share/main_nodes/package.zsh'
+[15.514s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/main_nodes/share/colcon-core/packages/main_nodes)
+[15.514s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ibrahim/MobiArm/src/moveit_config' with build type 'ament_cmake'
+[15.514s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ibrahim/MobiArm/src/moveit_config'
+[15.515s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[15.515s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[15.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/moveit_config': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/moveit_config -- -j16 -l16
+[15.898s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/MobiArm/build/moveit_config -- -j16 -l16
+[15.901s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ibrahim/MobiArm/build/moveit_config': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/MobiArm/build/moveit_config
+[15.949s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_config)
+[15.950s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config' for CMake module files
+[15.951s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ibrahim/MobiArm/build/moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/MobiArm/install/main_nodes:/home/ibrahim/MobiArm/install/linkattacher_msgs:/home/ibrahim/MobiArm/install/bin_interfaces:/home/ibrahim/MobiArm/install/ros2_linkattacher:/home/ibrahim/MobiArm/install/moveit_config:/home/ibrahim/MobiArm/install/bin_interface:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/MoveItArm/install/moveit_config:/home/ibrahim/MoveItArm/install/moveit_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/MobiArm/install/linkattacher_msgs/lib:/home/ibrahim/MobiArm/install/bin_interfaces/lib:/home/ibrahim/MobiArm/install/ros2_linkattacher/lib:/home/ibrahim/MobiArm/install/bin_interface/lib:/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/MobiArm/build/moveit_config
+[15.951s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config' for CMake config files
+[15.952s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_config', 'cmake_prefix_path')
+[15.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/hook/cmake_prefix_path.ps1'
+[15.953s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/hook/cmake_prefix_path.dsv'
+[15.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/hook/cmake_prefix_path.sh'
+[15.954s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/bin'
+[15.954s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/lib/pkgconfig/moveit_config.pc'
+[15.954s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/lib/python3.10/site-packages'
+[15.954s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/bin'
+[15.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.ps1'
+[15.955s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.dsv'
+[15.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.sh'
+[15.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.bash'
+[15.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.zsh'
+[15.957s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/moveit_config/share/colcon-core/packages/moveit_config)
+[15.957s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_config)
+[15.957s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config' for CMake module files
+[15.958s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config' for CMake config files
+[15.958s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_config', 'cmake_prefix_path')
+[15.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/hook/cmake_prefix_path.ps1'
+[15.959s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/hook/cmake_prefix_path.dsv'
+[15.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/hook/cmake_prefix_path.sh'
+[15.959s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/bin'
+[15.960s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/lib/pkgconfig/moveit_config.pc'
+[15.960s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/lib/python3.10/site-packages'
+[15.960s] Level 1:colcon.colcon_core.environment:checking '/home/ibrahim/MobiArm/install/moveit_config/bin'
+[15.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.ps1'
+[15.961s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.dsv'
+[15.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.sh'
+[15.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.bash'
+[15.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/package.zsh'
+[15.962s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ibrahim/MobiArm/install/moveit_config/share/colcon-core/packages/moveit_config)
+[15.963s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[15.963s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[15.964s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[15.964s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[16.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[16.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[16.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[16.044s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[16.044s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[16.044s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[16.045s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ibrahim/MobiArm/install/local_setup.ps1'
+[16.046s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ibrahim/MobiArm/install/_local_setup_util_ps1.py'
+[16.049s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ibrahim/MobiArm/install/setup.ps1'
+[16.052s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ibrahim/MobiArm/install/local_setup.sh'
+[16.053s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ibrahim/MobiArm/install/_local_setup_util_sh.py'
+[16.054s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ibrahim/MobiArm/install/setup.sh'
+[16.056s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ibrahim/MobiArm/install/local_setup.bash'
+[16.056s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ibrahim/MobiArm/install/setup.bash'
+[16.059s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ibrahim/MobiArm/install/local_setup.zsh'
+[16.060s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ibrahim/MobiArm/install/setup.zsh'

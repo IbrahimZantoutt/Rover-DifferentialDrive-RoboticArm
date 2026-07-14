@@ -110,7 +110,7 @@
 
     <model name="bin">
       <static>true</static>
-      <pose>2.5 0 0.5 0 0 0</pose>
+      <pose>2.21 0 0.5 0 0 0</pose>
       <link name="link">
         <!-- floor -->
         <collision name="floor_col">
@@ -180,11 +180,13 @@
          the scan / costmaps. Static so it stays put as a stable landmark.
          NOTE: at ~2.7 m a 5 cm cube only subtends ~1 deg, so expect just 1-2 beams
          on it — a faint blip. Enlarge the cube or move it closer for a stronger hit. -->
-    <model name="green_cube_ground">
+    <!-- Static pedestal: never moves, just holds the cube up at scan/camera height.
+         It is a separate STATIC model so it stays put forever; the LinkAttacher only
+         grabs the cube on top, not this stand. -->
+    <model name="cube_stand">
       <static>true</static>
       <pose>-2.5 -1.2 0 0 0 0</pose>
       <link name="link">
-        <!-- stool / pedestal: cylinder from the floor up to z=0.225 -->
         <collision name="stool_col">
           <pose>0 0 0.1125 0 0 0</pose>
           <geometry><cylinder><radius>0.08</radius><length>0.225</length></cylinder></geometry>
@@ -194,14 +196,30 @@
           <geometry><cylinder><radius>0.08</radius><length>0.225</length></cylinder></geometry>
           <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material>
         </visual>
-        <!-- 5 cm green cube on top, centred on the scan plane (z=0.25) -->
+      </link>
+    </model>
+
+    <!-- The graspable cube: a DYNAMIC body with mass, resting on the stand at z=0.24
+         (pedestal top 0.225 + half the 0.03 cube). Gravity keeps it sitting exactly
+         in place until the arm welds to it and lifts it. It has inertia so Gazebo can
+         actually move it, and it's its own model so LinkAttacher grabs only the cube.
+         Centre spans 0.225..0.255, so it still crosses the z=0.25 lidar scan plane. -->
+    <model name="green_cube_1">
+      <static>false</static>
+      <pose>-2.5 -1.2 0.24 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.5e-6</ixx><iyy>7.5e-6</iyy><izz>7.5e-6</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
         <collision name="cube_col">
-          <pose>0 0 0.235 0 0 0</pose>
-          <geometry><box><size>0.02 0.02 0.02</size></box></geometry>
+          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
         </collision>
         <visual name="cube_vis">
-          <pose>0 0 0.235 0 0 0</pose>
-          <geometry><box><size>0.02 0.02 0.02</size></box></geometry>
+          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
           <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material>
         </visual>
       </link>
