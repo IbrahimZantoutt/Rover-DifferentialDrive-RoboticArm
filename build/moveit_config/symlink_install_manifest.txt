@@ -36,4 +36,5 @@
 /home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/config/moveit_controllers.yaml
 /home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/config/pilz_cartesian_limits.yaml
 /home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml
+/home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/config/sensors_3d.yaml
 /home/ibrahim/MobiArm/install/moveit_config/share/moveit_config/.setup_assistant

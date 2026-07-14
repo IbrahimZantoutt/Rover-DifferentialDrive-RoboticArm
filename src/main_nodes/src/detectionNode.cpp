@@ -44,6 +44,12 @@ public:
   {
     standoff_ = this->declare_parameter("standoff", 0.4);              // base->object [m]
     target_frame_ = this->declare_parameter("target_frame", std::string("map"));
+    // If Nav2 ABORTS the final approach (progress-checker trip near the goal, or
+    // the goal sitting inside the costmap inflation) but the base actually ended
+    // up within this distance of the goal, count it as "arrived" and let the
+    // pickup run instead of bouncing back to a fresh detection.
+    arrival_tolerance_ = this->declare_parameter("arrival_tolerance", 0.6);       // [m]
+    robot_base_frame_ = this->declare_parameter("robot_base_frame", std::string("robot_base"));
 
     tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
     tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
@@ -146,6 +152,8 @@ private:
       std::bind(&DetectionNode::onResult, this, std::placeholders::_1);
 
     navigating_ = true;
+    committed_goal_ = goal_map;   // remember where we told the base to stop
+    have_goal_ = true;
     RCLCPP_INFO(get_logger(),
       "closest object %.2f m @ %.0f deg -> goal (%.2f, %.2f) in %s; navigating",
       best_r, theta * 180.0 / M_PI,
@@ -166,13 +174,30 @@ private:
         break;
       }
       case rclcpp_action::ResultCode::ABORTED: {
-        RCLCPP_WARN(get_logger(),
-          "Nav2 aborted. Staying COMMITTED to this one goal (one-shot): we do NOT "
-          "recompute a fresh goal from the robot's drifted position, which is what "
-          "made it approach from a random angle. Restart the node to try again.");
-        // navigating_ stays true -> no re-goal, no random re-approach
-        active_ = false;  // one-shot: stop until re-armed
-        publishReached(false);
+        // Nav2 frequently ABORTS the last stretch of the approach even though the
+        // base is basically at the cube: near the goal the robot moves too little
+        // to satisfy the progress checker (required_movement_radius 0.5 m / 10 s),
+        // or the goal sits inside the costmap inflation. If we actually ended up
+        // within arrival_tolerance of the goal, treat it as reached so the pickup
+        // runs -- instead of reporting failure and bouncing back to detection.
+        double dist = -1.0;
+        const bool have_dist = distanceToGoal(dist);
+        if (have_dist && dist <= arrival_tolerance_) {
+          RCLCPP_WARN(get_logger(),
+            "Nav2 aborted but base is %.2f m from goal (<= %.2f) -- accepting as "
+            "reached; running pickup", dist, arrival_tolerance_);
+          active_ = false;         // one-shot: stop until re-armed
+          publishReached(true);    // commit: pickup fires, no re-detect
+        } else {
+          RCLCPP_WARN(get_logger(),
+            "Nav2 aborted and base is %.2f m from goal (> %.2f) -- approach failed. "
+            "Staying COMMITTED to this one goal; we do NOT recompute from a drifted "
+            "pose (that caused random re-approaches).",
+            dist, arrival_tolerance_);
+          // navigating_ stays true -> no re-goal, no random re-approach
+          active_ = false;  // one-shot: stop until re-armed
+          publishReached(false);
+        }
         break;
       }
       case rclcpp_action::ResultCode::CANCELED: {
@@ -199,10 +224,34 @@ private:
     reached_pub_->publish(m);
   }
 
+  // Planar distance [m] from the robot base to the last committed goal, both in
+  // the map frame. Returns false (leaving dist_out untouched) if no goal has been
+  // committed yet or TF map<-robot_base is unavailable.
+  bool distanceToGoal(double & dist_out)
+  {
+    if (!have_goal_) return false;
+    try {
+      const auto tf = tf_buffer_->lookupTransform(
+        target_frame_, robot_base_frame_, tf2::TimePointZero);  // latest
+      const double dx = tf.transform.translation.x - committed_goal_.pose.position.x;
+      const double dy = tf.transform.translation.y - committed_goal_.pose.position.y;
+      dist_out = std::hypot(dx, dy);
+      return true;
+    } catch (const tf2::TransformException & e) {
+      RCLCPP_WARN(get_logger(), "distanceToGoal: no TF %s <- %s: %s",
+        target_frame_.c_str(), robot_base_frame_.c_str(), e.what());
+      return false;
+    }
+  }
+
   double standoff_;
   std::string target_frame_;
+  double arrival_tolerance_;
+  std::string robot_base_frame_;
+  geometry_msgs::msg::PoseStamped committed_goal_;
+  bool have_goal_ = false;
   bool navigating_ = false;
-  bool active_ = false; 
+  bool active_ = false;
 
   rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;
   rclcpp_action::Client<NavigateToPose>::SharedPtr nav_client_;

@@ -232,10 +232,10 @@
           </inertia>
         </inertial>
         <collision name="cube_col">
-          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
+          <geometry><box><size>0.03 0.03 0.12</size></box></geometry>
         </collision>
         <visual name="cube_vis">
-          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
+          <geometry><box><size>0.03 0.03 0.12</size></box></geometry>
           <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material>
         </visual>
       </link>
@@ -253,10 +253,10 @@
           </inertia>
         </inertial>
         <collision name="cube_col">
-          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
+          <geometry><box><size>0.03 0.03 0.12</size></box></geometry>
         </collision>
         <visual name="cube_vis">
-          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
+          <geometry><box><size>0.03 0.03 0.12</size></box></geometry>
           <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material>
         </visual>
       </link>

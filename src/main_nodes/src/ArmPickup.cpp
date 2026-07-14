@@ -158,7 +158,7 @@ int main(int argc, char **argv)
     auto pick = [&](double x, double y, double z) -> bool {
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
         lockBase();
-        if (goToPos(x, y, z + 0.24, 3.1416, 0, 0)) {
+        if (goToPos(x, y, z + 0.26, 1.5, 0, 0)) {
             action_count_++;
             // NOTE: attaches green_cube_<N> in call order, not the cube actually
             // grasped -- needs a position->model-name lookup for arbitrary layouts.
@@ -194,6 +194,25 @@ int main(int argc, char **argv)
         if (!search(target)) return false;
         return pick(target.x, target.y, target.z);
     };
+
+    //  auto addCollisionObjects = [&](){
+    //     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+    //     std::vector<moveit_msgs::msg::CollisionObject> collision_objects;
+    //     collision_objects.resize(4);
+
+    //     collision_objects[0].id = "camera";
+    //     collision_objects[0].header.frame_id = "world";
+    //     collision_objects[0].primitives.resize(1);
+    //     collision_objects[0].primitives[0].type = shape_msgs::msg::SolidPrimitive::BOX;
+    //     collision_objects[0].primitives[0].dimensions = {0.05, 0.1, 0.2};
+    //     collision_objects[0].primitive_poses.resize(1);
+    //     collision_objects[0].primitive_poses[0].position.x = 0.4;
+    //     collision_objects[0].primitive_poses[0].position.y = 0;
+    //     collision_objects[0].primitive_poses[0].position.z = 0.1;
+    //     collision_objects[0].operation = moveit_msgs::msg::CollisionObject::ADD;
+
+    //     planning_scene_interface.applyCollisionObjects(collision_objects);
+    // };
 
     auto pickup_srv = node->create_service<std_srvs::srv::Trigger>(
         "pickup",

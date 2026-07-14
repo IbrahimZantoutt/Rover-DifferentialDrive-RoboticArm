@@ -1,0 +1,4 @@
+/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp: In function ‘int main(int, char**)’:
+/home/ibrahim/MobiArm/src/main_nodes/src/ArmPickup.cpp:198:11: warning: variable ‘addCollisionObjects’ set but not used [-Wunused-but-set-variable]
+  198 |      auto addCollisionObjects = [&](){
+      |           ^~~~~~~~~~~~~~~~~~~
