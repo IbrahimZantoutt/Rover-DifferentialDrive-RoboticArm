@@ -17,6 +17,9 @@ class VisionNode : public rclcpp::Node{
     public:
         VisionNode() : Node("vision_node") {
             RCLCPP_INFO(this->get_logger(), "Vision Node has been started.");
+            // The hsv/mask windows are extra GUI work on every frame (costly over
+            // WSLg); debug_mode:=true brings them back.
+            debug_mode_ = this->declare_parameter("debug_mode", false);
 
             info_sub_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
             "/camera/camera_info", 10, [this](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {
@@ -90,10 +93,12 @@ class VisionNode : public rclcpp::Node{
                 }
             }
 
-            cv::imshow("hsv", hsv);
-            cv::waitKey(1);
-            cv::imshow("mask", mask);
-            cv::waitKey(1);
+            if (debug_mode_) {
+                cv::imshow("hsv", hsv);
+                cv::waitKey(1);
+                cv::imshow("mask", mask);
+                cv::waitKey(1);
+            }
         }
 
         void localize(int u, int v) {
@@ -170,6 +175,7 @@ class VisionNode : public rclcpp::Node{
         image_geometry::PinholeCameraModel camera_model_;
         cv::Mat depth_image_;
         bool have_model_ = false;
+        bool debug_mode_ = false;
 
 };
 

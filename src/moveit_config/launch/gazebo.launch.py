@@ -3,14 +3,20 @@ import re
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler
+from launch.conditions import IfCondition
 from launch.event_handlers import OnProcessExit
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from moveit_configs_utils import MoveItConfigsBuilder
 
 
 def generate_launch_description():
+    # RViz is a large constant GUI/CPU draw (painful over WSLg) and starves the
+    # Nav2 control loop, so it is OFF unless debug_mode:=true.
+    debug_mode = LaunchConfiguration("debug_mode")
+    debug_mode_arg = DeclareLaunchArgument("debug_mode", default_value="false")
     # Build the MoveIt config, telling xacro to use the Gazebo hardware plugin
     # (use_gazebo:=true also adds the `world` link + gazebo_ros2_control plugin).
     moveit_config = (
@@ -99,6 +105,7 @@ def generate_launch_description():
         package="rviz2",
         executable="rviz2",
         output="screen",
+        condition=IfCondition(debug_mode),
         arguments=["-d", rviz_config],
         parameters=[
             moveit_config.robot_description,
@@ -112,6 +119,7 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
+            debug_mode_arg,
             gazebo,
             robot_state_publisher,
             spawn_entity,
