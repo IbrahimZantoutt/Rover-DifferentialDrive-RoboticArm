@@ -199,12 +199,49 @@
       </link>
     </model>
 
+     <model name="cube_stand2">
+      <static>true</static>
+      <pose>-1.4 1.8 0 0 0 0</pose>
+      <link name="link">
+        <collision name="stool_col">
+          <pose>0 0 0.1125 0 0 0</pose>
+          <geometry><cylinder><radius>0.08</radius><length>0.225</length></cylinder></geometry>
+        </collision>
+        <visual name="stool_vis">
+          <pose>0 0 0.1125 0 0 0</pose>
+          <geometry><cylinder><radius>0.08</radius><length>0.225</length></cylinder></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material>
+        </visual>
+      </link>
+    </model>
+
     <!-- The graspable cube: a DYNAMIC body with mass, resting on the stand at z=0.24
          (pedestal top 0.225 + half the 0.03 cube). Gravity keeps it sitting exactly
          in place until the arm welds to it and lifts it. It has inertia so Gazebo can
          actually move it, and it's its own model so LinkAttacher grabs only the cube.
          Centre spans 0.225..0.255, so it still crosses the z=0.25 lidar scan plane. -->
     <model name="green_cube_1">
+      <static>false</static>
+      <pose>-1.4 1.8 0.24 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.5e-6</ixx><iyy>7.5e-6</iyy><izz>7.5e-6</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="cube_col">
+          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
+        </collision>
+        <visual name="cube_vis">
+          <geometry><box><size>0.03 0.03 0.03</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="green_cube_2">
       <static>false</static>
       <pose>-2.5 -1.2 0.24 0 0 0</pose>
       <link name="link">

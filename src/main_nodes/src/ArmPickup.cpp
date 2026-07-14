@@ -158,7 +158,7 @@ int main(int argc, char **argv)
     auto pick = [&](double x, double y, double z) -> bool {
         //goToPos(0.304, 0.339, 0.247,2.863, 1.389, -3.141);  better to add when added collision aware movement
         lockBase();
-        if (goToPos(x, y, z + 0.25, 3.1416, 0, 0)) {
+        if (goToPos(x, y, z + 0.24, 3.1416, 0, 0)) {
             action_count_++;
             // NOTE: attaches green_cube_<N> in call order, not the cube actually
             // grasped -- needs a position->model-name lookup for arbitrary layouts.
