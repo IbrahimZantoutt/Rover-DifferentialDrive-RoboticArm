@@ -68,7 +68,6 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 
 ### camera view
 <!-- Drag-and-drop the RViz bird's-eye map GIF here. -->
-<img width="636" height="515" alt="image" src="https://github.com/user-attachments/assets/566c8cda-4179-4f02-81dc-f0a4be8d8744" />
 
 <img width="100%" alt="slam_toolbox building the map in RViz while the robot works" src="https://github.com/user-attachments/assets/566c8cda-4179-4f02-81dc-f0a4be8d8744" />
 
