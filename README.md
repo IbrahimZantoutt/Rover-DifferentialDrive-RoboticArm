@@ -20,14 +20,14 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 
 ## Demo
 
+
 <div align="center">
 
-### one part demo — search, approach, pick, carry, place
+### The full mission — search, approach, pick, carry, place, repeat
 
 <!-- Drag-and-drop your horizontal full-process GIF into GitHub's editor here and replace the src below. -->
 
-
-<img width="70%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/fa8d8a7e-42d4-4761-8c31-b46f6ad4e7dc" />
+<img width="50%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/8c89f1fc-3266-469f-a5a3-b6f9d4576a41" />
 
 </div>
 
@@ -51,15 +51,32 @@ You launch two files and walk away. slam_toolbox maps the room live, a filtered 
 </tr>
 </table>
 
-<div align="center">
 
-### The full mission — search, approach, pick, carry, place, repeat
 
-<!-- Drag-and-drop your horizontal full-process GIF into GitHub's editor here and replace the src below. -->
+<table>
+<tr>
+<td width="50%" align="center">
 
-<img width="50%" alt="MobiArm running the full autonomous pick-and-place mission in Gazebo" src="https://github.com/user-attachments/assets/8c89f1fc-3266-469f-a5a3-b6f9d4576a41" />
+### pick action
 
-</div>
+<!-- Drag-and-drop a screenshot of the full robot in RViz (RobotModel display) here. -->
+
+<img width="100%" alt="MobiArm URDF: 4-wheel differential base, 6-DOF arm, lidar and depth camera" src="https://github.com/user-attachments/assets/29e649e5-ac3e-45f5-93ec-d17f450dc19c" />
+
+</td>
+<td width="50%" align="center">
+
+### camera view
+<!-- Drag-and-drop the RViz bird's-eye map GIF here. -->
+<img width="636" height="515" alt="image" src="https://github.com/user-attachments/assets/566c8cda-4179-4f02-81dc-f0a4be8d8744" />
+
+<img width="100%" alt="slam_toolbox building the map in RViz while the robot works" src="https://github.com/user-attachments/assets/566c8cda-4179-4f02-81dc-f0a4be8d8744" />
+
+</td>
+</tr>
+</table>
+
+
 
 ---
 
