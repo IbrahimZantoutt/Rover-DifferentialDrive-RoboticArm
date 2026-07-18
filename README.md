@@ -225,7 +225,18 @@ source install/setup.bash
 
 ### Run
 
-The mission runs in **two terminals**. The first owns the simulation and the navigation stack; the second owns perception and the mission itself. Wait for the first to settle before starting the second.
+#### Option 1 — Docker (recommended)
+
+No local ROS install needed — the image builds the whole workspace. One command brings up the sim, Nav2, perception, and the orchestrator.
+
+```bash
+xhost +local:root     # let the containers open GUI windows on your display
+docker compose up     # builds the image on first run, then launches everything
+```
+
+#### Option 2 — Native
+
+With the workspace built (see [Build](#build) above), the mission runs in **two terminals**. The first owns the simulation and the navigation stack; the second owns perception and the mission itself. Wait for the first to settle before starting the second.
 
 ```bash
 # Terminal 1 — Gazebo + MoveIt + SLAM + Nav2 + the scan filters
@@ -238,7 +249,7 @@ source install/setup.bash
 ros2 launch moveit_config mission.launch.py
 ```
 
-That's it — the robot folds its arm, starts hunting for cubes, and works until the room is clear. `ArmManager` shuts itself down when a search comes up empty.
+Either way, the robot folds its arm, starts hunting for cubes, and works until the room is clear. `ArmManager` shuts itself down when a search comes up empty.
 
 ### Watching it work
 

@@ -14,6 +14,8 @@
   <exec_depend>rviz2</exec_depend>
   <exec_depend>xacro</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
+  <!-- robot.urdf.xacro loads libgazebo_ros_camera/diff_drive/ray_sensor/joint_state_publisher plugins -->
+  <exec_depend>gazebo_plugins</exec_depend>
   <exec_depend>teleop_twist_keyboard</exec_depend>
   <!-- scan_self_filter.py / scan_objects_filter.py (lidar filter nodes) -->
   <exec_depend>rclpy</exec_depend>

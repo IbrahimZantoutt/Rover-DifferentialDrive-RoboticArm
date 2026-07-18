@@ -1,0 +1,28 @@
+services:
+
+  launch_main:
+    build: .
+    image: mobiarm:latest
+    command: bash -c "source /opt/ros/humble/setup.bash && source install/setup.bash && ros2 launch moveit_config nav2_slam.launch.py"
+    network_mode: host
+    ipc: host
+    environment:
+      - ROS_DOMAIN_ID=0
+      - QT_X11_NO_MITSHM=1
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+
+  launch_process:
+    build: .
+    command: bash -c "source /opt/ros/humble/setup.bash && source install/setup.bash && ros2 launch moveit_config mission.launch.py"
+    network_mode: host
+    ipc: host
+    environment:
+      - ROS_DOMAIN_ID=0
+      - QT_X11_NO_MITSHM=1
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    depends_on:
+      - launch_main
